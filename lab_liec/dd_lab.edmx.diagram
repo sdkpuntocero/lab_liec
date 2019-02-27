@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d508896b555347d19af58a9c3d9ee7b5" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="bd_labModel.fact_alergia" Width="1.5" PointX="8" PointY="12.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_area" Width="1.5" PointX="11" PointY="11.875" />
+        <EntityTypeShape EntityType="bd_labModel.fact_banco" Width="1.5" PointX="9" PointY="36.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_concreto_est" Width="1.5" PointX="14.25" PointY="33" />
+        <EntityTypeShape EntityType="bd_labModel.fact_concreto_situacion" Width="1.5" PointX="14.25" PointY="30.625" />
+        <EntityTypeShape EntityType="bd_labModel.fact_concreto_tipo" Width="1.5" PointX="14.25" PointY="16" />
+        <EntityTypeShape EntityType="bd_labModel.fact_ensaye_esp_est" Width="1.5" PointX="16.5" PointY="18.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_especimen_tipo" Width="1.5" PointX="14.25" PointY="28.25" />
+        <EntityTypeShape EntityType="bd_labModel.fact_est_clte" Width="1.5" PointX="3.75" PointY="34.625" />
+        <EntityTypeShape EntityType="bd_labModel.fact_est_clte_obra_rpt" Width="1.5" PointX="11.25" PointY="32.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_est_obra" Width="1.5" PointX="9" PointY="15.25" />
+        <EntityTypeShape EntityType="bd_labModel.fact_est_usr" Width="1.5" PointX="0.75" PointY="30.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_estcivil" Width="1.5" PointX="6" PointY="35.625" />
+        <EntityTypeShape EntityType="bd_labModel.fact_genero" Width="1.5" PointX="6" PointY="32.875" />
+        <EntityTypeShape EntityType="bd_labModel.fact_perfil" Width="1.5" PointX="11" PointY="8.625" />
+        <EntityTypeShape EntityType="bd_labModel.fact_prosp_est" Width="1.5" PointX="0.75" PointY="17.25" />
+        <EntityTypeShape EntityType="bd_labModel.fact_prosp_giro" Width="1.5" PointX="0.75" PointY="15" />
+        <EntityTypeShape EntityType="bd_labModel.fact_prosp_taccion" Width="1.5" PointX="5.25" PointY="14.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_prosp_tcont" Width="1.5" PointX="0.75" PointY="28" />
+        <EntityTypeShape EntityType="bd_labModel.fact_prosp_tserv" Width="1.5" PointX="0.75" PointY="19.625" />
+        <EntityTypeShape EntityType="bd_labModel.fact_tipo_escolar" Width="1.5" PointX="3" PointY="29.5" />
+        <EntityTypeShape EntityType="bd_labModel.fact_tipo_rfc" Width="1.5" PointX="3.75" PointY="32.25" />
+        <EntityTypeShape EntityType="bd_labModel.fact_tipo_servicio" Width="1.5" PointX="9" PointY="33.625" />
+        <EntityTypeShape EntityType="bd_labModel.inf_clte" Width="1.5" PointX="6" PointY="22.875" />
+        <EntityTypeShape EntityType="bd_labModel.inf_clte_contacto" Width="1.5" PointX="8.25" PointY="23.5" />
+        <EntityTypeShape EntityType="bd_labModel.inf_clte_obra_rpt" Width="1.5" PointX="13.5" PointY="23.875" />
+        <EntityTypeShape EntityType="bd_labModel.inf_clte_obras" Width="1.5" PointX="11.25" PointY="23.25" />
+        <EntityTypeShape EntityType="bd_labModel.inf_emp" Width="1.5" PointX="0.75" PointY="23.625" />
+        <EntityTypeShape EntityType="bd_labModel.inf_ensaye_esp" Width="1.5" PointX="18.75" PointY="22.5" />
+        <EntityTypeShape EntityType="bd_labModel.inf_prosp_cont" Width="1.5" PointX="5.25" PointY="17.625" />
+        <EntityTypeShape EntityType="bd_labModel.inf_prosp_seg" Width="1.5" PointX="7.5" PointY="18" />
+        <EntityTypeShape EntityType="bd_labModel.inf_prospectos" Width="1.5" PointX="3" PointY="16.875" />
+        <EntityTypeShape EntityType="bd_labModel.inf_rpc" Width="1.5" PointX="16.5" PointY="21.25" />
+        <EntityTypeShape EntityType="bd_labModel.inf_sepomex" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_bancario" Width="1.5" PointX="11.25" PointY="29" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_contacto" Width="1.5" PointX="5.25" PointY="42.875" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_escolar" Width="1.5" PointX="5.25" PointY="29" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_medicos" Width="1.5" PointX="10.25" PointY="18.75" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_personales" Width="1.5" PointX="8.25" PointY="28.125" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usr_rh" Width="1.5" PointX="13.25" PointY="18.75" />
+        <EntityTypeShape EntityType="bd_labModel.inf_usuario" Width="1.5" PointX="3" PointY="23.25" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_medicos_fact_alergia" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_rh_fact_area" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_bancario_fact_banco" />
+        <AssociationConnector Association="bd_labModel.FK_inf_rpc_fact_concreto_est" />
+        <AssociationConnector Association="bd_labModel.FK_inf_rpc_fact_concreto_situacion" />
+        <AssociationConnector Association="bd_labModel.FK_inf_rpc_fact_concreto_tipo" />
+        <AssociationConnector Association="bd_labModel.FK_inf_ensaye_esp_fact_ensaye_esp_est" />
+        <AssociationConnector Association="bd_labModel.FK_inf_rpc_fact_especimen_tipo" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_fact_est_clte" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_obras_fact_est_obra" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usuario_fact_est_usr" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_personales_fact_estcivil1" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_personales_fact_genero1" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_rh_fact_perfil" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prospectos_fact_prosp_est" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prospectos_fact_prosp_giro" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prosp_seg_fact_prosp_taccion" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prospectos_fact_prosp_tcont" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prospectos_fact_prosp_tserv" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_escolar_fact_tipo_escolar" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_fact_tipo_rfc" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_obras_fact_tipo_servicio" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_contacto_inf_clte" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_inf_emp" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_obras_inf_clte" />
+        <AssociationConnector Association="bd_labModel.FK_inf_clte_obra_rpt_inf_clte_obras" />
+        <AssociationConnector Association="bd_labModel.FK_inf_rpc_inf_clte_obras" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prospectos_inf_emp" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usuario_inf_emp" />
+        <AssociationConnector Association="bd_labModel.FK_inf_ensaye_esp_inf_rpc" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prosp_cont_inf_prospectos" />
+        <AssociationConnector Association="bd_labModel.FK_inf_prosp_seg_inf_prosp_cont" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_bancario_inf_usuario" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_contacto_inf_usuario" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_escolar_inf_usuario" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_medicos_inf_usuario" />
+        <AssociationConnector Association="bd_labModel.FK_inf_usr_personales_inf_usuario" />
+        <AssociationConnector Association="bd_labModel.FK_usr_rh_inf_usuario" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

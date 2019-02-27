@@ -1,0 +1,57 @@
+﻿.hideGridColumn {
+    display: none;
+}
+
+input.input-box, textarea {
+    color: #104D8d;
+    background-color: lightgray;
+}
+
+select.input-box, textarea {
+    color: #104D8d;
+    background-color: lightgray;
+}
+
+    textarea.input-box {
+        color: #104D8d;
+        background-color: lightgray;
+    }
+
+.fuente_css01 {
+    font-family: Arial;
+    color: #104D8d;
+}
+
+    .fuente_css01:hover {
+        color: #E34C0E;
+    }
+
+.fuente_css02 {
+    color: #E34C0E;
+}
+
+.panel-default > .panel-heading {
+    background-color: #104D8d;
+    color: white;
+}
+
+.encabezado001 {
+    background-color: #104D8d;
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+i {
+    margin: 2px;
+}
+#side-menu:hover .label-menu {
+    display: inline-block;
+}
+
+/*.buttonClass {
+    display: none;
+}*/
+   

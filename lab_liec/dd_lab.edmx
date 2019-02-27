@@ -1,0 +1,2902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bd_labModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fact_alergia">
+          <Key>
+            <PropertyRef Name="alergia_ID" />
+          </Key>
+          <Property Name="alergia_ID" Type="int" Nullable="false" />
+          <Property Name="alegia_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_area">
+          <Key>
+            <PropertyRef Name="area_ID" />
+          </Key>
+          <Property Name="area_ID" Type="int" Nullable="false" />
+          <Property Name="cod_area" Type="varchar" MaxLength="50" />
+          <Property Name="area_desc" Type="varchar" MaxLength="150" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="fact_banco">
+          <Key>
+            <PropertyRef Name="banco_ID" />
+          </Key>
+          <Property Name="banco_ID" Type="int" Nullable="false" />
+          <Property Name="banco_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_concreto_est">
+          <Key>
+            <PropertyRef Name="concreto_est_ID" />
+          </Key>
+          <Property Name="concreto_est_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_est_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_concreto_situacion">
+          <Key>
+            <PropertyRef Name="concreto_situacion_ID" />
+          </Key>
+          <Property Name="concreto_situacion_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_situacion_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_concreto_tipo">
+          <Key>
+            <PropertyRef Name="concreto_tipo_ID" />
+          </Key>
+          <Property Name="concreto_tipo_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_tipo_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_ensaye_esp_est">
+          <Key>
+            <PropertyRef Name="ensaye_esp_est_ID" />
+          </Key>
+          <Property Name="ensaye_esp_est_ID" Type="int" Nullable="false" />
+          <Property Name="ensaye_esp_est_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_especimen_tipo">
+          <Key>
+            <PropertyRef Name="especimen_tipo_ID" />
+          </Key>
+          <Property Name="especimen_tipo_ID" Type="int" Nullable="false" />
+          <Property Name="especimen_tipo_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_est_clte">
+          <Key>
+            <PropertyRef Name="est_clte_ID" />
+          </Key>
+          <Property Name="est_clte_ID" Type="int" Nullable="false" />
+          <Property Name="desc_est_clte" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_est_clte_obra_rpt">
+          <Key>
+            <PropertyRef Name="est_clte_obra_rpt_ID" />
+          </Key>
+          <Property Name="est_clte_obra_rpt_ID" Type="int" Nullable="false" />
+          <Property Name="est_clte_obra_rpt_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_est_obra">
+          <Key>
+            <PropertyRef Name="est_obra_ID" />
+          </Key>
+          <Property Name="est_obra_ID" Type="int" Nullable="false" />
+          <Property Name="est_obra_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_est_usr">
+          <Key>
+            <PropertyRef Name="est_usr_ID" />
+          </Key>
+          <Property Name="est_usr_ID" Type="int" Nullable="false" />
+          <Property Name="est_usr_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_estcivil">
+          <Key>
+            <PropertyRef Name="estcivil_ID" />
+          </Key>
+          <Property Name="estcivil_ID" Type="int" Nullable="false" />
+          <Property Name="cod_estciv" Type="varchar" MaxLength="50" />
+          <Property Name="estcivil_desc" Type="varchar" MaxLength="150" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="fact_genero">
+          <Key>
+            <PropertyRef Name="genero_ID" />
+          </Key>
+          <Property Name="genero_ID" Type="int" Nullable="false" />
+          <Property Name="cod_gen" Type="varchar" MaxLength="50" />
+          <Property Name="genero_desc" Type="varchar" MaxLength="50" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="fact_perfil">
+          <Key>
+            <PropertyRef Name="perfil_ID" />
+          </Key>
+          <Property Name="perfil_ID" Type="int" Nullable="false" />
+          <Property Name="cod_perfil" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="perfil_desc" Type="varchar" MaxLength="150" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="fact_prosp_est">
+          <Key>
+            <PropertyRef Name="prosp_est_ID" />
+          </Key>
+          <Property Name="prosp_est_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_est_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_prosp_giro">
+          <Key>
+            <PropertyRef Name="prosp_giro_ID" />
+          </Key>
+          <Property Name="prosp_giro_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_giro_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_prosp_taccion">
+          <Key>
+            <PropertyRef Name="prosp_taccion_ID" />
+          </Key>
+          <Property Name="prosp_taccion_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_taccion_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_prosp_tcont">
+          <Key>
+            <PropertyRef Name="prosp_tipocont_ID" />
+          </Key>
+          <Property Name="prosp_tipocont_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_tipocont_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_prosp_tserv">
+          <Key>
+            <PropertyRef Name="prosp_tserv_ID" />
+          </Key>
+          <Property Name="prosp_tserv_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_tserv_desc" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fact_tipo_escolar">
+          <Key>
+            <PropertyRef Name="tipo_escolar_ID" />
+          </Key>
+          <Property Name="tipo_escolar_ID" Type="int" Nullable="false" />
+          <Property Name="tipo_escolar_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_tipo_rfc">
+          <Key>
+            <PropertyRef Name="tipo_rfc_ID" />
+          </Key>
+          <Property Name="tipo_rfc_ID" Type="int" Nullable="false" />
+          <Property Name="tipo_rfc_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fact_tipo_servicio">
+          <Key>
+            <PropertyRef Name="tipo_servicio_ID" />
+          </Key>
+          <Property Name="tipo_servicio_ID" Type="int" Nullable="false" />
+          <Property Name="tipo_servicio_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="inf_clte">
+          <Key>
+            <PropertyRef Name="clte_ID" />
+          </Key>
+          <Property Name="clte_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="est_clte_ID" Type="int" />
+          <Property Name="cod_clte" Type="varchar" MaxLength="20" />
+          <Property Name="tipo_rfc_ID" Type="int" />
+          <Property Name="rfc" Type="varchar" MaxLength="50" />
+          <Property Name="razon_social" Type="varchar" MaxLength="150" />
+          <Property Name="telefono" Type="varchar" MaxLength="30" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="callenum" Type="varchar" MaxLength="300" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="6" />
+          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="comentarios" Type="varchar(max)" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="empresa_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_clte_contacto">
+          <Key>
+            <PropertyRef Name="clte_contacto_ID" />
+          </Key>
+          <Property Name="clte_contacto_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="dpto" Type="varchar" MaxLength="50" />
+          <Property Name="contacto_nom" Type="varchar" MaxLength="50" />
+          <Property Name="tel1" Type="varchar" MaxLength="30" />
+          <Property Name="tel2" Type="varchar" MaxLength="30" />
+          <Property Name="email1" Type="varchar" MaxLength="50" />
+          <Property Name="email2" Type="varchar" MaxLength="50" />
+          <Property Name="callenum" Type="varchar" MaxLength="300" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="6" />
+          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="clte_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_clte_obra_rpt">
+          <Key>
+            <PropertyRef Name="clte_obra_rpt_ID" />
+          </Key>
+          <Property Name="clte_obra_rpt_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="est_clte_obra_rpt_ID" Type="int" />
+          <Property Name="nombre_archivo" Type="varchar" MaxLength="50" />
+          <Property Name="ruta_archivo" Type="varchar(max)" />
+          <Property Name="registro" Type="date" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="clte_obras_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_clte_obras">
+          <Key>
+            <PropertyRef Name="clte_obras_ID" />
+          </Key>
+          <Property Name="clte_obras_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="est_obra_ID" Type="int" />
+          <Property Name="clave_obra" Type="varchar" MaxLength="50" />
+          <Property Name="desc_obra" Type="varchar(max)" />
+          <Property Name="coordinador" Type="varchar" MaxLength="150" />
+          <Property Name="contacto_obra" Type="varchar" MaxLength="150" />
+          <Property Name="tipo_servicio_ID" Type="int" Nullable="false" />
+          <Property Name="comentarios" Type="varchar(max)" />
+          <Property Name="clte_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_emp">
+          <Key>
+            <PropertyRef Name="empresa_ID" />
+          </Key>
+          <Property Name="empresa_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="estatus_ID" Type="int" />
+          <Property Name="empresa_nom" Type="varchar" MaxLength="50" />
+          <Property Name="telefono" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="callenum" Type="varchar" MaxLength="350" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="6" />
+          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="registro" Type="datetime" />
+        </EntityType>
+        <EntityType Name="inf_ensaye_esp">
+          <Key>
+            <PropertyRef Name="ensaye_esp_ID" />
+          </Key>
+          <Property Name="ensaye_esp_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ensaye_esp_cod" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_dia" Type="int" />
+          <Property Name="ensaye_esp_numdia" Type="int" />
+          <Property Name="ensaye_esp_num" Type="int" />
+          <Property Name="ensaye_esp_registro" Type="date" />
+          <Property Name="ensaye_esp_est_ID" Type="int" Nullable="false" />
+          <Property Name="cde" Type="int" />
+          <Property Name="cdem" Type="int" />
+          <Property Name="clave_ensa_a" Type="int" />
+          <Property Name="masa_a" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_a" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_b" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_a" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_b" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a" Type="varchar" MaxLength="50" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="concreto_rpc_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_prosp_cont">
+          <Key>
+            <PropertyRef Name="prosp_cont_ID" />
+          </Key>
+          <Property Name="prosp_cont_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="dpto" Type="varchar" MaxLength="50" />
+          <Property Name="contacto" Type="varchar" MaxLength="50" />
+          <Property Name="tel1" Type="varchar" MaxLength="30" />
+          <Property Name="tel2" Type="varchar" MaxLength="30" />
+          <Property Name="email1" Type="varchar" MaxLength="50" />
+          <Property Name="email2" Type="varchar" MaxLength="50" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="prospecto_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_prosp_seg">
+          <Key>
+            <PropertyRef Name="prosp_seg_ID" />
+          </Key>
+          <Property Name="prosp_seg_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="prosp_taccion_ID" Type="int" />
+          <Property Name="comentarios" Type="varchar(max)" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="prosp_cont_ID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="inf_prospectos">
+          <Key>
+            <PropertyRef Name="prospecto_ID" />
+          </Key>
+          <Property Name="prospecto_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="prosp_giro_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_tserv_ID" Type="int" Nullable="false" />
+          <Property Name="prosp_est_ID" Type="int" />
+          <Property Name="cod_prospecto" Type="varchar" MaxLength="20" />
+          <Property Name="prosp_tipocont_ID" Type="int" Nullable="false" />
+          <Property Name="empresa" Type="varchar" MaxLength="250" />
+          <Property Name="web" Type="varchar" MaxLength="50" />
+          <Property Name="callenum" Type="varchar" MaxLength="300" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="6" />
+          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="empresa_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_rpc">
+          <Key>
+            <PropertyRef Name="concreto_rpc_ID" />
+          </Key>
+          <Property Name="concreto_rpc_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="concreto_est_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_est_muestra" Type="varchar" MaxLength="50" />
+          <Property Name="fecha_colado" Type="datetime" />
+          <Property Name="fecha_recibe" Type="datetime" />
+          <Property Name="entrega" Type="varchar" MaxLength="50" />
+          <Property Name="recibe" Type="varchar" MaxLength="50" />
+          <Property Name="presion" Type="int" />
+          <Property Name="especimen_tipo_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_tipo_ID" Type="int" Nullable="false" />
+          <Property Name="concreto_situacion_ID" Type="int" Nullable="false" />
+          <Property Name="procedecia" Type="varchar" MaxLength="50" />
+          <Property Name="elemento" Type="varchar" MaxLength="50" />
+          <Property Name="dosificacion" Type="varchar" MaxLength="50" />
+          <Property Name="resistencia" Type="varchar" MaxLength="50" />
+          <Property Name="clase" Type="int" />
+          <Property Name="reva" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tma" Type="int" />
+          <Property Name="olla" Type="varchar" MaxLength="50" />
+          <Property Name="remision" Type="varchar" MaxLength="50" />
+          <Property Name="salida_planta" Type="time" Precision="7" />
+          <Property Name="llegada_obra" Type="time" Precision="7" />
+          <Property Name="desca_ini" Type="time" Precision="7" />
+          <Property Name="desca_term" Type="time" Precision="7" />
+          <Property Name="vol" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="revb" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="localiza" Type="varchar" MaxLength="150" />
+          <Property Name="registro" Type="datetime" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="clte_obras_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_sepomex">
+          <Key>
+            <PropertyRef Name="d_codigo" />
+            <PropertyRef Name="id_asenta_cpcons" />
+          </Key>
+          <Property Name="d_codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="d_asenta" Type="varchar" MaxLength="150" />
+          <Property Name="d_tipo_asenta" Type="varchar" MaxLength="50" />
+          <Property Name="d_mnpio" Type="varchar" MaxLength="50" />
+          <Property Name="d_estado" Type="varchar" MaxLength="50" />
+          <Property Name="d_ciudad" Type="varchar" MaxLength="50" />
+          <Property Name="d_cp" Type="varchar" MaxLength="50" />
+          <Property Name="c_estado" Type="varchar" MaxLength="50" />
+          <Property Name="c_oficina" Type="varchar" MaxLength="50" />
+          <Property Name="c_cp" Type="varchar" MaxLength="50" />
+          <Property Name="c_tipo_asenta" Type="varchar" MaxLength="50" />
+          <Property Name="c_mnpio" Type="varchar" MaxLength="50" />
+          <Property Name="id_asenta_cpcons" Type="int" Nullable="false" />
+          <Property Name="d_zona" Type="varchar" MaxLength="50" />
+          <Property Name="c_cve_ciudad" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="inf_usr_bancario">
+          <Key>
+            <PropertyRef Name="usr_bancario_ID" />
+          </Key>
+          <Property Name="usr_bancario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="banco_ID" Type="int" />
+          <Property Name="tarjeta" Type="varchar" MaxLength="50" />
+          <Property Name="clabe" Type="varchar" MaxLength="50" />
+          <Property Name="complementos" Type="varchar" MaxLength="50" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_usr_contacto">
+          <Key>
+            <PropertyRef Name="usr_contacto_ID" />
+          </Key>
+          <Property Name="usr_contacto_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="tel" Type="varchar" MaxLength="50" />
+          <Property Name="tel_alt" Type="varchar" MaxLength="50" />
+          <Property Name="correo" Type="varchar" MaxLength="50" />
+          <Property Name="correo_alt" Type="varchar" MaxLength="50" />
+          <Property Name="callenum" Type="varchar" MaxLength="350" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="50" />
+          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="inf_usr_escolar">
+          <Key>
+            <PropertyRef Name="usr_escolar_ID" />
+          </Key>
+          <Property Name="usr_escolar_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="tipo_escolar_ID" Type="int" />
+          <Property Name="grado_escolar" Type="varchar" MaxLength="50" />
+          <Property Name="titulo" Type="varchar" MaxLength="50" />
+          <Property Name="fecha_escolar" Type="nchar" MaxLength="10" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_usr_medicos">
+          <Key>
+            <PropertyRef Name="usr_medicos_ID" />
+          </Key>
+          <Property Name="usr_medicos_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="estatura" Type="varchar" MaxLength="50" />
+          <Property Name="peso" Type="varchar" MaxLength="50" />
+          <Property Name="tipo_sangre" Type="varchar" MaxLength="50" />
+          <Property Name="alergia_ID" Type="int" />
+          <Property Name="alergia" Type="varchar" MaxLength="50" />
+          <Property Name="tratamiento" Type="varchar(max)" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inf_usr_personales">
+          <Key>
+            <PropertyRef Name="usr_personales_ID" />
+          </Key>
+          <Property Name="usr_personales_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="nombres" Type="varchar" MaxLength="50" />
+          <Property Name="apaterno" Type="varchar" MaxLength="50" />
+          <Property Name="amaterno" Type="varchar" MaxLength="50" />
+          <Property Name="genero_ID" Type="int" Nullable="false" />
+          <Property Name="estcivil_ID" Type="int" Nullable="false" />
+          <Property Name="hijos" Type="int" />
+          <Property Name="cumple" Type="date" />
+          <Property Name="licencia" Type="varchar" MaxLength="50" />
+          <Property Name="rfc" Type="varchar" MaxLength="50" />
+          <Property Name="curp" Type="varchar" MaxLength="50" />
+          <Property Name="nss" Type="varchar" MaxLength="50" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="inf_usr_rh">
+          <Key>
+            <PropertyRef Name="usr_rh_ID" />
+          </Key>
+          <Property Name="usr_rh_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="fecha_ingreso" Type="date" />
+          <Property Name="area_ID" Type="int" Nullable="false" />
+          <Property Name="perfil_ID" Type="int" Nullable="false" />
+          <Property Name="jefe_inmediato" Type="varchar" MaxLength="50" />
+          <Property Name="comentarios" Type="varchar(max)" />
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <EntityType Name="inf_usuario">
+          <Key>
+            <PropertyRef Name="usuario_ID" />
+          </Key>
+          <Property Name="usuario_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="est_usr_ID" Type="int" />
+          <Property Name="cod_usr" Type="varchar" MaxLength="50" />
+          <Property Name="usr" Type="varchar" MaxLength="50" />
+          <Property Name="clave" Type="varchar" MaxLength="50" />
+          <Property Name="correo_corp" Type="varchar" MaxLength="50" />
+          <Property Name="empresa_ID" Type="uniqueidentifier" />
+          <Property Name="registro" Type="date" />
+        </EntityType>
+        <Association Name="FK_inf_clte_contacto_inf_clte">
+          <End Role="inf_clte" Type="Self.inf_clte" Multiplicity="1" />
+          <End Role="inf_clte_contacto" Type="Self.inf_clte_contacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte">
+              <PropertyRef Name="clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_contacto">
+              <PropertyRef Name="clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_fact_est_clte">
+          <End Role="fact_est_clte" Type="Self.fact_est_clte" Multiplicity="0..1" />
+          <End Role="inf_clte" Type="Self.inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_clte">
+              <PropertyRef Name="est_clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="est_clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_fact_tipo_rfc">
+          <End Role="fact_tipo_rfc" Type="Self.fact_tipo_rfc" Multiplicity="0..1" />
+          <End Role="inf_clte" Type="Self.inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_rfc">
+              <PropertyRef Name="tipo_rfc_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="tipo_rfc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_inf_emp">
+          <End Role="inf_emp" Type="Self.inf_emp" Multiplicity="1" />
+          <End Role="inf_clte" Type="Self.inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt">
+          <End Role="fact_est_clte_obra_rpt" Type="Self.fact_est_clte_obra_rpt" Multiplicity="0..1" />
+          <End Role="inf_clte_obra_rpt" Type="Self.inf_clte_obra_rpt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_clte_obra_rpt">
+              <PropertyRef Name="est_clte_obra_rpt_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obra_rpt">
+              <PropertyRef Name="est_clte_obra_rpt_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obra_rpt_inf_clte_obras">
+          <End Role="inf_clte_obras" Type="Self.inf_clte_obras" Multiplicity="1" />
+          <End Role="inf_clte_obra_rpt" Type="Self.inf_clte_obra_rpt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte_obras">
+              <PropertyRef Name="clte_obras_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obra_rpt">
+              <PropertyRef Name="clte_obras_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_fact_est_obra">
+          <End Role="fact_est_obra" Type="Self.fact_est_obra" Multiplicity="0..1" />
+          <End Role="inf_clte_obras" Type="Self.inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_obra">
+              <PropertyRef Name="est_obra_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="est_obra_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_fact_tipo_servicio">
+          <End Role="fact_tipo_servicio" Type="Self.fact_tipo_servicio" Multiplicity="1" />
+          <End Role="inf_clte_obras" Type="Self.inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_servicio">
+              <PropertyRef Name="tipo_servicio_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="tipo_servicio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_inf_clte">
+          <End Role="inf_clte" Type="Self.inf_clte" Multiplicity="1" />
+          <End Role="inf_clte_obras" Type="Self.inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte">
+              <PropertyRef Name="clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_ensaye_esp_fact_ensaye_esp_est">
+          <End Role="fact_ensaye_esp_est" Type="Self.fact_ensaye_esp_est" Multiplicity="1" />
+          <End Role="inf_ensaye_esp" Type="Self.inf_ensaye_esp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_ensaye_esp_est">
+              <PropertyRef Name="ensaye_esp_est_ID" />
+            </Principal>
+            <Dependent Role="inf_ensaye_esp">
+              <PropertyRef Name="ensaye_esp_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_ensaye_esp_inf_rpc">
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="1" />
+          <End Role="inf_ensaye_esp" Type="Self.inf_ensaye_esp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_rpc">
+              <PropertyRef Name="concreto_rpc_ID" />
+            </Principal>
+            <Dependent Role="inf_ensaye_esp">
+              <PropertyRef Name="concreto_rpc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_cont_inf_prospectos">
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="1" />
+          <End Role="inf_prosp_cont" Type="Self.inf_prosp_cont" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_prospectos">
+              <PropertyRef Name="prospecto_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_cont">
+              <PropertyRef Name="prospecto_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_seg_fact_prosp_taccion">
+          <End Role="fact_prosp_taccion" Type="Self.fact_prosp_taccion" Multiplicity="0..1" />
+          <End Role="inf_prosp_seg" Type="Self.inf_prosp_seg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_taccion">
+              <PropertyRef Name="prosp_taccion_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_seg">
+              <PropertyRef Name="prosp_taccion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_seg_inf_prosp_cont">
+          <End Role="inf_prosp_cont" Type="Self.inf_prosp_cont" Multiplicity="0..1" />
+          <End Role="inf_prosp_seg" Type="Self.inf_prosp_seg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_prosp_cont">
+              <PropertyRef Name="prosp_cont_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_seg">
+              <PropertyRef Name="prosp_cont_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_est">
+          <End Role="fact_prosp_est" Type="Self.fact_prosp_est" Multiplicity="0..1" />
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_est">
+              <PropertyRef Name="prosp_est_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_giro">
+          <End Role="fact_prosp_giro" Type="Self.fact_prosp_giro" Multiplicity="1" />
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_giro">
+              <PropertyRef Name="prosp_giro_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_giro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_tcont">
+          <End Role="fact_prosp_tcont" Type="Self.fact_prosp_tcont" Multiplicity="1" />
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_tcont">
+              <PropertyRef Name="prosp_tipocont_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_tipocont_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_tserv">
+          <End Role="fact_prosp_tserv" Type="Self.fact_prosp_tserv" Multiplicity="1" />
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_tserv">
+              <PropertyRef Name="prosp_tserv_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_tserv_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_inf_emp">
+          <End Role="inf_emp" Type="Self.inf_emp" Multiplicity="1" />
+          <End Role="inf_prospectos" Type="Self.inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_est">
+          <End Role="fact_concreto_est" Type="Self.fact_concreto_est" Multiplicity="1" />
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_est">
+              <PropertyRef Name="concreto_est_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_situacion">
+          <End Role="fact_concreto_situacion" Type="Self.fact_concreto_situacion" Multiplicity="1" />
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_situacion">
+              <PropertyRef Name="concreto_situacion_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_situacion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_tipo">
+          <End Role="fact_concreto_tipo" Type="Self.fact_concreto_tipo" Multiplicity="1" />
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_tipo">
+              <PropertyRef Name="concreto_tipo_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_tipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_especimen_tipo">
+          <End Role="fact_especimen_tipo" Type="Self.fact_especimen_tipo" Multiplicity="1" />
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_especimen_tipo">
+              <PropertyRef Name="especimen_tipo_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="especimen_tipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_inf_clte_obras">
+          <End Role="inf_clte_obras" Type="Self.inf_clte_obras" Multiplicity="1" />
+          <End Role="inf_rpc" Type="Self.inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte_obras">
+              <PropertyRef Name="clte_obras_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="clte_obras_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_bancario_fact_banco">
+          <End Role="fact_banco" Type="Self.fact_banco" Multiplicity="0..1" />
+          <End Role="inf_usr_bancario" Type="Self.inf_usr_bancario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_banco">
+              <PropertyRef Name="banco_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_bancario">
+              <PropertyRef Name="banco_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_bancario_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_bancario" Type="Self.inf_usr_bancario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_bancario">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_contacto_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_contacto" Type="Self.inf_usr_contacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_contacto">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_escolar_fact_tipo_escolar">
+          <End Role="fact_tipo_escolar" Type="Self.fact_tipo_escolar" Multiplicity="0..1" />
+          <End Role="inf_usr_escolar" Type="Self.inf_usr_escolar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_escolar">
+              <PropertyRef Name="tipo_escolar_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_escolar">
+              <PropertyRef Name="tipo_escolar_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_escolar_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_escolar" Type="Self.inf_usr_escolar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_escolar">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_medicos_fact_alergia">
+          <End Role="fact_alergia" Type="Self.fact_alergia" Multiplicity="0..1" />
+          <End Role="inf_usr_medicos" Type="Self.inf_usr_medicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_alergia">
+              <PropertyRef Name="alergia_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_medicos">
+              <PropertyRef Name="alergia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_medicos_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_medicos" Type="Self.inf_usr_medicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_medicos">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_fact_estcivil1">
+          <End Role="fact_estcivil" Type="Self.fact_estcivil" Multiplicity="1" />
+          <End Role="inf_usr_personales" Type="Self.inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_estcivil">
+              <PropertyRef Name="estcivil_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="estcivil_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_fact_genero1">
+          <End Role="fact_genero" Type="Self.fact_genero" Multiplicity="1" />
+          <End Role="inf_usr_personales" Type="Self.inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_genero">
+              <PropertyRef Name="genero_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="genero_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_personales" Type="Self.inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_rh_fact_area">
+          <End Role="fact_area" Type="Self.fact_area" Multiplicity="1" />
+          <End Role="inf_usr_rh" Type="Self.inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_area">
+              <PropertyRef Name="area_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="area_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_rh_fact_perfil">
+          <End Role="fact_perfil" Type="Self.fact_perfil" Multiplicity="1" />
+          <End Role="inf_usr_rh" Type="Self.inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_perfil">
+              <PropertyRef Name="perfil_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="perfil_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usuario_fact_est_usr">
+          <End Role="fact_est_usr" Type="Self.fact_est_usr" Multiplicity="0..1" />
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_usr">
+              <PropertyRef Name="est_usr_ID" />
+            </Principal>
+            <Dependent Role="inf_usuario">
+              <PropertyRef Name="est_usr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usuario_inf_emp">
+          <End Role="inf_emp" Type="Self.inf_emp" Multiplicity="0..1" />
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_usuario">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usr_rh_inf_usuario">
+          <End Role="inf_usuario" Type="Self.inf_usuario" Multiplicity="1" />
+          <End Role="inf_usr_rh" Type="Self.inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bd_labModelStoreContainer">
+          <EntitySet Name="fact_alergia" EntityType="Self.fact_alergia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_area" EntityType="Self.fact_area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_banco" EntityType="Self.fact_banco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_concreto_est" EntityType="Self.fact_concreto_est" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_concreto_situacion" EntityType="Self.fact_concreto_situacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_concreto_tipo" EntityType="Self.fact_concreto_tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_ensaye_esp_est" EntityType="Self.fact_ensaye_esp_est" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_especimen_tipo" EntityType="Self.fact_especimen_tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_est_clte" EntityType="Self.fact_est_clte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_est_clte_obra_rpt" EntityType="Self.fact_est_clte_obra_rpt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_est_obra" EntityType="Self.fact_est_obra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_est_usr" EntityType="Self.fact_est_usr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_estcivil" EntityType="Self.fact_estcivil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_genero" EntityType="Self.fact_genero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_perfil" EntityType="Self.fact_perfil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_prosp_est" EntityType="Self.fact_prosp_est" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_prosp_giro" EntityType="Self.fact_prosp_giro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_prosp_taccion" EntityType="Self.fact_prosp_taccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_prosp_tcont" EntityType="Self.fact_prosp_tcont" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_prosp_tserv" EntityType="Self.fact_prosp_tserv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_tipo_escolar" EntityType="Self.fact_tipo_escolar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_tipo_rfc" EntityType="Self.fact_tipo_rfc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fact_tipo_servicio" EntityType="Self.fact_tipo_servicio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_clte" EntityType="Self.inf_clte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_clte_contacto" EntityType="Self.inf_clte_contacto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_clte_obra_rpt" EntityType="Self.inf_clte_obra_rpt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_clte_obras" EntityType="Self.inf_clte_obras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_emp" EntityType="Self.inf_emp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_ensaye_esp" EntityType="Self.inf_ensaye_esp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_prosp_cont" EntityType="Self.inf_prosp_cont" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_prosp_seg" EntityType="Self.inf_prosp_seg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_prospectos" EntityType="Self.inf_prospectos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_rpc" EntityType="Self.inf_rpc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_sepomex" EntityType="Self.inf_sepomex" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_bancario" EntityType="Self.inf_usr_bancario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_contacto" EntityType="Self.inf_usr_contacto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_escolar" EntityType="Self.inf_usr_escolar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_medicos" EntityType="Self.inf_usr_medicos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_personales" EntityType="Self.inf_usr_personales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usr_rh" EntityType="Self.inf_usr_rh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inf_usuario" EntityType="Self.inf_usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_inf_clte_contacto_inf_clte" Association="Self.FK_inf_clte_contacto_inf_clte">
+            <End Role="inf_clte" EntitySet="inf_clte" />
+            <End Role="inf_clte_contacto" EntitySet="inf_clte_contacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_fact_est_clte" Association="Self.FK_inf_clte_fact_est_clte">
+            <End Role="fact_est_clte" EntitySet="fact_est_clte" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_fact_tipo_rfc" Association="Self.FK_inf_clte_fact_tipo_rfc">
+            <End Role="fact_tipo_rfc" EntitySet="fact_tipo_rfc" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_inf_emp" Association="Self.FK_inf_clte_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt" Association="Self.FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt">
+            <End Role="fact_est_clte_obra_rpt" EntitySet="fact_est_clte_obra_rpt" />
+            <End Role="inf_clte_obra_rpt" EntitySet="inf_clte_obra_rpt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obra_rpt_inf_clte_obras" Association="Self.FK_inf_clte_obra_rpt_inf_clte_obras">
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+            <End Role="inf_clte_obra_rpt" EntitySet="inf_clte_obra_rpt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_fact_est_obra" Association="Self.FK_inf_clte_obras_fact_est_obra">
+            <End Role="fact_est_obra" EntitySet="fact_est_obra" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_fact_tipo_servicio" Association="Self.FK_inf_clte_obras_fact_tipo_servicio">
+            <End Role="fact_tipo_servicio" EntitySet="fact_tipo_servicio" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_inf_clte" Association="Self.FK_inf_clte_obras_inf_clte">
+            <End Role="inf_clte" EntitySet="inf_clte" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_ensaye_esp_fact_ensaye_esp_est" Association="Self.FK_inf_ensaye_esp_fact_ensaye_esp_est">
+            <End Role="fact_ensaye_esp_est" EntitySet="fact_ensaye_esp_est" />
+            <End Role="inf_ensaye_esp" EntitySet="inf_ensaye_esp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_ensaye_esp_inf_rpc" Association="Self.FK_inf_ensaye_esp_inf_rpc">
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+            <End Role="inf_ensaye_esp" EntitySet="inf_ensaye_esp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_cont_inf_prospectos" Association="Self.FK_inf_prosp_cont_inf_prospectos">
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+            <End Role="inf_prosp_cont" EntitySet="inf_prosp_cont" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_seg_fact_prosp_taccion" Association="Self.FK_inf_prosp_seg_fact_prosp_taccion">
+            <End Role="fact_prosp_taccion" EntitySet="fact_prosp_taccion" />
+            <End Role="inf_prosp_seg" EntitySet="inf_prosp_seg" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_seg_inf_prosp_cont" Association="Self.FK_inf_prosp_seg_inf_prosp_cont">
+            <End Role="inf_prosp_cont" EntitySet="inf_prosp_cont" />
+            <End Role="inf_prosp_seg" EntitySet="inf_prosp_seg" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_est" Association="Self.FK_inf_prospectos_fact_prosp_est">
+            <End Role="fact_prosp_est" EntitySet="fact_prosp_est" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_giro" Association="Self.FK_inf_prospectos_fact_prosp_giro">
+            <End Role="fact_prosp_giro" EntitySet="fact_prosp_giro" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_tcont" Association="Self.FK_inf_prospectos_fact_prosp_tcont">
+            <End Role="fact_prosp_tcont" EntitySet="fact_prosp_tcont" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_tserv" Association="Self.FK_inf_prospectos_fact_prosp_tserv">
+            <End Role="fact_prosp_tserv" EntitySet="fact_prosp_tserv" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_inf_emp" Association="Self.FK_inf_prospectos_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_est" Association="Self.FK_inf_rpc_fact_concreto_est">
+            <End Role="fact_concreto_est" EntitySet="fact_concreto_est" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_situacion" Association="Self.FK_inf_rpc_fact_concreto_situacion">
+            <End Role="fact_concreto_situacion" EntitySet="fact_concreto_situacion" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_tipo" Association="Self.FK_inf_rpc_fact_concreto_tipo">
+            <End Role="fact_concreto_tipo" EntitySet="fact_concreto_tipo" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_especimen_tipo" Association="Self.FK_inf_rpc_fact_especimen_tipo">
+            <End Role="fact_especimen_tipo" EntitySet="fact_especimen_tipo" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_inf_clte_obras" Association="Self.FK_inf_rpc_inf_clte_obras">
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_bancario_fact_banco" Association="Self.FK_inf_usr_bancario_fact_banco">
+            <End Role="fact_banco" EntitySet="fact_banco" />
+            <End Role="inf_usr_bancario" EntitySet="inf_usr_bancario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_bancario_inf_usuario" Association="Self.FK_inf_usr_bancario_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_bancario" EntitySet="inf_usr_bancario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_contacto_inf_usuario" Association="Self.FK_inf_usr_contacto_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_contacto" EntitySet="inf_usr_contacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_escolar_fact_tipo_escolar" Association="Self.FK_inf_usr_escolar_fact_tipo_escolar">
+            <End Role="fact_tipo_escolar" EntitySet="fact_tipo_escolar" />
+            <End Role="inf_usr_escolar" EntitySet="inf_usr_escolar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_escolar_inf_usuario" Association="Self.FK_inf_usr_escolar_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_escolar" EntitySet="inf_usr_escolar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_medicos_fact_alergia" Association="Self.FK_inf_usr_medicos_fact_alergia">
+            <End Role="fact_alergia" EntitySet="fact_alergia" />
+            <End Role="inf_usr_medicos" EntitySet="inf_usr_medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_medicos_inf_usuario" Association="Self.FK_inf_usr_medicos_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_medicos" EntitySet="inf_usr_medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_fact_estcivil1" Association="Self.FK_inf_usr_personales_fact_estcivil1">
+            <End Role="fact_estcivil" EntitySet="fact_estcivil" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_fact_genero1" Association="Self.FK_inf_usr_personales_fact_genero1">
+            <End Role="fact_genero" EntitySet="fact_genero" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_inf_usuario" Association="Self.FK_inf_usr_personales_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_rh_fact_area" Association="Self.FK_inf_usr_rh_fact_area">
+            <End Role="fact_area" EntitySet="fact_area" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_rh_fact_perfil" Association="Self.FK_inf_usr_rh_fact_perfil">
+            <End Role="fact_perfil" EntitySet="fact_perfil" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usuario_fact_est_usr" Association="Self.FK_inf_usuario_fact_est_usr">
+            <End Role="fact_est_usr" EntitySet="fact_est_usr" />
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usuario_inf_emp" Association="Self.FK_inf_usuario_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usr_rh_inf_usuario" Association="Self.FK_usr_rh_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bd_labModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="bd_labEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fact_alergia" EntityType="bd_labModel.fact_alergia" />
+          <EntitySet Name="fact_area" EntityType="bd_labModel.fact_area" />
+          <EntitySet Name="fact_banco" EntityType="bd_labModel.fact_banco" />
+          <EntitySet Name="fact_concreto_est" EntityType="bd_labModel.fact_concreto_est" />
+          <EntitySet Name="fact_concreto_situacion" EntityType="bd_labModel.fact_concreto_situacion" />
+          <EntitySet Name="fact_concreto_tipo" EntityType="bd_labModel.fact_concreto_tipo" />
+          <EntitySet Name="fact_ensaye_esp_est" EntityType="bd_labModel.fact_ensaye_esp_est" />
+          <EntitySet Name="fact_especimen_tipo" EntityType="bd_labModel.fact_especimen_tipo" />
+          <EntitySet Name="fact_est_clte" EntityType="bd_labModel.fact_est_clte" />
+          <EntitySet Name="fact_est_clte_obra_rpt" EntityType="bd_labModel.fact_est_clte_obra_rpt" />
+          <EntitySet Name="fact_est_obra" EntityType="bd_labModel.fact_est_obra" />
+          <EntitySet Name="fact_est_usr" EntityType="bd_labModel.fact_est_usr" />
+          <EntitySet Name="fact_estcivil" EntityType="bd_labModel.fact_estcivil" />
+          <EntitySet Name="fact_genero" EntityType="bd_labModel.fact_genero" />
+          <EntitySet Name="fact_perfil" EntityType="bd_labModel.fact_perfil" />
+          <EntitySet Name="fact_prosp_est" EntityType="bd_labModel.fact_prosp_est" />
+          <EntitySet Name="fact_prosp_giro" EntityType="bd_labModel.fact_prosp_giro" />
+          <EntitySet Name="fact_prosp_taccion" EntityType="bd_labModel.fact_prosp_taccion" />
+          <EntitySet Name="fact_prosp_tcont" EntityType="bd_labModel.fact_prosp_tcont" />
+          <EntitySet Name="fact_prosp_tserv" EntityType="bd_labModel.fact_prosp_tserv" />
+          <EntitySet Name="fact_tipo_escolar" EntityType="bd_labModel.fact_tipo_escolar" />
+          <EntitySet Name="fact_tipo_rfc" EntityType="bd_labModel.fact_tipo_rfc" />
+          <EntitySet Name="fact_tipo_servicio" EntityType="bd_labModel.fact_tipo_servicio" />
+          <EntitySet Name="inf_clte" EntityType="bd_labModel.inf_clte" />
+          <EntitySet Name="inf_clte_contacto" EntityType="bd_labModel.inf_clte_contacto" />
+          <EntitySet Name="inf_clte_obra_rpt" EntityType="bd_labModel.inf_clte_obra_rpt" />
+          <EntitySet Name="inf_clte_obras" EntityType="bd_labModel.inf_clte_obras" />
+          <EntitySet Name="inf_emp" EntityType="bd_labModel.inf_emp" />
+          <EntitySet Name="inf_ensaye_esp" EntityType="bd_labModel.inf_ensaye_esp" />
+          <EntitySet Name="inf_prosp_cont" EntityType="bd_labModel.inf_prosp_cont" />
+          <EntitySet Name="inf_prosp_seg" EntityType="bd_labModel.inf_prosp_seg" />
+          <EntitySet Name="inf_prospectos" EntityType="bd_labModel.inf_prospectos" />
+          <EntitySet Name="inf_rpc" EntityType="bd_labModel.inf_rpc" />
+          <EntitySet Name="inf_sepomex" EntityType="bd_labModel.inf_sepomex" />
+          <EntitySet Name="inf_usr_bancario" EntityType="bd_labModel.inf_usr_bancario" />
+          <EntitySet Name="inf_usr_contacto" EntityType="bd_labModel.inf_usr_contacto" />
+          <EntitySet Name="inf_usr_escolar" EntityType="bd_labModel.inf_usr_escolar" />
+          <EntitySet Name="inf_usr_medicos" EntityType="bd_labModel.inf_usr_medicos" />
+          <EntitySet Name="inf_usr_personales" EntityType="bd_labModel.inf_usr_personales" />
+          <EntitySet Name="inf_usr_rh" EntityType="bd_labModel.inf_usr_rh" />
+          <EntitySet Name="inf_usuario" EntityType="bd_labModel.inf_usuario" />
+          <AssociationSet Name="FK_inf_usr_medicos_fact_alergia" Association="bd_labModel.FK_inf_usr_medicos_fact_alergia">
+            <End Role="fact_alergia" EntitySet="fact_alergia" />
+            <End Role="inf_usr_medicos" EntitySet="inf_usr_medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_rh_fact_area" Association="bd_labModel.FK_inf_usr_rh_fact_area">
+            <End Role="fact_area" EntitySet="fact_area" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_bancario_fact_banco" Association="bd_labModel.FK_inf_usr_bancario_fact_banco">
+            <End Role="fact_banco" EntitySet="fact_banco" />
+            <End Role="inf_usr_bancario" EntitySet="inf_usr_bancario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_est" Association="bd_labModel.FK_inf_rpc_fact_concreto_est">
+            <End Role="fact_concreto_est" EntitySet="fact_concreto_est" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_situacion" Association="bd_labModel.FK_inf_rpc_fact_concreto_situacion">
+            <End Role="fact_concreto_situacion" EntitySet="fact_concreto_situacion" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_concreto_tipo" Association="bd_labModel.FK_inf_rpc_fact_concreto_tipo">
+            <End Role="fact_concreto_tipo" EntitySet="fact_concreto_tipo" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_ensaye_esp_fact_ensaye_esp_est" Association="bd_labModel.FK_inf_ensaye_esp_fact_ensaye_esp_est">
+            <End Role="fact_ensaye_esp_est" EntitySet="fact_ensaye_esp_est" />
+            <End Role="inf_ensaye_esp" EntitySet="inf_ensaye_esp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_fact_especimen_tipo" Association="bd_labModel.FK_inf_rpc_fact_especimen_tipo">
+            <End Role="fact_especimen_tipo" EntitySet="fact_especimen_tipo" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_fact_est_clte" Association="bd_labModel.FK_inf_clte_fact_est_clte">
+            <End Role="fact_est_clte" EntitySet="fact_est_clte" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt" Association="bd_labModel.FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt">
+            <End Role="fact_est_clte_obra_rpt" EntitySet="fact_est_clte_obra_rpt" />
+            <End Role="inf_clte_obra_rpt" EntitySet="inf_clte_obra_rpt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_fact_est_obra" Association="bd_labModel.FK_inf_clte_obras_fact_est_obra">
+            <End Role="fact_est_obra" EntitySet="fact_est_obra" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usuario_fact_est_usr" Association="bd_labModel.FK_inf_usuario_fact_est_usr">
+            <End Role="fact_est_usr" EntitySet="fact_est_usr" />
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_fact_estcivil1" Association="bd_labModel.FK_inf_usr_personales_fact_estcivil1">
+            <End Role="fact_estcivil" EntitySet="fact_estcivil" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_fact_genero1" Association="bd_labModel.FK_inf_usr_personales_fact_genero1">
+            <End Role="fact_genero" EntitySet="fact_genero" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_rh_fact_perfil" Association="bd_labModel.FK_inf_usr_rh_fact_perfil">
+            <End Role="fact_perfil" EntitySet="fact_perfil" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_est" Association="bd_labModel.FK_inf_prospectos_fact_prosp_est">
+            <End Role="fact_prosp_est" EntitySet="fact_prosp_est" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_giro" Association="bd_labModel.FK_inf_prospectos_fact_prosp_giro">
+            <End Role="fact_prosp_giro" EntitySet="fact_prosp_giro" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_seg_fact_prosp_taccion" Association="bd_labModel.FK_inf_prosp_seg_fact_prosp_taccion">
+            <End Role="fact_prosp_taccion" EntitySet="fact_prosp_taccion" />
+            <End Role="inf_prosp_seg" EntitySet="inf_prosp_seg" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_tcont" Association="bd_labModel.FK_inf_prospectos_fact_prosp_tcont">
+            <End Role="fact_prosp_tcont" EntitySet="fact_prosp_tcont" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_fact_prosp_tserv" Association="bd_labModel.FK_inf_prospectos_fact_prosp_tserv">
+            <End Role="fact_prosp_tserv" EntitySet="fact_prosp_tserv" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_escolar_fact_tipo_escolar" Association="bd_labModel.FK_inf_usr_escolar_fact_tipo_escolar">
+            <End Role="fact_tipo_escolar" EntitySet="fact_tipo_escolar" />
+            <End Role="inf_usr_escolar" EntitySet="inf_usr_escolar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_fact_tipo_rfc" Association="bd_labModel.FK_inf_clte_fact_tipo_rfc">
+            <End Role="fact_tipo_rfc" EntitySet="fact_tipo_rfc" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_fact_tipo_servicio" Association="bd_labModel.FK_inf_clte_obras_fact_tipo_servicio">
+            <End Role="fact_tipo_servicio" EntitySet="fact_tipo_servicio" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_contacto_inf_clte" Association="bd_labModel.FK_inf_clte_contacto_inf_clte">
+            <End Role="inf_clte" EntitySet="inf_clte" />
+            <End Role="inf_clte_contacto" EntitySet="inf_clte_contacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_inf_emp" Association="bd_labModel.FK_inf_clte_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_clte" EntitySet="inf_clte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obras_inf_clte" Association="bd_labModel.FK_inf_clte_obras_inf_clte">
+            <End Role="inf_clte" EntitySet="inf_clte" />
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_clte_obra_rpt_inf_clte_obras" Association="bd_labModel.FK_inf_clte_obra_rpt_inf_clte_obras">
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+            <End Role="inf_clte_obra_rpt" EntitySet="inf_clte_obra_rpt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_rpc_inf_clte_obras" Association="bd_labModel.FK_inf_rpc_inf_clte_obras">
+            <End Role="inf_clte_obras" EntitySet="inf_clte_obras" />
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prospectos_inf_emp" Association="bd_labModel.FK_inf_prospectos_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usuario_inf_emp" Association="bd_labModel.FK_inf_usuario_inf_emp">
+            <End Role="inf_emp" EntitySet="inf_emp" />
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_ensaye_esp_inf_rpc" Association="bd_labModel.FK_inf_ensaye_esp_inf_rpc">
+            <End Role="inf_rpc" EntitySet="inf_rpc" />
+            <End Role="inf_ensaye_esp" EntitySet="inf_ensaye_esp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_cont_inf_prospectos" Association="bd_labModel.FK_inf_prosp_cont_inf_prospectos">
+            <End Role="inf_prospectos" EntitySet="inf_prospectos" />
+            <End Role="inf_prosp_cont" EntitySet="inf_prosp_cont" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_prosp_seg_inf_prosp_cont" Association="bd_labModel.FK_inf_prosp_seg_inf_prosp_cont">
+            <End Role="inf_prosp_cont" EntitySet="inf_prosp_cont" />
+            <End Role="inf_prosp_seg" EntitySet="inf_prosp_seg" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_bancario_inf_usuario" Association="bd_labModel.FK_inf_usr_bancario_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_bancario" EntitySet="inf_usr_bancario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_contacto_inf_usuario" Association="bd_labModel.FK_inf_usr_contacto_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_contacto" EntitySet="inf_usr_contacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_escolar_inf_usuario" Association="bd_labModel.FK_inf_usr_escolar_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_escolar" EntitySet="inf_usr_escolar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_medicos_inf_usuario" Association="bd_labModel.FK_inf_usr_medicos_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_medicos" EntitySet="inf_usr_medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_inf_usr_personales_inf_usuario" Association="bd_labModel.FK_inf_usr_personales_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_personales" EntitySet="inf_usr_personales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usr_rh_inf_usuario" Association="bd_labModel.FK_usr_rh_inf_usuario">
+            <End Role="inf_usuario" EntitySet="inf_usuario" />
+            <End Role="inf_usr_rh" EntitySet="inf_usr_rh" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="fact_alergia">
+          <Key>
+            <PropertyRef Name="alergia_ID" />
+          </Key>
+          <Property Name="alergia_ID" Type="Int32" Nullable="false" />
+          <Property Name="alegia_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_usr_medicos" Relationship="bd_labModel.FK_inf_usr_medicos_fact_alergia" FromRole="fact_alergia" ToRole="inf_usr_medicos" />
+        </EntityType>
+        <EntityType Name="fact_area">
+          <Key>
+            <PropertyRef Name="area_ID" />
+          </Key>
+          <Property Name="area_ID" Type="Int32" Nullable="false" />
+          <Property Name="cod_area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="area_desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="inf_usr_rh" Relationship="bd_labModel.FK_inf_usr_rh_fact_area" FromRole="fact_area" ToRole="inf_usr_rh" />
+        </EntityType>
+        <EntityType Name="fact_banco">
+          <Key>
+            <PropertyRef Name="banco_ID" />
+          </Key>
+          <Property Name="banco_ID" Type="Int32" Nullable="false" />
+          <Property Name="banco_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_usr_bancario" Relationship="bd_labModel.FK_inf_usr_bancario_fact_banco" FromRole="fact_banco" ToRole="inf_usr_bancario" />
+        </EntityType>
+        <EntityType Name="fact_concreto_est">
+          <Key>
+            <PropertyRef Name="concreto_est_ID" />
+          </Key>
+          <Property Name="concreto_est_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_est_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_est" FromRole="fact_concreto_est" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="fact_concreto_situacion">
+          <Key>
+            <PropertyRef Name="concreto_situacion_ID" />
+          </Key>
+          <Property Name="concreto_situacion_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_situacion_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_situacion" FromRole="fact_concreto_situacion" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="fact_concreto_tipo">
+          <Key>
+            <PropertyRef Name="concreto_tipo_ID" />
+          </Key>
+          <Property Name="concreto_tipo_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_tipo_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_tipo" FromRole="fact_concreto_tipo" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="fact_ensaye_esp_est">
+          <Key>
+            <PropertyRef Name="ensaye_esp_est_ID" />
+          </Key>
+          <Property Name="ensaye_esp_est_ID" Type="Int32" Nullable="false" />
+          <Property Name="ensaye_esp_est_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_ensaye_esp" Relationship="bd_labModel.FK_inf_ensaye_esp_fact_ensaye_esp_est" FromRole="fact_ensaye_esp_est" ToRole="inf_ensaye_esp" />
+        </EntityType>
+        <EntityType Name="fact_especimen_tipo">
+          <Key>
+            <PropertyRef Name="especimen_tipo_ID" />
+          </Key>
+          <Property Name="especimen_tipo_ID" Type="Int32" Nullable="false" />
+          <Property Name="especimen_tipo_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_rpc_fact_especimen_tipo" FromRole="fact_especimen_tipo" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="fact_est_clte">
+          <Key>
+            <PropertyRef Name="est_clte_ID" />
+          </Key>
+          <Property Name="est_clte_ID" Type="Int32" Nullable="false" />
+          <Property Name="desc_est_clte" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_clte" Relationship="bd_labModel.FK_inf_clte_fact_est_clte" FromRole="fact_est_clte" ToRole="inf_clte" />
+        </EntityType>
+        <EntityType Name="fact_est_clte_obra_rpt">
+          <Key>
+            <PropertyRef Name="est_clte_obra_rpt_ID" />
+          </Key>
+          <Property Name="est_clte_obra_rpt_ID" Type="Int32" Nullable="false" />
+          <Property Name="est_clte_obra_rpt_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_clte_obra_rpt" Relationship="bd_labModel.FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt" FromRole="fact_est_clte_obra_rpt" ToRole="inf_clte_obra_rpt" />
+        </EntityType>
+        <EntityType Name="fact_est_obra">
+          <Key>
+            <PropertyRef Name="est_obra_ID" />
+          </Key>
+          <Property Name="est_obra_ID" Type="Int32" Nullable="false" />
+          <Property Name="est_obra_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_clte_obras" Relationship="bd_labModel.FK_inf_clte_obras_fact_est_obra" FromRole="fact_est_obra" ToRole="inf_clte_obras" />
+        </EntityType>
+        <EntityType Name="fact_est_usr">
+          <Key>
+            <PropertyRef Name="est_usr_ID" />
+          </Key>
+          <Property Name="est_usr_ID" Type="Int32" Nullable="false" />
+          <Property Name="est_usr_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usuario_fact_est_usr" FromRole="fact_est_usr" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="fact_estcivil">
+          <Key>
+            <PropertyRef Name="estcivil_ID" />
+          </Key>
+          <Property Name="estcivil_ID" Type="Int32" Nullable="false" />
+          <Property Name="cod_estciv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estcivil_desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="inf_usr_personales" Relationship="bd_labModel.FK_inf_usr_personales_fact_estcivil1" FromRole="fact_estcivil" ToRole="inf_usr_personales" />
+        </EntityType>
+        <EntityType Name="fact_genero">
+          <Key>
+            <PropertyRef Name="genero_ID" />
+          </Key>
+          <Property Name="genero_ID" Type="Int32" Nullable="false" />
+          <Property Name="cod_gen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="genero_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="inf_usr_personales" Relationship="bd_labModel.FK_inf_usr_personales_fact_genero1" FromRole="fact_genero" ToRole="inf_usr_personales" />
+        </EntityType>
+        <EntityType Name="fact_perfil">
+          <Key>
+            <PropertyRef Name="perfil_ID" />
+          </Key>
+          <Property Name="perfil_ID" Type="Int32" Nullable="false" />
+          <Property Name="cod_perfil" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="perfil_desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="inf_usr_rh" Relationship="bd_labModel.FK_inf_usr_rh_fact_perfil" FromRole="fact_perfil" ToRole="inf_usr_rh" />
+        </EntityType>
+        <EntityType Name="fact_prosp_est">
+          <Key>
+            <PropertyRef Name="prosp_est_ID" />
+          </Key>
+          <Property Name="prosp_est_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_est_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_est" FromRole="fact_prosp_est" ToRole="inf_prospectos" />
+        </EntityType>
+        <EntityType Name="fact_prosp_giro">
+          <Key>
+            <PropertyRef Name="prosp_giro_ID" />
+          </Key>
+          <Property Name="prosp_giro_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_giro_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_giro" FromRole="fact_prosp_giro" ToRole="inf_prospectos" />
+        </EntityType>
+        <EntityType Name="fact_prosp_taccion">
+          <Key>
+            <PropertyRef Name="prosp_taccion_ID" />
+          </Key>
+          <Property Name="prosp_taccion_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_taccion_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_prosp_seg" Relationship="bd_labModel.FK_inf_prosp_seg_fact_prosp_taccion" FromRole="fact_prosp_taccion" ToRole="inf_prosp_seg" />
+        </EntityType>
+        <EntityType Name="fact_prosp_tcont">
+          <Key>
+            <PropertyRef Name="prosp_tipocont_ID" />
+          </Key>
+          <Property Name="prosp_tipocont_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_tipocont_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_tcont" FromRole="fact_prosp_tcont" ToRole="inf_prospectos" />
+        </EntityType>
+        <EntityType Name="fact_prosp_tserv">
+          <Key>
+            <PropertyRef Name="prosp_tserv_ID" />
+          </Key>
+          <Property Name="prosp_tserv_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_tserv_desc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_tserv" FromRole="fact_prosp_tserv" ToRole="inf_prospectos" />
+        </EntityType>
+        <EntityType Name="fact_tipo_escolar">
+          <Key>
+            <PropertyRef Name="tipo_escolar_ID" />
+          </Key>
+          <Property Name="tipo_escolar_ID" Type="Int32" Nullable="false" />
+          <Property Name="tipo_escolar_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_usr_escolar" Relationship="bd_labModel.FK_inf_usr_escolar_fact_tipo_escolar" FromRole="fact_tipo_escolar" ToRole="inf_usr_escolar" />
+        </EntityType>
+        <EntityType Name="fact_tipo_rfc">
+          <Key>
+            <PropertyRef Name="tipo_rfc_ID" />
+          </Key>
+          <Property Name="tipo_rfc_ID" Type="Int32" Nullable="false" />
+          <Property Name="tipo_rfc_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_clte" Relationship="bd_labModel.FK_inf_clte_fact_tipo_rfc" FromRole="fact_tipo_rfc" ToRole="inf_clte" />
+        </EntityType>
+        <EntityType Name="fact_tipo_servicio">
+          <Key>
+            <PropertyRef Name="tipo_servicio_ID" />
+          </Key>
+          <Property Name="tipo_servicio_ID" Type="Int32" Nullable="false" />
+          <Property Name="tipo_servicio_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inf_clte_obras" Relationship="bd_labModel.FK_inf_clte_obras_fact_tipo_servicio" FromRole="fact_tipo_servicio" ToRole="inf_clte_obras" />
+        </EntityType>
+        <EntityType Name="inf_clte">
+          <Key>
+            <PropertyRef Name="clte_ID" />
+          </Key>
+          <Property Name="clte_ID" Type="Guid" Nullable="false" />
+          <Property Name="est_clte_ID" Type="Int32" />
+          <Property Name="cod_clte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_rfc_ID" Type="Int32" />
+          <Property Name="rfc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="razon_social" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="callenum" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="empresa_ID" Type="Guid" Nullable="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_est_clte" Relationship="bd_labModel.FK_inf_clte_fact_est_clte" FromRole="inf_clte" ToRole="fact_est_clte" />
+          <NavigationProperty Name="fact_tipo_rfc" Relationship="bd_labModel.FK_inf_clte_fact_tipo_rfc" FromRole="inf_clte" ToRole="fact_tipo_rfc" />
+          <NavigationProperty Name="inf_clte_contacto" Relationship="bd_labModel.FK_inf_clte_contacto_inf_clte" FromRole="inf_clte" ToRole="inf_clte_contacto" />
+          <NavigationProperty Name="inf_emp" Relationship="bd_labModel.FK_inf_clte_inf_emp" FromRole="inf_clte" ToRole="inf_emp" />
+          <NavigationProperty Name="inf_clte_obras" Relationship="bd_labModel.FK_inf_clte_obras_inf_clte" FromRole="inf_clte" ToRole="inf_clte_obras" />
+        </EntityType>
+        <EntityType Name="inf_clte_contacto">
+          <Key>
+            <PropertyRef Name="clte_contacto_ID" />
+          </Key>
+          <Property Name="clte_contacto_ID" Type="Guid" Nullable="false" />
+          <Property Name="dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contacto_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tel1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tel2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="callenum" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="clte_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="inf_clte" Relationship="bd_labModel.FK_inf_clte_contacto_inf_clte" FromRole="inf_clte_contacto" ToRole="inf_clte" />
+        </EntityType>
+        <EntityType Name="inf_clte_obra_rpt">
+          <Key>
+            <PropertyRef Name="clte_obra_rpt_ID" />
+          </Key>
+          <Property Name="clte_obra_rpt_ID" Type="Guid" Nullable="false" />
+          <Property Name="est_clte_obra_rpt_ID" Type="Int32" />
+          <Property Name="nombre_archivo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ruta_archivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="clte_obras_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_est_clte_obra_rpt" Relationship="bd_labModel.FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt" FromRole="inf_clte_obra_rpt" ToRole="fact_est_clte_obra_rpt" />
+          <NavigationProperty Name="inf_clte_obras" Relationship="bd_labModel.FK_inf_clte_obra_rpt_inf_clte_obras" FromRole="inf_clte_obra_rpt" ToRole="inf_clte_obras" />
+        </EntityType>
+        <EntityType Name="inf_clte_obras">
+          <Key>
+            <PropertyRef Name="clte_obras_ID" />
+          </Key>
+          <Property Name="clte_obras_ID" Type="Guid" Nullable="false" />
+          <Property Name="est_obra_ID" Type="Int32" />
+          <Property Name="clave_obra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="desc_obra" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="coordinador" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="contacto_obra" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_servicio_ID" Type="Int32" Nullable="false" />
+          <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="clte_ID" Type="Guid" Nullable="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_est_obra" Relationship="bd_labModel.FK_inf_clte_obras_fact_est_obra" FromRole="inf_clte_obras" ToRole="fact_est_obra" />
+          <NavigationProperty Name="fact_tipo_servicio" Relationship="bd_labModel.FK_inf_clte_obras_fact_tipo_servicio" FromRole="inf_clte_obras" ToRole="fact_tipo_servicio" />
+          <NavigationProperty Name="inf_clte" Relationship="bd_labModel.FK_inf_clte_obras_inf_clte" FromRole="inf_clte_obras" ToRole="inf_clte" />
+          <NavigationProperty Name="inf_clte_obra_rpt" Relationship="bd_labModel.FK_inf_clte_obra_rpt_inf_clte_obras" FromRole="inf_clte_obras" ToRole="inf_clte_obra_rpt" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_rpc_inf_clte_obras" FromRole="inf_clte_obras" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="inf_emp">
+          <Key>
+            <PropertyRef Name="empresa_ID" />
+          </Key>
+          <Property Name="empresa_ID" Type="Guid" Nullable="false" />
+          <Property Name="estatus_ID" Type="Int32" />
+          <Property Name="empresa_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="callenum" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="inf_clte" Relationship="bd_labModel.FK_inf_clte_inf_emp" FromRole="inf_emp" ToRole="inf_clte" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prospectos_inf_emp" FromRole="inf_emp" ToRole="inf_prospectos" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usuario_inf_emp" FromRole="inf_emp" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_ensaye_esp">
+          <Key>
+            <PropertyRef Name="ensaye_esp_ID" />
+          </Key>
+          <Property Name="ensaye_esp_ID" Type="Guid" Nullable="false" />
+          <Property Name="ensaye_esp_cod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_dia" Type="Int32" />
+          <Property Name="ensaye_esp_numdia" Type="Int32" />
+          <Property Name="ensaye_esp_num" Type="Int32" />
+          <Property Name="ensaye_esp_registro" Type="DateTime" Precision="0" />
+          <Property Name="ensaye_esp_est_ID" Type="Int32" Nullable="false" />
+          <Property Name="cde" Type="Int32" />
+          <Property Name="cdem" Type="Int32" />
+          <Property Name="clave_ensa_a" Type="Int32" />
+          <Property Name="masa_a" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_a" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_b" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_a" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_b" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="concreto_rpc_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_ensaye_esp_est" Relationship="bd_labModel.FK_inf_ensaye_esp_fact_ensaye_esp_est" FromRole="inf_ensaye_esp" ToRole="fact_ensaye_esp_est" />
+          <NavigationProperty Name="inf_rpc" Relationship="bd_labModel.FK_inf_ensaye_esp_inf_rpc" FromRole="inf_ensaye_esp" ToRole="inf_rpc" />
+        </EntityType>
+        <EntityType Name="inf_prosp_cont">
+          <Key>
+            <PropertyRef Name="prosp_cont_ID" />
+          </Key>
+          <Property Name="prosp_cont_ID" Type="Guid" Nullable="false" />
+          <Property Name="dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tel1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tel2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="prospecto_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="inf_prospectos" Relationship="bd_labModel.FK_inf_prosp_cont_inf_prospectos" FromRole="inf_prosp_cont" ToRole="inf_prospectos" />
+          <NavigationProperty Name="inf_prosp_seg" Relationship="bd_labModel.FK_inf_prosp_seg_inf_prosp_cont" FromRole="inf_prosp_cont" ToRole="inf_prosp_seg" />
+        </EntityType>
+        <EntityType Name="inf_prosp_seg">
+          <Key>
+            <PropertyRef Name="prosp_seg_ID" />
+          </Key>
+          <Property Name="prosp_seg_ID" Type="Guid" Nullable="false" />
+          <Property Name="prosp_taccion_ID" Type="Int32" />
+          <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="prosp_cont_ID" Type="Guid" />
+          <NavigationProperty Name="fact_prosp_taccion" Relationship="bd_labModel.FK_inf_prosp_seg_fact_prosp_taccion" FromRole="inf_prosp_seg" ToRole="fact_prosp_taccion" />
+          <NavigationProperty Name="inf_prosp_cont" Relationship="bd_labModel.FK_inf_prosp_seg_inf_prosp_cont" FromRole="inf_prosp_seg" ToRole="inf_prosp_cont" />
+        </EntityType>
+        <EntityType Name="inf_prospectos">
+          <Key>
+            <PropertyRef Name="prospecto_ID" />
+          </Key>
+          <Property Name="prospecto_ID" Type="Guid" Nullable="false" />
+          <Property Name="prosp_giro_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_tserv_ID" Type="Int32" Nullable="false" />
+          <Property Name="prosp_est_ID" Type="Int32" />
+          <Property Name="cod_prospecto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="prosp_tipocont_ID" Type="Int32" Nullable="false" />
+          <Property Name="empresa" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="web" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="callenum" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="empresa_ID" Type="Guid" Nullable="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_prosp_est" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_est" FromRole="inf_prospectos" ToRole="fact_prosp_est" />
+          <NavigationProperty Name="fact_prosp_giro" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_giro" FromRole="inf_prospectos" ToRole="fact_prosp_giro" />
+          <NavigationProperty Name="fact_prosp_tcont" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_tcont" FromRole="inf_prospectos" ToRole="fact_prosp_tcont" />
+          <NavigationProperty Name="fact_prosp_tserv" Relationship="bd_labModel.FK_inf_prospectos_fact_prosp_tserv" FromRole="inf_prospectos" ToRole="fact_prosp_tserv" />
+          <NavigationProperty Name="inf_emp" Relationship="bd_labModel.FK_inf_prospectos_inf_emp" FromRole="inf_prospectos" ToRole="inf_emp" />
+          <NavigationProperty Name="inf_prosp_cont" Relationship="bd_labModel.FK_inf_prosp_cont_inf_prospectos" FromRole="inf_prospectos" ToRole="inf_prosp_cont" />
+        </EntityType>
+        <EntityType Name="inf_rpc">
+          <Key>
+            <PropertyRef Name="concreto_rpc_ID" />
+          </Key>
+          <Property Name="concreto_rpc_ID" Type="Guid" Nullable="false" />
+          <Property Name="concreto_est_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_est_muestra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_colado" Type="DateTime" Precision="3" />
+          <Property Name="fecha_recibe" Type="DateTime" Precision="3" />
+          <Property Name="entrega" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="recibe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion" Type="Int32" />
+          <Property Name="especimen_tipo_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_tipo_ID" Type="Int32" Nullable="false" />
+          <Property Name="concreto_situacion_ID" Type="Int32" Nullable="false" />
+          <Property Name="procedecia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="elemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dosificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="resistencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clase" Type="Int32" />
+          <Property Name="reva" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tma" Type="Int32" />
+          <Property Name="olla" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="remision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="salida_planta" Type="Time" Precision="7" />
+          <Property Name="llegada_obra" Type="Time" Precision="7" />
+          <Property Name="desca_ini" Type="Time" Precision="7" />
+          <Property Name="desca_term" Type="Time" Precision="7" />
+          <Property Name="vol" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="revb" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="localiza" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="registro" Type="DateTime" Precision="3" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="clte_obras_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_concreto_est" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_est" FromRole="inf_rpc" ToRole="fact_concreto_est" />
+          <NavigationProperty Name="fact_concreto_situacion" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_situacion" FromRole="inf_rpc" ToRole="fact_concreto_situacion" />
+          <NavigationProperty Name="fact_concreto_tipo" Relationship="bd_labModel.FK_inf_rpc_fact_concreto_tipo" FromRole="inf_rpc" ToRole="fact_concreto_tipo" />
+          <NavigationProperty Name="fact_especimen_tipo" Relationship="bd_labModel.FK_inf_rpc_fact_especimen_tipo" FromRole="inf_rpc" ToRole="fact_especimen_tipo" />
+          <NavigationProperty Name="inf_clte_obras" Relationship="bd_labModel.FK_inf_rpc_inf_clte_obras" FromRole="inf_rpc" ToRole="inf_clte_obras" />
+          <NavigationProperty Name="inf_ensaye_esp" Relationship="bd_labModel.FK_inf_ensaye_esp_inf_rpc" FromRole="inf_rpc" ToRole="inf_ensaye_esp" />
+        </EntityType>
+        <EntityType Name="inf_sepomex">
+          <Key>
+            <PropertyRef Name="d_codigo" />
+            <PropertyRef Name="id_asenta_cpcons" />
+          </Key>
+          <Property Name="d_codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_asenta" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="d_tipo_asenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_mnpio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_cp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_oficina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_cp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_tipo_asenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_mnpio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" Nullable="false" />
+          <Property Name="d_zona" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_cve_ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="inf_usr_bancario">
+          <Key>
+            <PropertyRef Name="usr_bancario_ID" />
+          </Key>
+          <Property Name="usr_bancario_ID" Type="Guid" Nullable="false" />
+          <Property Name="banco_ID" Type="Int32" />
+          <Property Name="tarjeta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clabe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="complementos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_banco" Relationship="bd_labModel.FK_inf_usr_bancario_fact_banco" FromRole="inf_usr_bancario" ToRole="fact_banco" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usr_bancario_inf_usuario" FromRole="inf_usr_bancario" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usr_contacto">
+          <Key>
+            <PropertyRef Name="usr_contacto_ID" />
+          </Key>
+          <Property Name="usr_contacto_ID" Type="Guid" Nullable="false" />
+          <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tel_alt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo_alt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="callenum" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usr_contacto_inf_usuario" FromRole="inf_usr_contacto" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usr_escolar">
+          <Key>
+            <PropertyRef Name="usr_escolar_ID" />
+          </Key>
+          <Property Name="usr_escolar_ID" Type="Guid" Nullable="false" />
+          <Property Name="tipo_escolar_ID" Type="Int32" />
+          <Property Name="grado_escolar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_escolar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_tipo_escolar" Relationship="bd_labModel.FK_inf_usr_escolar_fact_tipo_escolar" FromRole="inf_usr_escolar" ToRole="fact_tipo_escolar" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usr_escolar_inf_usuario" FromRole="inf_usr_escolar" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usr_medicos">
+          <Key>
+            <PropertyRef Name="usr_medicos_ID" />
+          </Key>
+          <Property Name="usr_medicos_ID" Type="Guid" Nullable="false" />
+          <Property Name="estatura" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="peso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_sangre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="alergia_ID" Type="Int32" />
+          <Property Name="alergia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tratamiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="fact_alergia" Relationship="bd_labModel.FK_inf_usr_medicos_fact_alergia" FromRole="inf_usr_medicos" ToRole="fact_alergia" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usr_medicos_inf_usuario" FromRole="inf_usr_medicos" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usr_personales">
+          <Key>
+            <PropertyRef Name="usr_personales_ID" />
+          </Key>
+          <Property Name="usr_personales_ID" Type="Guid" Nullable="false" />
+          <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="apaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="amaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="genero_ID" Type="Int32" Nullable="false" />
+          <Property Name="estcivil_ID" Type="Int32" Nullable="false" />
+          <Property Name="hijos" Type="Int32" />
+          <Property Name="cumple" Type="DateTime" Precision="0" />
+          <Property Name="licencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rfc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="curp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nss" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="fact_estcivil" Relationship="bd_labModel.FK_inf_usr_personales_fact_estcivil1" FromRole="inf_usr_personales" ToRole="fact_estcivil" />
+          <NavigationProperty Name="fact_genero" Relationship="bd_labModel.FK_inf_usr_personales_fact_genero1" FromRole="inf_usr_personales" ToRole="fact_genero" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_inf_usr_personales_inf_usuario" FromRole="inf_usr_personales" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usr_rh">
+          <Key>
+            <PropertyRef Name="usr_rh_ID" />
+          </Key>
+          <Property Name="usr_rh_ID" Type="Guid" Nullable="false" />
+          <Property Name="fecha_ingreso" Type="DateTime" Precision="0" />
+          <Property Name="area_ID" Type="Int32" Nullable="false" />
+          <Property Name="perfil_ID" Type="Int32" Nullable="false" />
+          <Property Name="jefe_inmediato" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="fact_area" Relationship="bd_labModel.FK_inf_usr_rh_fact_area" FromRole="inf_usr_rh" ToRole="fact_area" />
+          <NavigationProperty Name="fact_perfil" Relationship="bd_labModel.FK_inf_usr_rh_fact_perfil" FromRole="inf_usr_rh" ToRole="fact_perfil" />
+          <NavigationProperty Name="inf_usuario" Relationship="bd_labModel.FK_usr_rh_inf_usuario" FromRole="inf_usr_rh" ToRole="inf_usuario" />
+        </EntityType>
+        <EntityType Name="inf_usuario">
+          <Key>
+            <PropertyRef Name="usuario_ID" />
+          </Key>
+          <Property Name="usuario_ID" Type="Guid" Nullable="false" />
+          <Property Name="est_usr_ID" Type="Int32" />
+          <Property Name="cod_usr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo_corp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="empresa_ID" Type="Guid" />
+          <Property Name="registro" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="fact_est_usr" Relationship="bd_labModel.FK_inf_usuario_fact_est_usr" FromRole="inf_usuario" ToRole="fact_est_usr" />
+          <NavigationProperty Name="inf_emp" Relationship="bd_labModel.FK_inf_usuario_inf_emp" FromRole="inf_usuario" ToRole="inf_emp" />
+          <NavigationProperty Name="inf_usr_bancario" Relationship="bd_labModel.FK_inf_usr_bancario_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_bancario" />
+          <NavigationProperty Name="inf_usr_contacto" Relationship="bd_labModel.FK_inf_usr_contacto_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_contacto" />
+          <NavigationProperty Name="inf_usr_escolar" Relationship="bd_labModel.FK_inf_usr_escolar_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_escolar" />
+          <NavigationProperty Name="inf_usr_medicos" Relationship="bd_labModel.FK_inf_usr_medicos_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_medicos" />
+          <NavigationProperty Name="inf_usr_personales" Relationship="bd_labModel.FK_inf_usr_personales_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_personales" />
+          <NavigationProperty Name="inf_usr_rh" Relationship="bd_labModel.FK_usr_rh_inf_usuario" FromRole="inf_usuario" ToRole="inf_usr_rh" />
+        </EntityType>
+        <Association Name="FK_inf_usr_medicos_fact_alergia">
+          <End Type="bd_labModel.fact_alergia" Role="fact_alergia" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_usr_medicos" Role="inf_usr_medicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_alergia">
+              <PropertyRef Name="alergia_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_medicos">
+              <PropertyRef Name="alergia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_rh_fact_area">
+          <End Type="bd_labModel.fact_area" Role="fact_area" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_rh" Role="inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_area">
+              <PropertyRef Name="area_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="area_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_bancario_fact_banco">
+          <End Type="bd_labModel.fact_banco" Role="fact_banco" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_usr_bancario" Role="inf_usr_bancario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_banco">
+              <PropertyRef Name="banco_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_bancario">
+              <PropertyRef Name="banco_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_est">
+          <End Type="bd_labModel.fact_concreto_est" Role="fact_concreto_est" Multiplicity="1" />
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_est">
+              <PropertyRef Name="concreto_est_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_situacion">
+          <End Type="bd_labModel.fact_concreto_situacion" Role="fact_concreto_situacion" Multiplicity="1" />
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_situacion">
+              <PropertyRef Name="concreto_situacion_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_situacion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_concreto_tipo">
+          <End Type="bd_labModel.fact_concreto_tipo" Role="fact_concreto_tipo" Multiplicity="1" />
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_concreto_tipo">
+              <PropertyRef Name="concreto_tipo_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="concreto_tipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_ensaye_esp_fact_ensaye_esp_est">
+          <End Type="bd_labModel.fact_ensaye_esp_est" Role="fact_ensaye_esp_est" Multiplicity="1" />
+          <End Type="bd_labModel.inf_ensaye_esp" Role="inf_ensaye_esp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_ensaye_esp_est">
+              <PropertyRef Name="ensaye_esp_est_ID" />
+            </Principal>
+            <Dependent Role="inf_ensaye_esp">
+              <PropertyRef Name="ensaye_esp_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_fact_especimen_tipo">
+          <End Type="bd_labModel.fact_especimen_tipo" Role="fact_especimen_tipo" Multiplicity="1" />
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_especimen_tipo">
+              <PropertyRef Name="especimen_tipo_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="especimen_tipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_fact_est_clte">
+          <End Type="bd_labModel.fact_est_clte" Role="fact_est_clte" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_clte" Role="inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_clte">
+              <PropertyRef Name="est_clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="est_clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obra_rpt_fact_est_clte_obra_rpt">
+          <End Type="bd_labModel.fact_est_clte_obra_rpt" Role="fact_est_clte_obra_rpt" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_clte_obra_rpt" Role="inf_clte_obra_rpt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_clte_obra_rpt">
+              <PropertyRef Name="est_clte_obra_rpt_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obra_rpt">
+              <PropertyRef Name="est_clte_obra_rpt_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_fact_est_obra">
+          <End Type="bd_labModel.fact_est_obra" Role="fact_est_obra" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_clte_obras" Role="inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_obra">
+              <PropertyRef Name="est_obra_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="est_obra_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usuario_fact_est_usr">
+          <End Type="bd_labModel.fact_est_usr" Role="fact_est_usr" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_est_usr">
+              <PropertyRef Name="est_usr_ID" />
+            </Principal>
+            <Dependent Role="inf_usuario">
+              <PropertyRef Name="est_usr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_fact_estcivil1">
+          <End Type="bd_labModel.fact_estcivil" Role="fact_estcivil" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_personales" Role="inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_estcivil">
+              <PropertyRef Name="estcivil_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="estcivil_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_fact_genero1">
+          <End Type="bd_labModel.fact_genero" Role="fact_genero" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_personales" Role="inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_genero">
+              <PropertyRef Name="genero_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="genero_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_rh_fact_perfil">
+          <End Type="bd_labModel.fact_perfil" Role="fact_perfil" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_rh" Role="inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_perfil">
+              <PropertyRef Name="perfil_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="perfil_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_est">
+          <End Type="bd_labModel.fact_prosp_est" Role="fact_prosp_est" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_est">
+              <PropertyRef Name="prosp_est_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_est_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_giro">
+          <End Type="bd_labModel.fact_prosp_giro" Role="fact_prosp_giro" Multiplicity="1" />
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_giro">
+              <PropertyRef Name="prosp_giro_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_giro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_seg_fact_prosp_taccion">
+          <End Type="bd_labModel.fact_prosp_taccion" Role="fact_prosp_taccion" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_prosp_seg" Role="inf_prosp_seg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_taccion">
+              <PropertyRef Name="prosp_taccion_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_seg">
+              <PropertyRef Name="prosp_taccion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_tcont">
+          <End Type="bd_labModel.fact_prosp_tcont" Role="fact_prosp_tcont" Multiplicity="1" />
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_tcont">
+              <PropertyRef Name="prosp_tipocont_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_tipocont_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_fact_prosp_tserv">
+          <End Type="bd_labModel.fact_prosp_tserv" Role="fact_prosp_tserv" Multiplicity="1" />
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_prosp_tserv">
+              <PropertyRef Name="prosp_tserv_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="prosp_tserv_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_escolar_fact_tipo_escolar">
+          <End Type="bd_labModel.fact_tipo_escolar" Role="fact_tipo_escolar" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_usr_escolar" Role="inf_usr_escolar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_escolar">
+              <PropertyRef Name="tipo_escolar_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_escolar">
+              <PropertyRef Name="tipo_escolar_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_fact_tipo_rfc">
+          <End Type="bd_labModel.fact_tipo_rfc" Role="fact_tipo_rfc" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_clte" Role="inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_rfc">
+              <PropertyRef Name="tipo_rfc_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="tipo_rfc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_fact_tipo_servicio">
+          <End Type="bd_labModel.fact_tipo_servicio" Role="fact_tipo_servicio" Multiplicity="1" />
+          <End Type="bd_labModel.inf_clte_obras" Role="inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fact_tipo_servicio">
+              <PropertyRef Name="tipo_servicio_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="tipo_servicio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_contacto_inf_clte">
+          <End Type="bd_labModel.inf_clte" Role="inf_clte" Multiplicity="1" />
+          <End Type="bd_labModel.inf_clte_contacto" Role="inf_clte_contacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte">
+              <PropertyRef Name="clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_contacto">
+              <PropertyRef Name="clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_inf_emp">
+          <End Type="bd_labModel.inf_emp" Role="inf_emp" Multiplicity="1" />
+          <End Type="bd_labModel.inf_clte" Role="inf_clte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_clte">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obras_inf_clte">
+          <End Type="bd_labModel.inf_clte" Role="inf_clte" Multiplicity="1" />
+          <End Type="bd_labModel.inf_clte_obras" Role="inf_clte_obras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte">
+              <PropertyRef Name="clte_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obras">
+              <PropertyRef Name="clte_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_clte_obra_rpt_inf_clte_obras">
+          <End Type="bd_labModel.inf_clte_obras" Role="inf_clte_obras" Multiplicity="1" />
+          <End Type="bd_labModel.inf_clte_obra_rpt" Role="inf_clte_obra_rpt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte_obras">
+              <PropertyRef Name="clte_obras_ID" />
+            </Principal>
+            <Dependent Role="inf_clte_obra_rpt">
+              <PropertyRef Name="clte_obras_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_rpc_inf_clte_obras">
+          <End Type="bd_labModel.inf_clte_obras" Role="inf_clte_obras" Multiplicity="1" />
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_clte_obras">
+              <PropertyRef Name="clte_obras_ID" />
+            </Principal>
+            <Dependent Role="inf_rpc">
+              <PropertyRef Name="clte_obras_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prospectos_inf_emp">
+          <End Type="bd_labModel.inf_emp" Role="inf_emp" Multiplicity="1" />
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_prospectos">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usuario_inf_emp">
+          <End Type="bd_labModel.inf_emp" Role="inf_emp" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_emp">
+              <PropertyRef Name="empresa_ID" />
+            </Principal>
+            <Dependent Role="inf_usuario">
+              <PropertyRef Name="empresa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_ensaye_esp_inf_rpc">
+          <End Type="bd_labModel.inf_rpc" Role="inf_rpc" Multiplicity="1" />
+          <End Type="bd_labModel.inf_ensaye_esp" Role="inf_ensaye_esp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_rpc">
+              <PropertyRef Name="concreto_rpc_ID" />
+            </Principal>
+            <Dependent Role="inf_ensaye_esp">
+              <PropertyRef Name="concreto_rpc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_cont_inf_prospectos">
+          <End Type="bd_labModel.inf_prospectos" Role="inf_prospectos" Multiplicity="1" />
+          <End Type="bd_labModel.inf_prosp_cont" Role="inf_prosp_cont" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_prospectos">
+              <PropertyRef Name="prospecto_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_cont">
+              <PropertyRef Name="prospecto_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_prosp_seg_inf_prosp_cont">
+          <End Type="bd_labModel.inf_prosp_cont" Role="inf_prosp_cont" Multiplicity="0..1" />
+          <End Type="bd_labModel.inf_prosp_seg" Role="inf_prosp_seg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_prosp_cont">
+              <PropertyRef Name="prosp_cont_ID" />
+            </Principal>
+            <Dependent Role="inf_prosp_seg">
+              <PropertyRef Name="prosp_cont_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_bancario_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_bancario" Role="inf_usr_bancario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_bancario">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_contacto_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_contacto" Role="inf_usr_contacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_contacto">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_escolar_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_escolar" Role="inf_usr_escolar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_escolar">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_medicos_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_medicos" Role="inf_usr_medicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_medicos">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_inf_usr_personales_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_personales" Role="inf_usr_personales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_personales">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usr_rh_inf_usuario">
+          <End Type="bd_labModel.inf_usuario" Role="inf_usuario" Multiplicity="1" />
+          <End Type="bd_labModel.inf_usr_rh" Role="inf_usr_rh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inf_usuario">
+              <PropertyRef Name="usuario_ID" />
+            </Principal>
+            <Dependent Role="inf_usr_rh">
+              <PropertyRef Name="usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bd_labModelStoreContainer" CdmEntityContainer="bd_labEntities">
+          <EntitySetMapping Name="fact_alergia">
+            <EntityTypeMapping TypeName="bd_labModel.fact_alergia">
+              <MappingFragment StoreEntitySet="fact_alergia">
+                <ScalarProperty Name="alegia_desc" ColumnName="alegia_desc" />
+                <ScalarProperty Name="alergia_ID" ColumnName="alergia_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_area">
+            <EntityTypeMapping TypeName="bd_labModel.fact_area">
+              <MappingFragment StoreEntitySet="fact_area">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="area_desc" ColumnName="area_desc" />
+                <ScalarProperty Name="cod_area" ColumnName="cod_area" />
+                <ScalarProperty Name="area_ID" ColumnName="area_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_banco">
+            <EntityTypeMapping TypeName="bd_labModel.fact_banco">
+              <MappingFragment StoreEntitySet="fact_banco">
+                <ScalarProperty Name="banco_desc" ColumnName="banco_desc" />
+                <ScalarProperty Name="banco_ID" ColumnName="banco_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_concreto_est">
+            <EntityTypeMapping TypeName="bd_labModel.fact_concreto_est">
+              <MappingFragment StoreEntitySet="fact_concreto_est">
+                <ScalarProperty Name="concreto_est_desc" ColumnName="concreto_est_desc" />
+                <ScalarProperty Name="concreto_est_ID" ColumnName="concreto_est_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_concreto_situacion">
+            <EntityTypeMapping TypeName="bd_labModel.fact_concreto_situacion">
+              <MappingFragment StoreEntitySet="fact_concreto_situacion">
+                <ScalarProperty Name="concreto_situacion_desc" ColumnName="concreto_situacion_desc" />
+                <ScalarProperty Name="concreto_situacion_ID" ColumnName="concreto_situacion_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_concreto_tipo">
+            <EntityTypeMapping TypeName="bd_labModel.fact_concreto_tipo">
+              <MappingFragment StoreEntitySet="fact_concreto_tipo">
+                <ScalarProperty Name="concreto_tipo_desc" ColumnName="concreto_tipo_desc" />
+                <ScalarProperty Name="concreto_tipo_ID" ColumnName="concreto_tipo_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_ensaye_esp_est">
+            <EntityTypeMapping TypeName="bd_labModel.fact_ensaye_esp_est">
+              <MappingFragment StoreEntitySet="fact_ensaye_esp_est">
+                <ScalarProperty Name="ensaye_esp_est_desc" ColumnName="ensaye_esp_est_desc" />
+                <ScalarProperty Name="ensaye_esp_est_ID" ColumnName="ensaye_esp_est_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_especimen_tipo">
+            <EntityTypeMapping TypeName="bd_labModel.fact_especimen_tipo">
+              <MappingFragment StoreEntitySet="fact_especimen_tipo">
+                <ScalarProperty Name="especimen_tipo_desc" ColumnName="especimen_tipo_desc" />
+                <ScalarProperty Name="especimen_tipo_ID" ColumnName="especimen_tipo_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_est_clte">
+            <EntityTypeMapping TypeName="bd_labModel.fact_est_clte">
+              <MappingFragment StoreEntitySet="fact_est_clte">
+                <ScalarProperty Name="desc_est_clte" ColumnName="desc_est_clte" />
+                <ScalarProperty Name="est_clte_ID" ColumnName="est_clte_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_est_clte_obra_rpt">
+            <EntityTypeMapping TypeName="bd_labModel.fact_est_clte_obra_rpt">
+              <MappingFragment StoreEntitySet="fact_est_clte_obra_rpt">
+                <ScalarProperty Name="est_clte_obra_rpt_desc" ColumnName="est_clte_obra_rpt_desc" />
+                <ScalarProperty Name="est_clte_obra_rpt_ID" ColumnName="est_clte_obra_rpt_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_est_obra">
+            <EntityTypeMapping TypeName="bd_labModel.fact_est_obra">
+              <MappingFragment StoreEntitySet="fact_est_obra">
+                <ScalarProperty Name="est_obra_desc" ColumnName="est_obra_desc" />
+                <ScalarProperty Name="est_obra_ID" ColumnName="est_obra_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_est_usr">
+            <EntityTypeMapping TypeName="bd_labModel.fact_est_usr">
+              <MappingFragment StoreEntitySet="fact_est_usr">
+                <ScalarProperty Name="est_usr_desc" ColumnName="est_usr_desc" />
+                <ScalarProperty Name="est_usr_ID" ColumnName="est_usr_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_estcivil">
+            <EntityTypeMapping TypeName="bd_labModel.fact_estcivil">
+              <MappingFragment StoreEntitySet="fact_estcivil">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="estcivil_desc" ColumnName="estcivil_desc" />
+                <ScalarProperty Name="cod_estciv" ColumnName="cod_estciv" />
+                <ScalarProperty Name="estcivil_ID" ColumnName="estcivil_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_genero">
+            <EntityTypeMapping TypeName="bd_labModel.fact_genero">
+              <MappingFragment StoreEntitySet="fact_genero">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="genero_desc" ColumnName="genero_desc" />
+                <ScalarProperty Name="cod_gen" ColumnName="cod_gen" />
+                <ScalarProperty Name="genero_ID" ColumnName="genero_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_perfil">
+            <EntityTypeMapping TypeName="bd_labModel.fact_perfil">
+              <MappingFragment StoreEntitySet="fact_perfil">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="perfil_desc" ColumnName="perfil_desc" />
+                <ScalarProperty Name="cod_perfil" ColumnName="cod_perfil" />
+                <ScalarProperty Name="perfil_ID" ColumnName="perfil_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_prosp_est">
+            <EntityTypeMapping TypeName="bd_labModel.fact_prosp_est">
+              <MappingFragment StoreEntitySet="fact_prosp_est">
+                <ScalarProperty Name="prosp_est_desc" ColumnName="prosp_est_desc" />
+                <ScalarProperty Name="prosp_est_ID" ColumnName="prosp_est_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_prosp_giro">
+            <EntityTypeMapping TypeName="bd_labModel.fact_prosp_giro">
+              <MappingFragment StoreEntitySet="fact_prosp_giro">
+                <ScalarProperty Name="prosp_giro_desc" ColumnName="prosp_giro_desc" />
+                <ScalarProperty Name="prosp_giro_ID" ColumnName="prosp_giro_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_prosp_taccion">
+            <EntityTypeMapping TypeName="bd_labModel.fact_prosp_taccion">
+              <MappingFragment StoreEntitySet="fact_prosp_taccion">
+                <ScalarProperty Name="prosp_taccion_desc" ColumnName="prosp_taccion_desc" />
+                <ScalarProperty Name="prosp_taccion_ID" ColumnName="prosp_taccion_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_prosp_tcont">
+            <EntityTypeMapping TypeName="bd_labModel.fact_prosp_tcont">
+              <MappingFragment StoreEntitySet="fact_prosp_tcont">
+                <ScalarProperty Name="prosp_tipocont_desc" ColumnName="prosp_tipocont_desc" />
+                <ScalarProperty Name="prosp_tipocont_ID" ColumnName="prosp_tipocont_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_prosp_tserv">
+            <EntityTypeMapping TypeName="bd_labModel.fact_prosp_tserv">
+              <MappingFragment StoreEntitySet="fact_prosp_tserv">
+                <ScalarProperty Name="prosp_tserv_desc" ColumnName="prosp_tserv_desc" />
+                <ScalarProperty Name="prosp_tserv_ID" ColumnName="prosp_tserv_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_tipo_escolar">
+            <EntityTypeMapping TypeName="bd_labModel.fact_tipo_escolar">
+              <MappingFragment StoreEntitySet="fact_tipo_escolar">
+                <ScalarProperty Name="tipo_escolar_desc" ColumnName="tipo_escolar_desc" />
+                <ScalarProperty Name="tipo_escolar_ID" ColumnName="tipo_escolar_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_tipo_rfc">
+            <EntityTypeMapping TypeName="bd_labModel.fact_tipo_rfc">
+              <MappingFragment StoreEntitySet="fact_tipo_rfc">
+                <ScalarProperty Name="tipo_rfc_desc" ColumnName="tipo_rfc_desc" />
+                <ScalarProperty Name="tipo_rfc_ID" ColumnName="tipo_rfc_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fact_tipo_servicio">
+            <EntityTypeMapping TypeName="bd_labModel.fact_tipo_servicio">
+              <MappingFragment StoreEntitySet="fact_tipo_servicio">
+                <ScalarProperty Name="tipo_servicio_desc" ColumnName="tipo_servicio_desc" />
+                <ScalarProperty Name="tipo_servicio_ID" ColumnName="tipo_servicio_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_clte">
+            <EntityTypeMapping TypeName="bd_labModel.inf_clte">
+              <MappingFragment StoreEntitySet="inf_clte">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="empresa_ID" ColumnName="empresa_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+                <ScalarProperty Name="callenum" ColumnName="callenum" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+                <ScalarProperty Name="rfc" ColumnName="rfc" />
+                <ScalarProperty Name="tipo_rfc_ID" ColumnName="tipo_rfc_ID" />
+                <ScalarProperty Name="cod_clte" ColumnName="cod_clte" />
+                <ScalarProperty Name="est_clte_ID" ColumnName="est_clte_ID" />
+                <ScalarProperty Name="clte_ID" ColumnName="clte_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_clte_contacto">
+            <EntityTypeMapping TypeName="bd_labModel.inf_clte_contacto">
+              <MappingFragment StoreEntitySet="inf_clte_contacto">
+                <ScalarProperty Name="clte_ID" ColumnName="clte_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+                <ScalarProperty Name="callenum" ColumnName="callenum" />
+                <ScalarProperty Name="email2" ColumnName="email2" />
+                <ScalarProperty Name="email1" ColumnName="email1" />
+                <ScalarProperty Name="tel2" ColumnName="tel2" />
+                <ScalarProperty Name="tel1" ColumnName="tel1" />
+                <ScalarProperty Name="contacto_nom" ColumnName="contacto_nom" />
+                <ScalarProperty Name="dpto" ColumnName="dpto" />
+                <ScalarProperty Name="clte_contacto_ID" ColumnName="clte_contacto_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_clte_obra_rpt">
+            <EntityTypeMapping TypeName="bd_labModel.inf_clte_obra_rpt">
+              <MappingFragment StoreEntitySet="inf_clte_obra_rpt">
+                <ScalarProperty Name="clte_obras_ID" ColumnName="clte_obras_ID" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="ruta_archivo" ColumnName="ruta_archivo" />
+                <ScalarProperty Name="nombre_archivo" ColumnName="nombre_archivo" />
+                <ScalarProperty Name="est_clte_obra_rpt_ID" ColumnName="est_clte_obra_rpt_ID" />
+                <ScalarProperty Name="clte_obra_rpt_ID" ColumnName="clte_obra_rpt_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_clte_obras">
+            <EntityTypeMapping TypeName="bd_labModel.inf_clte_obras">
+              <MappingFragment StoreEntitySet="inf_clte_obras">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="clte_ID" ColumnName="clte_ID" />
+                <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+                <ScalarProperty Name="tipo_servicio_ID" ColumnName="tipo_servicio_ID" />
+                <ScalarProperty Name="contacto_obra" ColumnName="contacto_obra" />
+                <ScalarProperty Name="coordinador" ColumnName="coordinador" />
+                <ScalarProperty Name="desc_obra" ColumnName="desc_obra" />
+                <ScalarProperty Name="clave_obra" ColumnName="clave_obra" />
+                <ScalarProperty Name="est_obra_ID" ColumnName="est_obra_ID" />
+                <ScalarProperty Name="clte_obras_ID" ColumnName="clte_obras_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_emp">
+            <EntityTypeMapping TypeName="bd_labModel.inf_emp">
+              <MappingFragment StoreEntitySet="inf_emp">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+                <ScalarProperty Name="callenum" ColumnName="callenum" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="empresa_nom" ColumnName="empresa_nom" />
+                <ScalarProperty Name="estatus_ID" ColumnName="estatus_ID" />
+                <ScalarProperty Name="empresa_ID" ColumnName="empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_ensaye_esp">
+            <EntityTypeMapping TypeName="bd_labModel.inf_ensaye_esp">
+              <MappingFragment StoreEntitySet="inf_ensaye_esp">
+                <ScalarProperty Name="concreto_rpc_ID" ColumnName="concreto_rpc_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="tipofalla_a" ColumnName="tipofalla_a" />
+                <ScalarProperty Name="presion_a" ColumnName="presion_a" />
+                <ScalarProperty Name="intensidad_a" ColumnName="intensidad_a" />
+                <ScalarProperty Name="directo_a" ColumnName="directo_a" />
+                <ScalarProperty Name="lados_b" ColumnName="lados_b" />
+                <ScalarProperty Name="lados_a" ColumnName="lados_a" />
+                <ScalarProperty Name="altura_b" ColumnName="altura_b" />
+                <ScalarProperty Name="altura_a" ColumnName="altura_a" />
+                <ScalarProperty Name="masa_a" ColumnName="masa_a" />
+                <ScalarProperty Name="clave_ensa_a" ColumnName="clave_ensa_a" />
+                <ScalarProperty Name="cdem" ColumnName="cdem" />
+                <ScalarProperty Name="cde" ColumnName="cde" />
+                <ScalarProperty Name="ensaye_esp_est_ID" ColumnName="ensaye_esp_est_ID" />
+                <ScalarProperty Name="ensaye_esp_registro" ColumnName="ensaye_esp_registro" />
+                <ScalarProperty Name="ensaye_esp_num" ColumnName="ensaye_esp_num" />
+                <ScalarProperty Name="ensaye_esp_numdia" ColumnName="ensaye_esp_numdia" />
+                <ScalarProperty Name="ensaye_esp_dia" ColumnName="ensaye_esp_dia" />
+                <ScalarProperty Name="ensaye_esp_cod" ColumnName="ensaye_esp_cod" />
+                <ScalarProperty Name="ensaye_esp_ID" ColumnName="ensaye_esp_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_prosp_cont">
+            <EntityTypeMapping TypeName="bd_labModel.inf_prosp_cont">
+              <MappingFragment StoreEntitySet="inf_prosp_cont">
+                <ScalarProperty Name="prospecto_ID" ColumnName="prospecto_ID" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="email2" ColumnName="email2" />
+                <ScalarProperty Name="email1" ColumnName="email1" />
+                <ScalarProperty Name="tel2" ColumnName="tel2" />
+                <ScalarProperty Name="tel1" ColumnName="tel1" />
+                <ScalarProperty Name="contacto" ColumnName="contacto" />
+                <ScalarProperty Name="dpto" ColumnName="dpto" />
+                <ScalarProperty Name="prosp_cont_ID" ColumnName="prosp_cont_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_prosp_seg">
+            <EntityTypeMapping TypeName="bd_labModel.inf_prosp_seg">
+              <MappingFragment StoreEntitySet="inf_prosp_seg">
+                <ScalarProperty Name="prosp_cont_ID" ColumnName="prosp_cont_ID" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+                <ScalarProperty Name="prosp_taccion_ID" ColumnName="prosp_taccion_ID" />
+                <ScalarProperty Name="prosp_seg_ID" ColumnName="prosp_seg_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_prospectos">
+            <EntityTypeMapping TypeName="bd_labModel.inf_prospectos">
+              <MappingFragment StoreEntitySet="inf_prospectos">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="empresa_ID" ColumnName="empresa_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+                <ScalarProperty Name="callenum" ColumnName="callenum" />
+                <ScalarProperty Name="web" ColumnName="web" />
+                <ScalarProperty Name="empresa" ColumnName="empresa" />
+                <ScalarProperty Name="prosp_tipocont_ID" ColumnName="prosp_tipocont_ID" />
+                <ScalarProperty Name="cod_prospecto" ColumnName="cod_prospecto" />
+                <ScalarProperty Name="prosp_est_ID" ColumnName="prosp_est_ID" />
+                <ScalarProperty Name="prosp_tserv_ID" ColumnName="prosp_tserv_ID" />
+                <ScalarProperty Name="prosp_giro_ID" ColumnName="prosp_giro_ID" />
+                <ScalarProperty Name="prospecto_ID" ColumnName="prospecto_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_rpc">
+            <EntityTypeMapping TypeName="bd_labModel.inf_rpc">
+              <MappingFragment StoreEntitySet="inf_rpc">
+                <ScalarProperty Name="clte_obras_ID" ColumnName="clte_obras_ID" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="localiza" ColumnName="localiza" />
+                <ScalarProperty Name="revb" ColumnName="revb" />
+                <ScalarProperty Name="vol" ColumnName="vol" />
+                <ScalarProperty Name="desca_term" ColumnName="desca_term" />
+                <ScalarProperty Name="desca_ini" ColumnName="desca_ini" />
+                <ScalarProperty Name="llegada_obra" ColumnName="llegada_obra" />
+                <ScalarProperty Name="salida_planta" ColumnName="salida_planta" />
+                <ScalarProperty Name="remision" ColumnName="remision" />
+                <ScalarProperty Name="olla" ColumnName="olla" />
+                <ScalarProperty Name="tma" ColumnName="tma" />
+                <ScalarProperty Name="reva" ColumnName="reva" />
+                <ScalarProperty Name="clase" ColumnName="clase" />
+                <ScalarProperty Name="resistencia" ColumnName="resistencia" />
+                <ScalarProperty Name="dosificacion" ColumnName="dosificacion" />
+                <ScalarProperty Name="elemento" ColumnName="elemento" />
+                <ScalarProperty Name="procedecia" ColumnName="procedecia" />
+                <ScalarProperty Name="concreto_situacion_ID" ColumnName="concreto_situacion_ID" />
+                <ScalarProperty Name="concreto_tipo_ID" ColumnName="concreto_tipo_ID" />
+                <ScalarProperty Name="especimen_tipo_ID" ColumnName="especimen_tipo_ID" />
+                <ScalarProperty Name="presion" ColumnName="presion" />
+                <ScalarProperty Name="recibe" ColumnName="recibe" />
+                <ScalarProperty Name="entrega" ColumnName="entrega" />
+                <ScalarProperty Name="fecha_recibe" ColumnName="fecha_recibe" />
+                <ScalarProperty Name="fecha_colado" ColumnName="fecha_colado" />
+                <ScalarProperty Name="concreto_est_muestra" ColumnName="concreto_est_muestra" />
+                <ScalarProperty Name="concreto_est_ID" ColumnName="concreto_est_ID" />
+                <ScalarProperty Name="concreto_rpc_ID" ColumnName="concreto_rpc_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_sepomex">
+            <EntityTypeMapping TypeName="bd_labModel.inf_sepomex">
+              <MappingFragment StoreEntitySet="inf_sepomex">
+                <ScalarProperty Name="c_cve_ciudad" ColumnName="c_cve_ciudad" />
+                <ScalarProperty Name="d_zona" ColumnName="d_zona" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="c_mnpio" ColumnName="c_mnpio" />
+                <ScalarProperty Name="c_tipo_asenta" ColumnName="c_tipo_asenta" />
+                <ScalarProperty Name="c_cp" ColumnName="c_cp" />
+                <ScalarProperty Name="c_oficina" ColumnName="c_oficina" />
+                <ScalarProperty Name="c_estado" ColumnName="c_estado" />
+                <ScalarProperty Name="d_cp" ColumnName="d_cp" />
+                <ScalarProperty Name="d_ciudad" ColumnName="d_ciudad" />
+                <ScalarProperty Name="d_estado" ColumnName="d_estado" />
+                <ScalarProperty Name="d_mnpio" ColumnName="d_mnpio" />
+                <ScalarProperty Name="d_tipo_asenta" ColumnName="d_tipo_asenta" />
+                <ScalarProperty Name="d_asenta" ColumnName="d_asenta" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_bancario">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_bancario">
+              <MappingFragment StoreEntitySet="inf_usr_bancario">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="complementos" ColumnName="complementos" />
+                <ScalarProperty Name="clabe" ColumnName="clabe" />
+                <ScalarProperty Name="tarjeta" ColumnName="tarjeta" />
+                <ScalarProperty Name="banco_ID" ColumnName="banco_ID" />
+                <ScalarProperty Name="usr_bancario_ID" ColumnName="usr_bancario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_contacto">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_contacto">
+              <MappingFragment StoreEntitySet="inf_usr_contacto">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="id_asenta_cpcons" ColumnName="id_asenta_cpcons" />
+                <ScalarProperty Name="d_codigo" ColumnName="d_codigo" />
+                <ScalarProperty Name="callenum" ColumnName="callenum" />
+                <ScalarProperty Name="correo_alt" ColumnName="correo_alt" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="tel_alt" ColumnName="tel_alt" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="usr_contacto_ID" ColumnName="usr_contacto_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_escolar">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_escolar">
+              <MappingFragment StoreEntitySet="inf_usr_escolar">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="fecha_escolar" ColumnName="fecha_escolar" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="grado_escolar" ColumnName="grado_escolar" />
+                <ScalarProperty Name="tipo_escolar_ID" ColumnName="tipo_escolar_ID" />
+                <ScalarProperty Name="usr_escolar_ID" ColumnName="usr_escolar_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_medicos">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_medicos">
+              <MappingFragment StoreEntitySet="inf_usr_medicos">
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
+                <ScalarProperty Name="alergia" ColumnName="alergia" />
+                <ScalarProperty Name="alergia_ID" ColumnName="alergia_ID" />
+                <ScalarProperty Name="tipo_sangre" ColumnName="tipo_sangre" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="estatura" ColumnName="estatura" />
+                <ScalarProperty Name="usr_medicos_ID" ColumnName="usr_medicos_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_personales">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_personales">
+              <MappingFragment StoreEntitySet="inf_usr_personales">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="nss" ColumnName="nss" />
+                <ScalarProperty Name="curp" ColumnName="curp" />
+                <ScalarProperty Name="rfc" ColumnName="rfc" />
+                <ScalarProperty Name="licencia" ColumnName="licencia" />
+                <ScalarProperty Name="cumple" ColumnName="cumple" />
+                <ScalarProperty Name="hijos" ColumnName="hijos" />
+                <ScalarProperty Name="estcivil_ID" ColumnName="estcivil_ID" />
+                <ScalarProperty Name="genero_ID" ColumnName="genero_ID" />
+                <ScalarProperty Name="amaterno" ColumnName="amaterno" />
+                <ScalarProperty Name="apaterno" ColumnName="apaterno" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="usr_personales_ID" ColumnName="usr_personales_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usr_rh">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usr_rh">
+              <MappingFragment StoreEntitySet="inf_usr_rh">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+                <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+                <ScalarProperty Name="jefe_inmediato" ColumnName="jefe_inmediato" />
+                <ScalarProperty Name="perfil_ID" ColumnName="perfil_ID" />
+                <ScalarProperty Name="area_ID" ColumnName="area_ID" />
+                <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+                <ScalarProperty Name="usr_rh_ID" ColumnName="usr_rh_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inf_usuario">
+            <EntityTypeMapping TypeName="bd_labModel.inf_usuario">
+              <MappingFragment StoreEntitySet="inf_usuario">
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="empresa_ID" ColumnName="empresa_ID" />
+                <ScalarProperty Name="correo_corp" ColumnName="correo_corp" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="usr" ColumnName="usr" />
+                <ScalarProperty Name="cod_usr" ColumnName="cod_usr" />
+                <ScalarProperty Name="est_usr_ID" ColumnName="est_usr_ID" />
+                <ScalarProperty Name="usuario_ID" ColumnName="usuario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
