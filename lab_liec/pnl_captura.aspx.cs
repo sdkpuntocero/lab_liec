@@ -2221,6 +2221,115 @@ namespace lab_liec
             }
         }
 
+        protected void gv_obra_clte_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            GridViewRow gvr = (GridViewRow)(((Button)e.CommandSource).NamingContainer);
+            guclte_ID = Guid.Parse(gvr.Cells[0].Text.ToString().Trim());
+
+            if (e.CommandName == "btn_recepcion")
+            {
+
+                if (int_rppc == 0)
+                {
+                    div_docf.Visible = false;
+                    Mensaje("Favor de seleccionar una acción");
+                }
+                else if (int_rppc == 1)
+                {
+                    div_docf.Visible = true;
+                    btn_guardar_rppc.Visible = true;
+
+                }
+                else if (int_rppc == 2)
+                {
+                    div_rpc.Visible = true;
+                    btn_guardar_rppc.Visible = true;
+                    div_docf.Visible = true;
+
+                }
+            }
+          
+
+            //try
+            //{
+            //   
+
+            //    using (bd_labEntities edm_clte = new bd_labEntities())
+            //    {
+            //        var i_clte = (from t_clte in edm_clte.inf_clte
+            //                      where t_clte.clte_ID == guclte_ID
+            //                      select new
+            //                      {
+            //                          t_clte.tipo_rfc_ID,
+            //                          t_clte.rfc,
+            //                          t_clte.razon_social,
+            //                          t_clte.telefono,
+            //                          t_clte.email,
+            //                          t_clte.callenum,
+            //                          t_clte.d_codigo,
+            //                          t_clte.id_asenta_cpcons,
+            //                          t_clte.comentarios
+            //                      }).FirstOrDefault();
+
+            //        ddl_trfc_clte_fisc.SelectedValue = i_clte.tipo_rfc_ID.ToString();
+            //        txt_rfc_clte_fisc.Text = i_clte.rfc;
+            //        txt_rs.Text = i_clte.razon_social;
+            //        txt_telefono_clte.Text = i_clte.telefono;
+            //        txt_email_clte.Text = i_clte.email;
+            //        txt_callenum_clte.Text = i_clte.callenum;
+            //        txt_cp_clte.Text = i_clte.d_codigo;
+            //        txt_clte_coment.Text = i_clte.comentarios;
+
+            //        try
+            //        {
+            //            int int_col = int.Parse(i_clte.id_asenta_cpcons.ToString());
+
+            //            using (bd_labEntities db_sepomex = new bd_labEntities())
+            //            {
+            //                var tbl_sepomex = (from c in db_sepomex.inf_sepomex
+            //                                   where c.id_asenta_cpcons == int_col
+            //                                   where c.d_codigo == i_clte.d_codigo
+            //                                   select c).ToList();
+
+            //                ddl_colonia_clte.DataSource = tbl_sepomex;
+            //                ddl_colonia_clte.DataTextField = "d_asenta";
+            //                ddl_colonia_clte.DataValueField = "id_asenta_cpcons";
+            //                ddl_colonia_clte.DataBind();
+
+            //                txt_municipio_clte.Text = tbl_sepomex[0].d_mnpio;
+            //                txt_estado_clte.Text = tbl_sepomex[0].d_estado;
+            //            }
+            //        }
+            //        catch
+            //        {
+            //        }
+            //        rfv_rs.Enabled = true;
+            //        rfv_callenum_clte.Enabled = true;
+            //        rfv_cp_clte.Enabled = true;
+
+            //        var i_cltef = (from t_clte in edm_clte.inf_clte
+            //                       where t_clte.clte_ID == guclte_ID
+            //                       select new
+            //                       {
+            //                           t_clte.clte_ID,
+            //                           t_clte.cod_clte,
+            //                           t_clte.razon_social,
+            //                           t_clte.registro
+            //                       }).OrderBy(x => x.cod_clte).ToList();
+
+            //        gv_clte.DataSource = i_cltef;
+            //        gv_clte.DataBind();
+            //        gv_clte.Visible = true;
+
+            //        div_clte_f.Visible = true;
+            //    }
+            //}
+            //catch
+            //{ }
+        }
+
+ 
+
         protected void chkb_28_rppc_CheckedChanged(object sender, EventArgs e)
         {
             DateTime dt_fcol;
@@ -2567,6 +2676,16 @@ namespace lab_liec
             i_agregar_rppc.Attributes["style"] = "color:white";
             i_editar_rppc.Attributes["style"] = "color:#E34C0E";
             limp_txt_rppc();
+            rfv_buscar_rppc.Enabled = true;
+            rfv_nmue_rppc.Enabled = true;
+            rfv_fcol_rppc.Enabled = true;
+            rfv_frec_rppc.Enabled = true;
+            rfv_entrega_rppc.Enabled = true;
+            rfv_recibe_rppc.Enabled = true;
+            rfv_r_rppc.Enabled = true;
+            rfv_tesp_rppc.Enabled = true;
+            rfv_tconc_rppc.Enabled = true;
+            rfv_sit_rppc.Enabled = true;
             gv_rppc.Visible = false;
         }
 
@@ -2716,7 +2835,36 @@ namespace lab_liec
             txt_inic_rrpc.Text = null;
             txt_term_rrpc.Text = null;
         }
+        protected void gv_rppc_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            GridViewRow gvr = (GridViewRow)(((Button)e.CommandSource).NamingContainer);
+            guclte_ID = Guid.Parse(gvr.Cells[0].Text.ToString().Trim());
 
+            if (e.CommandName == "btn_recepcion")
+            {
+
+                if (int_rppc == 0)
+                {
+                    div_docf.Visible = false;
+                    Mensaje("Favor de seleccionar una acción");
+                }
+                else if (int_rppc == 1)
+                {
+                    div_docf.Visible = false;
+                    div_pfe.Visible = true;
+                    btn_guardar_rppc.Visible = true;
+
+                }
+                else if (int_rppc == 2)
+                {
+                    div_docf.Visible = false;
+                    div_pfe.Visible = true;
+                    btn_guardar_rppc.Visible = true;
+                    
+
+                }
+            }
+        }
         protected void btn_guardar_rppc_Click(object sender, EventArgs e)
         {
             if (int_rppc == 0)
@@ -2765,7 +2913,8 @@ namespace lab_liec
                 dt_llobra_rppc = TimeSpan.Zero;
                 dt_desca_ini_rppc = TimeSpan.Zero;
                 dt_desca_term_rppc = TimeSpan.Zero;
-                if (int_sit == 3)
+
+                if (int_sit == 2)
                 {
                     proce_rppc = txt_proce_rppc.Text.Trim().ToUpper();
                     elem_rppc = txt_elem_rppc.Text.Trim().ToUpper();
@@ -2784,452 +2933,124 @@ namespace lab_liec
                     dt_desca_ini_rppc = TimeSpan.Parse(txt_inic_rrpc.Text);
                     dt_desca_term_rppc = TimeSpan.Parse(txt_term_rrpc.Text);
                 }
-                if (chkb_1_rppc.Checked)
-                {
-                    bool_1d = true;
-                    int_1d = int.Parse(txt_cant1_rppc.Text);
-                }
-                else
-                {
-                    bool_1d = false;
-                    int_1d = 0;
-                }
-                if (chkb_3_rppc.Checked)
-                {
-                    bool_3d = true;
-                    int_3d = int.Parse(txt_cant3_rppc.Text);
-                }
-                else
-                {
-                    bool_3d = false;
-                    int_3d = 0;
-                }
-                if (chkb_7_rppc.Checked)
-                {
-                    bool_7d = true;
-                    int_7d = int.Parse(txt_cant7_rppc.Text);
-                }
-                else
-                {
-                    bool_7d = false;
-                    int_7d = 0;
-                }
-                if (chkb_14_rppc.Checked)
-                {
-                    bool_14d = true;
-                    int_14d = int.Parse(txt_cant14_rppc.Text);
-                }
-                else
-                {
-                    bool_14d = false;
-                    int_14d = 0;
-                }
-                if (chkb_28_rppc.Checked)
-                {
-                    bool_28d = true;
-                    int_28d = int.Parse(txt_cant28_rppc.Text);
-                }
-                else
-                {
-                    bool_28d = false;
-                    int_28d = 0;
-                }
-                if (chkb_otro_rppc.Checked)
-                {
-                    bool_otrod = true;
-                    int_otrod = int.Parse(txt_cantotro_rppc.Text);
-                    int_otroe = int.Parse(txt_cantesp_rppc.Text);
-                }
-                else
-                {
-                    bool_otrod = false;
-                    int_otrod = 0;
-                }
-                string n_rub;
-                int int_pfe = 0;
-                int_pfe = int_1d + int_3d + int_7d + int_14d + int_28d + int_otrod;
 
-                DataTable dt1 = new DataTable();
-                dt1.Columns.Add("dias");
-                dt1.Columns.Add("ndias");
-                dt1.Columns.Add("cantidad");
-
-                DataRow dr1, dr3, dr7, dr14, dr28, dr0;
-                dr1 = dt1.NewRow();
-                dr1["dias"] = 1;
-                dr1["ndias"] = 1;
-                dr1["cantidad"] = int_1d;
-                dt1.Rows.Add(dr1);
-                dr3 = dt1.NewRow();
-                dr3["dias"] = 3;
-                dr3["ndias"] = 3;
-                dr3["cantidad"] = int_3d;
-                dt1.Rows.Add(dr3);
-                dr7 = dt1.NewRow();
-                dr7["dias"] = 7;
-                dr7["ndias"] = 7;
-                dr7["cantidad"] = int_7d;
-                dt1.Rows.Add(dr7);
-                dr14 = dt1.NewRow();
-                dr14["dias"] = 14;
-                dr14["ndias"] = 14;
-                dr14["cantidad"] = int_14d;
-                dt1.Rows.Add(dr14);
-                dr28 = dt1.NewRow();
-                dr28["dias"] = 28;
-                dr28["ndias"] = 28;
-                dr28["cantidad"] = int_28d;
-                dt1.Rows.Add(dr28);
-                dr0 = dt1.NewRow();
-                dr0["dias"] = 0;
-                dr0["ndias"] = int_otrod;
-                dr0["cantidad"] = int_otroe;
-                dt1.Rows.Add(dr0);
-
-                Char char_s = '|';
-                string d_rub = txt_buscar_rppc.Text.Trim();
-                String[] de_rub = d_rub.Trim().Split(char_s);
-                n_rub = de_rub[0].Trim();
-
-                if (int_rppc == 2)
+                if(int_rppc == 1)
                 {
-                    int int_ddl;
-                    int int_estatusID = 0;
-                    int int_act = 0;
-                    foreach (GridViewRow row in gv_rppc.Rows)
+                    using (var m_clte = new bd_labEntities())
                     {
-                        if (row.RowType == DataControlRowType.DataRow)
+                        var i_clte = new inf_rpc
+
                         {
-                            CheckBox chkRow = (row.Cells[0].FindControl("chk_rppc") as CheckBox);
-                            if (chkRow.Checked)
-                            {
-                                int_act = int_act + 1;
-                            }
-                            else
-                            {
-                                row.BackColor = Color.White;
-                            }
-                        }
+                            concreto_rpc_ID = gui_nrppc,
+                            concreto_est_ID = 1,
+                            concreto_est_muestra = str_nomues_rppc,
+                            fecha_colado = fcolado_rrpc,
+                            fecha_recibe = fente_rrpc,
+                            entrega = entr_rppc,
+                            recibe = recib_rppc,
+                            presion = presi_rppc,
+                            especimen_tipo_ID = int_tesp_rppc,
+                            concreto_tipo_ID = int_tcont_rrp,
+                            concreto_situacion_ID = int_sit_rppc,
+                            procedecia = proce_rppc,
+                            elemento = elem_rppc,
+                            dosificacion = dosi_rppc,
+                            resistencia = resi_rppc,
+                            clase = int_clase,
+                            reva = dml_reva_rppc,
+                            tma = int_tma_rppc,
+                            olla = olla_rppc,
+                            remision = remi_rppc,
+                            salida_planta = dt_splan_rppc,
+                            llegada_obra = dt_llobra_rppc,
+                            desca_ini = dt_desca_ini_rppc,
+                            desca_term = dt_desca_term_rppc,
+                            vol = dml_vol_rppc,
+                            revb = dl_revb_rppc,
+                            localiza = loca_rppc,
+                            usuario_ID = guid_idusr,
+                            registro = DateTime.Now,
+                            clte_obras_ID = guclte_ID
+                        };
+
+                        m_clte.inf_rpc.Add(i_clte);
+                        m_clte.SaveChanges();
                     }
-                    if (int_act == 0)
+
+                    limp_txt_rppc();
+                    nmue_rppc.Text = null;
+                    gv_rppc.Visible = false;
+
+                    using (bd_labEntities data_clte = new bd_labEntities())
                     {
-                        Mensaje("Favor de seleccionar una muestra.");
+                        var i_clte = (from t_clte in data_clte.inf_rpc
+                                      where t_clte.concreto_rpc_ID == gui_nrppc
+                                      select new
+                                      {
+                                          t_clte.concreto_rpc_ID,
+                                          t_clte.concreto_est_muestra,
+                                          t_clte.fecha_colado,
+                                          t_clte.registro
+
+                                      }).ToList();
+
+                        gv_rppc.DataSource = i_clte;
+                        gv_rppc.DataBind();
+                        gv_rppc.Visible = true;
                     }
-                    else
-                    {
-                        foreach (GridViewRow row_d in gv_rppc.Rows)
-                        {
-                            // int key = (int)GridView1.DataKeys[row.RowIndex].Value;
-                            if (row_d.RowType == DataControlRowType.DataRow)
-                            {
-                                DropDownList dl = (DropDownList)row_d.FindControl("ddl_rppc_est");
 
-                                int_ddl = int.Parse(dl.SelectedValue);
-                                if (int_ddl == 1)
-                                {
-                                    int_estatusID = 1;
-                                }
-                                else if (int_ddl == 2)
-                                {
-                                    int_estatusID = 2;
-                                }
-                            }
-                            if (row_d.RowType == DataControlRowType.DataRow)
-                            {
-                                CheckBox chkRow = (row_d.Cells[0].FindControl("chk_rppc") as CheckBox);
-                                if (chkRow.Checked)
-                                {
-                                    string str_nm = row_d.Cells[1].Text;
-                                    Guid guid_frppc;
-                                    using (var m_clte = new bd_labEntities())
-                                    {
-                                        var i_clte = (from c in m_clte.inf_rpc
-                                                      where c.concreto_est_muestra == str_nm
-                                                      select c).FirstOrDefault();
-
-                                        guid_frppc = i_clte.concreto_rpc_ID;
-
-                                        i_clte.concreto_est_ID = int_estatusID;
-                                        i_clte.concreto_est_muestra = str_nomues_rppc;
-                                        i_clte.fecha_colado = fcolado_rrpc;
-                                        i_clte.fecha_recibe = fente_rrpc;
-                                        i_clte.entrega = entr_rppc;
-                                        i_clte.recibe = recib_rppc;
-                                        i_clte.presion = presi_rppc;
-                                        i_clte.especimen_tipo_ID = int_tesp_rppc;
-                                        i_clte.concreto_tipo_ID = int_tcont_rrp;
-                                        i_clte.concreto_situacion_ID = int_sit_rppc;
-                                        i_clte.procedecia = proce_rppc;
-                                        i_clte.elemento = elem_rppc;
-                                        i_clte.dosificacion = dosi_rppc;
-                                        i_clte.resistencia = resi_rppc;
-                                        i_clte.clase = int_clase;
-                                        i_clte.reva = dml_reva_rppc;
-                                        i_clte.tma = int_tma_rppc;
-                                        i_clte.olla = olla_rppc;
-                                        i_clte.remision = remi_rppc;
-                                        i_clte.salida_planta = dt_splan_rppc;
-                                        i_clte.llegada_obra = dt_llobra_rppc;
-                                        i_clte.desca_ini = dt_desca_ini_rppc;
-                                        i_clte.desca_term = dt_desca_term_rppc;
-                                        i_clte.vol = dml_vol_rppc;
-                                        i_clte.revb = dl_revb_rppc;
-                                        i_clte.localiza = loca_rppc;
-
-                                        m_clte.SaveChanges();
-                                    }
-
-                                    using (var m_conc_ec = new bd_labEntities())
-                                    {
-                                        var i_s = (from c in m_conc_ec.inf_ensaye_esp
-                                                   where c.concreto_rpc_ID == guid_frppc
-                                                   where c.ensaye_esp_dia == int_1d
-                                                   select c).ToList();
-
-
-                                    }
-
-                                    //foreach (int n in pfe_array)
-                                    //{
-                                    //    Char char_f = ',';
-                                    //    String[] de_pfe = n.ToString().Trim().Split(char_f);
-                                    //    string n_pfe = de_pfe[0].Trim();
-                                    //    int f_pfe = int.Parse(de_pfe[1]);
-                                    //    if (f_pfe == 0)
-                                    //    {
-                                    //    }
-                                    //    else
-                                    //    {
-                                    //        int fcolm = 0;
-                                    //        if (n_pfe == "uno")
-                                    //        {
-                                    //            fcolm = 1;
-                                    //        }
-                                    //        else if (n_pfe == "tres")
-                                    //        {
-                                    //            fcolm = 3;
-                                    //        }
-                                    //        else if (n_pfe == "siete")
-                                    //        {
-                                    //            fcolm = 7;
-                                    //        }
-                                    //        else if (n_pfe == "catorce")
-                                    //        {
-                                    //            fcolm = 14;
-                                    //        }
-                                    //        else if (n_pfe == "vienteocho")
-                                    //        {
-                                    //            fcolm = 28;
-                                    //        }
-                                    //        else if (n_pfe == "cero")
-                                    //        {
-                                    //            fcolm = 0;
-                                    //        }
-
-                                    //        if (f_pfe == 2)
-                                    //        {
-                                    //            for (int i = 0; i < f_pfe; i++)
-                                    //            {
-                                    //                using (var m_conc_ec = new bd_labEntities())
-                                    //                {
-                                    //                    var i_conc_ec = (from c in m_conc_ec.inf_conc_ec
-                                    //                                     where c.id_mrp_concreto == guid_frppc
-                                    //                                     select c).FirstOrDefault();
-                                    //                    i_conc_ec.dia_ensaye = n_pfe;
-                                    //                    i_conc_ec.num_muesra = 1;
-                                    //                    i_conc_ec.fecha_ensaye = fcolado_rrpc.AddDays(fcolm);
-                                    //                    m_conc_ec.SaveChanges();
-                                    //                }
-                                    //            }
-                                    //        }
-                                    //        else
-                                    //        {
-                                    //            using (var m_conc_ec = new bd_labEntities())
-                                    //            {
-                                    //                var i_conc_ec = (from c in m_conc_ec.inf_conc_ec
-                                    //                                 where c.id_mrp_concreto == guid_frppc
-                                    //                                 select c).FirstOrDefault();
-                                    //                i_conc_ec.dia_ensaye = n_pfe;
-                                    //                i_conc_ec.num_muesra = 1;
-                                    //                i_conc_ec.fecha_ensaye = fcolado_rrpc.AddDays(fcolm);
-                                    //                m_conc_ec.SaveChanges();
-                                    //            }
-                                    //        }
-                                    //    }
-                                    //}
-                                }
-                            }
-                        }
-
-                        foreach (GridViewRow row in gv_rppc.Rows)
-                        {
-                        }
-
-                        limp_txt_rppc();
-                        gv_rppc.Visible = false;
-                        Mensaje("Datos de cliente-obra-muestra actualizados con éxito.");
-                    }
+                    div_docf.Visible = false;
+                    Mensaje("Datos de cliente-obra-muestra agregados con éxito.");
                 }
-                else
+                else if (int_rppc == 2)
                 {
-                    using (bd_labEntities edm_nclte = new bd_labEntities())
-                    {
-                        var i_co = (from c in edm_nclte.inf_clte_obras
-                                    where c.clave_obra == n_rub
-                                    select c).FirstOrDefault();
-                        int_co = i_co.clte_obras_ID;
 
-                        var i_nclte = (from c in edm_nclte.inf_rpc
-                                       where c.concreto_est_muestra == str_nomues_rppc
-                                       select c).ToList();
+                    //using (var m_clte = new bd_labEntities())
+                    //{
+                    //    var i_clte = (from c in m_clte.inf_rpc
+                    //                  where c.concreto_est_muestra == str_nm
+                    //                  select c).FirstOrDefault();
 
-                        if (i_nclte.Count == 0)
-                        {
-                            using (var m_clte = new bd_labEntities())
-                            {
-                                var i_clte = new inf_rpc
+                    //    guid_frppc = i_clte.concreto_rpc_ID;
 
-                                {
-                                    concreto_rpc_ID = gui_nrppc,
-                                    concreto_est_ID = 1,
-                                    concreto_est_muestra = str_nomues_rppc,
-                                    fecha_colado = fcolado_rrpc,
-                                    fecha_recibe = fente_rrpc,
-                                    entrega = entr_rppc,
-                                    recibe = recib_rppc,
-                                    presion = presi_rppc,
-                                    especimen_tipo_ID = int_tesp_rppc,
-                                    concreto_tipo_ID = int_tcont_rrp,
-                                    concreto_situacion_ID = int_sit_rppc,
-                                    procedecia = proce_rppc,
-                                    elemento = elem_rppc,
-                                    dosificacion = dosi_rppc,
-                                    resistencia = resi_rppc,
-                                    clase = int_clase,
-                                    reva = dml_reva_rppc,
-                                    tma = int_tma_rppc,
-                                    olla = olla_rppc,
-                                    remision = remi_rppc,
-                                    salida_planta = dt_splan_rppc,
-                                    llegada_obra = dt_llobra_rppc,
-                                    desca_ini = dt_desca_ini_rppc,
-                                    desca_term = dt_desca_term_rppc,
-                                    vol = dml_vol_rppc,
-                                    revb = dl_revb_rppc,
-                                    localiza = loca_rppc,
-                                    usuario_ID = guis_usr_capt,
-                                    registro = DateTime.Now,
-                                    clte_obras_ID = int_co
-                                };
+                    //    i_clte.concreto_est_ID = 1;
+                    //    i_clte.concreto_est_muestra = str_nomues_rppc;
+                    //    i_clte.fecha_colado = fcolado_rrpc;
+                    //    i_clte.fecha_recibe = fente_rrpc;
+                    //    i_clte.entrega = entr_rppc;
+                    //    i_clte.recibe = recib_rppc;
+                    //    i_clte.presion = presi_rppc;
+                    //    i_clte.especimen_tipo_ID = int_tesp_rppc;
+                    //    i_clte.concreto_tipo_ID = int_tcont_rrp;
+                    //    i_clte.concreto_situacion_ID = int_sit_rppc;
+                    //    i_clte.procedecia = proce_rppc;
+                    //    i_clte.elemento = elem_rppc;
+                    //    i_clte.dosificacion = dosi_rppc;
+                    //    i_clte.resistencia = resi_rppc;
+                    //    i_clte.clase = int_clase;
+                    //    i_clte.reva = dml_reva_rppc;
+                    //    i_clte.tma = int_tma_rppc;
+                    //    i_clte.olla = olla_rppc;
+                    //    i_clte.remision = remi_rppc;
+                    //    i_clte.salida_planta = dt_splan_rppc;
+                    //    i_clte.llegada_obra = dt_llobra_rppc;
+                    //    i_clte.desca_ini = dt_desca_ini_rppc;
+                    //    i_clte.desca_term = dt_desca_term_rppc;
+                    //    i_clte.vol = dml_vol_rppc;
+                    //    i_clte.revb = dl_revb_rppc;
+                    //    i_clte.localiza = loca_rppc;
 
-                                m_clte.inf_rpc.Add(i_clte);
-                                m_clte.SaveChanges();
-                            }
-
-                            foreach (DataRow nn in dt1.Rows)
-                            {
-                                int d_e, d_en, d_ec;
-                                d_e = int.Parse(nn[0].ToString());
-                                d_en = int.Parse(nn[1].ToString());
-                                d_ec = int.Parse(nn[2].ToString());
-
-                                if (d_ec == 0)
-                                {
-                                }
-                                else
-                                {
-                                    string str_cod_esp;
-                                    int int_c_e;
-                                    using (bd_labEntities edm_rub = new bd_labEntities())
-                                    {
-                                        var i_rub = (from c in edm_rub.inf_ensaye_esp
-                                                     where c.concreto_rpc_ID == gui_nrppc
-                                                     select c).ToList();
-                                        int_c_e = i_rub.Count;
-                                        if (int_c_e == 0)
-                                        {
-                                            str_cod_esp = "ESP-" + string.Format("{0:000}", int_c_e + 1);
-                                        }
-                                        else
-                                        {
-                                            str_cod_esp = "ESP-" + string.Format("{0:000}", int_c_e + 1);
-                                        }
-                                    }
-                                    if (d_ec == 2)
-                                    {
-                                        for (int i = 0; i < d_ec; i++)
-                                        {
-                                            str_cod_esp = "ESP-" + string.Format("{0:000}", int_c_e + i + 1);
-                                            using (var m_conc_ec = new bd_labEntities())
-                                            {
-                                                var i_conc_ec = new inf_ensaye_esp
-
-                                                {
-                                                    ensaye_esp_ID = Guid.NewGuid(),
-                                                    ensaye_esp_cod = str_cod_esp,
-                                                    concreto_rpc_ID = gui_nrppc,
-                                                    ensaye_esp_dia = d_e,
-                                                    ensaye_esp_numdia = d_en,
-                                                    ensaye_esp_num = 1,
-                                                    ensaye_esp_est_ID = 1,
-                                                    ensaye_esp_registro = fcolado_rrpc.AddDays(d_en),
-                                                    registro = DateTime.Now,
-                                                };
-
-                                                m_conc_ec.inf_ensaye_esp.Add(i_conc_ec);
-                                                m_conc_ec.SaveChanges();
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        using (var m_conc_ec = new bd_labEntities())
-                                        {
-                                            var i_conc_ec = new inf_ensaye_esp
-
-                                            {
-                                                ensaye_esp_ID = Guid.NewGuid(),
-                                                ensaye_esp_cod = str_cod_esp,
-                                                concreto_rpc_ID = gui_nrppc,
-                                                ensaye_esp_dia = d_e,
-                                                ensaye_esp_numdia = d_en,
-                                                ensaye_esp_num = 1,
-                                                ensaye_esp_est_ID = 1,
-                                                ensaye_esp_registro = fcolado_rrpc.AddDays(d_en),
-                                                registro = DateTime.Now,
-                                            };
-
-                                            m_conc_ec.inf_ensaye_esp.Add(i_conc_ec);
-                                            m_conc_ec.SaveChanges();
-                                        }
-                                    }
-                                }
-                            }
-
-
-                            nmue_rppc.Text = null;
-                            gv_rppc.Visible = false;
-                            Mensaje("Datos de cliente-obra-muestra agregados con éxito.");
-                        }
-                        else
-                        {
-                            limp_txt_rppc();
-                            gv_rppc.Visible = false;
-                            Mensaje("Obra existe en la base de datos, favor de revisar.");
-                        }
-                    }
+                    //    m_clte.SaveChanges();
+                    //}
                 }
-                //}
-                //catch
-                //{
-                //    int_rppc = 0;
-                //    limp_txt_rppc();
+                
+                
 
-                //    i_agregar_rppc.Attributes["style"] = "color:white";
-                //    i_editar_rppc.Attributes["style"] = "color:white";
-                //    Mensaje("Favor de seleccionar una muestra");
-                //}
+
+
+
             }
+            
         }
         protected void btn_buscar_rppc_Click(object sender, EventArgs e)
         {
@@ -3252,17 +3073,22 @@ namespace lab_liec
 
                     guid_cltef = i_co.clte_obras_ID;
 
-                    var i_clte = (from t_clte in data_clte.inf_rpc
-                                  where t_clte.clte_obras_ID == guid_cltef
+                    var i_clte = (from t_co in data_clte.inf_clte_obras
+                                  join i_c in data_clte.inf_clte on t_co.clte_ID equals i_c.clte_ID
+                                  where t_co.clte_obras_ID == guid_cltef
                                   select new
                                   {
-                                      t_clte.concreto_est_muestra,
-                                      t_clte.registro
-                                  }).OrderBy(x => x.concreto_est_muestra).ToList();
+                                      t_co.clte_obras_ID,
+                                      t_co.clave_obra,
+                                      i_c.razon_social,
+                                      i_c.cod_clte,
+                                      i_c.registro
 
-                    gv_rppc.DataSource = i_clte;
-                    gv_rppc.DataBind();
-                    gv_rppc.Visible = true;
+                                  }).ToList();
+
+                    gv_obra_clte.DataSource = i_clte;
+                    gv_obra_clte.DataBind();
+                    gv_obra_clte.Visible = true;
                 }
             }
             catch

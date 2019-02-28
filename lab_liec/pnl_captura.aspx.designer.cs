@@ -2335,6 +2335,15 @@ namespace lab_liec {
         protected global::System.Web.UI.WebControls.CheckBox chkb_desactivar_rppc;
         
         /// <summary>
+        /// Control gv_obra_clte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv_obra_clte;
+        
+        /// <summary>
         /// Control div_rpc.
         /// </summary>
         /// <remarks>
@@ -2396,6 +2405,15 @@ namespace lab_liec {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gv_rppc;
+        
+        /// <summary>
+        /// Control div_docf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_docf;
         
         /// <summary>
         /// Control lbl_nmue_rppc.
@@ -3080,6 +3098,15 @@ namespace lab_liec {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_loca_rppc;
+        
+        /// <summary>
+        /// Control div_pfe.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_pfe;
         
         /// <summary>
         /// Control lbl_fmaxe.
