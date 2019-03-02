@@ -31,7 +31,7 @@ namespace lab_liec
         public string email { get; set; }
         public string callenum { get; set; }
         public string d_codigo { get; set; }
-        public Nullable<int> id_asenta_cpcons { get; set; }
+        public string id_asenta_cpcons { get; set; }
         public string comentarios { get; set; }
         public Nullable<System.DateTime> registro { get; set; }
         public System.Guid empresa_ID { get; set; }

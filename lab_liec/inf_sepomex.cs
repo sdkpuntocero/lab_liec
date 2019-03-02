@@ -26,7 +26,7 @@ namespace lab_liec
         public string c_cp { get; set; }
         public string c_tipo_asenta { get; set; }
         public string c_mnpio { get; set; }
-        public int id_asenta_cpcons { get; set; }
+        public string id_asenta_cpcons { get; set; }
         public string d_zona { get; set; }
         public string c_cve_ciudad { get; set; }
     }

@@ -1094,7 +1094,7 @@
                                             <div class="panel-body">
                                                 <div class="row">
                                                     <div class="col-lg-12">
-                                                        <asp:GridView CssClass="table" ID="gv_obra_clte" runat="server" AutoGenerateColumns="False" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" TabIndex="5" OnRowCommand="gv_obra_clte_RowCommand">
+                                                        <asp:GridView CssClass="table" ID="gv_obra_clte" runat="server" AutoGenerateColumns="False" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" TabIndex="6" OnRowCommand="gv_obra_clte_RowCommand">
                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                             <Columns>
                                                                 <asp:BoundField DataField="clte_obras_ID" HeaderText="ID" SortExpression="clte_obras_ID" Visible="true" HeaderStyle-CssClass="hideGridColumn" ItemStyle-CssClass="hideGridColumn" />
@@ -1130,9 +1130,9 @@
                                                                 <span class="input-group-addon">
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_buscar_rpc" runat="server" Text="*BUSCAR # MUESTRA:"></asp:Label>
                                                                 </span>
-                                                                <asp:TextBox CssClass="form-control input-box" ID="txt_buscar_rpc" runat="server" placeholder="letras/números" TextMode="Search" TabIndex="6"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="txt_buscar_rpc" runat="server" placeholder="letras/números" TextMode="Search" TabIndex="7"></asp:TextBox>
                                                                 <span class="input-group-btn">
-                                                                    <asp:Button CssClass="btn btn-warning" ID="btn_buscar_rpc" runat="server" Text="Ir" OnClick="btn_buscar_rpc_Click" TabIndex="7" />
+                                                                    <asp:Button CssClass="btn btn-warning" ID="btn_buscar_rpc" runat="server" Text="Ir" OnClick="btn_buscar_rpc_Click" TabIndex="8" />
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1142,7 +1142,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <asp:GridView CssClass="table" ID="gv_rppc" runat="server" AutoGenerateColumns="False" AllowPaging="True" CellPadding="4" PageSize="5" ForeColor="#333333" GridLines="None" TabIndex="8" OnPageIndexChanging="gv_rppc_PageIndexChanging" OnRowDataBound="gv_rppc_RowDataBound" OnRowCommand="gv_rppc_RowCommand">
+                                                        <asp:GridView CssClass="table" ID="gv_rppc" runat="server" AutoGenerateColumns="False" AllowPaging="True" CellPadding="4" PageSize="5" ForeColor="#333333" GridLines="None" TabIndex="9" OnPageIndexChanging="gv_rppc_PageIndexChanging" OnRowDataBound="gv_rppc_RowDataBound" OnRowCommand="gv_rppc_RowCommand">
                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                             <Columns>
                                                                  <asp:BoundField DataField="concreto_rpc_ID" HeaderText="ID" SortExpression="concreto_rpc_ID" Visible="true" HeaderStyle-CssClass="hideGridColumn" ItemStyle-CssClass="hideGridColumn" />
@@ -1182,7 +1182,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_nmue_rppc" runat="server" Text="*No. de Muestra:"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="nmue_rppc" runat="server" placeholder="letras/números" TabIndex="9"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="nmue_rppc" runat="server" placeholder="letras/números" TabIndex="10"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_nmue_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="nmue_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1193,7 +1193,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_fcol_rppc" runat="server" Text="*Colado"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="fcol_rppc" runat="server" TextMode="Date" TabIndex="10"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="fcol_rppc" runat="server" TextMode="Date" TabIndex="11"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_fcol_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="fcol_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1205,7 +1205,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_frec_rppc" runat="server" Text="Recepción"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="frec_rppc" runat="server" TextMode="Date" TabIndex="11"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="frec_rppc" runat="server" TextMode="Date" TabIndex="12"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_frec_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="frec_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1218,7 +1218,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_entrega_rppc" runat="server" Text="Entrega"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="entrega_rppc" runat="server" placeholder="letras/números" TabIndex="12"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="entrega_rppc" runat="server" placeholder="letras/números" TabIndex="13"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_entrega_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="entrega_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1229,7 +1229,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_recibe_rppc" runat="server" Text="Recibe"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="recibe_rppc" runat="server" placeholder="letras/números" TabIndex="13"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="recibe_rppc" runat="server" placeholder="letras/números" TabIndex="14"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_recibe_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="recibe_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1242,7 +1242,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_r_rppc" runat="server" Text="f’c=kgf/cm²"></asp:Label>
 
-                                                                <asp:TextBox CssClass="form-control input-box" ID="r_rppc" runat="server" placeholder="[0-9]" TabIndex="14"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control input-box" ID="r_rppc" runat="server" placeholder="[0-9]" TabIndex="15"></asp:TextBox>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_r_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="r_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1253,7 +1253,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_tesp_rppc" runat="server" Text="Tipo de Especímen"></asp:Label>
 
-                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_tesp_rppc" runat="server" AutoPostBack="true" BackColor="LightGray" ForeColor="#104D8D" TabIndex="15"></asp:DropDownList>
+                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_tesp_rppc" runat="server"  BackColor="LightGray" ForeColor="#104D8D" TabIndex="16"></asp:DropDownList>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_tesp_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="ddl_tesp_rppc" InitialValue="0" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1264,7 +1264,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_tconc_rppc" runat="server" Text="Tipo de Concreto (N,RR,RT,UR)"></asp:Label>
 
-                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_tconc_rppc" runat="server" AutoPostBack="true" BackColor="LightGray" ForeColor="#104D8D" TabIndex="16"></asp:DropDownList>
+                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_tconc_rppc" runat="server"  BackColor="LightGray" ForeColor="#104D8D" TabIndex="17"></asp:DropDownList>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_tconc_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="ddl_tconc_rppc" InitialValue="0" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1275,7 +1275,7 @@
 
                                                                 <asp:Label CssClass="control-label fuente_css02" ID="lbl_sit_rppc" runat="server" Text="Situación (Documento)"></asp:Label>
 
-                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_sit_rppc" runat="server" AutoPostBack="true" BackColor="LightGray" ForeColor="#104D8D" OnSelectedIndexChanged="ddl_sit_rppc_SelectedIndexChanged" TabIndex="17"></asp:DropDownList>
+                                                                <asp:DropDownList CssClass="form-control input-box" ID="ddl_sit_rppc" runat="server" AutoPostBack="true" BackColor="LightGray" ForeColor="#104D8D" OnSelectedIndexChanged="ddl_sit_rppc_SelectedIndexChanged" TabIndex="18"></asp:DropDownList>
                                                                 <div class="text-right">
                                                                     <asp:RequiredFieldValidator ID="rfv_sit_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="ddl_sit_rppc" InitialValue="0" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                 </div>
@@ -1289,7 +1289,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_proce_rppc" runat="server" Text="*Procedencia:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_proce_rppc" runat="server" placeholder="letras/números" TabIndex="18"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_proce_rppc" runat="server" placeholder="letras/números" TabIndex="19"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_proce_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_proce_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1300,7 +1300,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_elem_rppc" runat="server" Text="*Elemento:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_elem_rppc" runat="server" placeholder="letras/números" TabIndex="19"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_elem_rppc" runat="server" placeholder="letras/números" TabIndex="20"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_elem_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_elem_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1311,7 +1311,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_dosi_rppc" runat="server" Text="*Dosificación:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_dosi_rppc" runat="server" placeholder="letras/números" TabIndex="20"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_dosi_rppc" runat="server" placeholder="letras/números" TabIndex="21"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_dosi_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_dosi_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1322,7 +1322,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_resis_rppc" runat="server" Text="*Resistencia:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_resis_rppc" runat="server" placeholder="letras/números" TabIndex="21"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_resis_rppc" runat="server" placeholder="letras/números" TabIndex="22"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_resis_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_resis_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1333,7 +1333,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_clase_rppc" runat="server" Text="*Clase:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_clase_rppc" runat="server" placeholder="letras/números" TabIndex="22"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_clase_rppc" runat="server" placeholder="letras/números" TabIndex="23"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_clase_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_clase_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1344,7 +1344,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_rev_rrpc" runat="server" Text="*REV. cm:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_rev_rrpc" runat="server" placeholder="letras/números" TabIndex="23"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_rev_rrpc" runat="server" placeholder="letras/números" TabIndex="24"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_rev_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_rev_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1357,7 +1357,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_tma_rrpc" runat="server" Text="*T.M.A. mm:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_tma_rrpc" runat="server" placeholder="letras/números" TabIndex="24"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_tma_rrpc" runat="server" placeholder="letras/números" TabIndex="25"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_tma_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_tma_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1368,7 +1368,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_olla_rrpc" runat="server" Text="*OLLA:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_olla_rrpc" runat="server" placeholder="letras/números" TabIndex="25"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_olla_rrpc" runat="server" placeholder="letras/números" TabIndex="26"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_olla_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_olla_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1379,7 +1379,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_remi_rppc" runat="server" Text="*Remisión:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_remi_rppc" runat="server" placeholder="letras/números" TabIndex="26"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_remi_rppc" runat="server" placeholder="letras/números" TabIndex="27"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_remi_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_remi_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1390,7 +1390,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_splata_rrpc" runat="server" Text="*Salida planta:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_splata_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="27"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_splata_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="28"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_splata_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_splata_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1401,7 +1401,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_llobra_rrpc" runat="server" Text="*Llegada a obra:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_llobra_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="28"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_llobra_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="29"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_llobra_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_llobra_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1412,7 +1412,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_inic_rrpc" runat="server" Text="*Descarga Inicia:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_inic_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="29"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_inic_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="30"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfvl_inic_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_inic_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1425,7 +1425,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_term_rrpc" runat="server" Text="*Descarga Termina:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_term_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="30"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_term_rrpc" runat="server" placeholder="letras/números" TextMode="Time" TabIndex="31"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_term_rrpc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_term_rrpc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1436,7 +1436,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_vol_rppc" runat="server" Text="*VOL m3:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_vol_rppc" runat="server" placeholder="letras/números" TabIndex="31"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_vol_rppc" runat="server" placeholder="letras/números" TabIndex="32"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_vol_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_vol_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1447,7 +1447,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_revb_rppc" runat="server" Text="*REV. cm:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_revb_rppc" runat="server" placeholder="letras/números" TabIndex="32"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_revb_rppc" runat="server" placeholder="letras/números" TabIndex="33"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_revb_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_revb_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1458,7 +1458,7 @@
 
                                                                     <asp:Label CssClass="control-label fuente_css02" ID="lbl_loca_rppc" runat="server" Text="*Localización:"></asp:Label>
 
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_loca_rppc" runat="server" placeholder="letras/números" TextMode="MultiLine" TabIndex="33"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_loca_rppc" runat="server" placeholder="letras/números" TextMode="MultiLine" TabIndex="34"></asp:TextBox>
                                                                     <div class="text-right">
                                                                         <asp:RequiredFieldValidator ID="rfv_loca_rppc" runat="server" ErrorMessage="*Obligatorio" ControlToValidate="txt_loca_rppc" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
                                                                     </div>
@@ -1476,13 +1476,13 @@
 
                                                             <div class="input-group">
                                                                 <span class="input-group-addon text-left">
-                                                                    <asp:CheckBox ID="chkb_1_rppc" runat="server" AutoPostBack="true" Text="1 Día : " OnCheckedChanged="chkb_1_rppc_CheckedChanged" TabIndex="34" />
+                                                                    <asp:CheckBox ID="chkb_1_rppc" runat="server" AutoPostBack="true" Text="1 Día : " OnCheckedChanged="chkb_1_rppc_CheckedChanged" TabIndex="35" />
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant1_rppc" runat="server" TextMode="Number" TabIndex="35"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant1_rppc" runat="server" TextMode="Number" TabIndex="36"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f1_rppc" runat="server" TextMode="Date" TabIndex="36" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f1_rppc" runat="server" TextMode="Date" TabIndex="37" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1492,13 +1492,13 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
 
-                                                                    <asp:CheckBox ID="chkb_3_rppc" runat="server" AutoPostBack="true" Text="3 Días:" OnCheckedChanged="chkb_3_rppc_CheckedChanged" TabIndex="37" />
+                                                                    <asp:CheckBox ID="chkb_3_rppc" runat="server" AutoPostBack="true" Text="3 Días:" OnCheckedChanged="chkb_3_rppc_CheckedChanged" TabIndex="38" />
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant3_rppc" runat="server" TextMode="Number" TabIndex="38"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant3_rppc" runat="server" TextMode="Number" TabIndex="39"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f3_rppc" runat="server" TextMode="Date" TabIndex="39" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f3_rppc" runat="server" TextMode="Date" TabIndex="40" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1508,13 +1508,13 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
 
-                                                                    <asp:CheckBox ID="chkb_7_rppc" runat="server" AutoPostBack="true" Text="7 Días:" OnCheckedChanged="chkb_7_rppc_CheckedChanged" TabIndex="40" />
+                                                                    <asp:CheckBox ID="chkb_7_rppc" runat="server" AutoPostBack="true" Text="7 Días:" OnCheckedChanged="chkb_7_rppc_CheckedChanged" TabIndex="41" />
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant7_rppc" runat="server" TextMode="Number" TabIndex="41"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant7_rppc" runat="server" TextMode="Number" TabIndex="42"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f7_rppc" runat="server" TextMode="Date" TabIndex="42" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f7_rppc" runat="server" TextMode="Date" TabIndex="43" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1526,13 +1526,13 @@
 
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
-                                                                    <asp:CheckBox ID="chkb_14_rppc" runat="server" AutoPostBack="true" Text="14 Días:" OnCheckedChanged="chkb_14_rppc_CheckedChanged" TabIndex="43" />
+                                                                    <asp:CheckBox ID="chkb_14_rppc" runat="server" AutoPostBack="true" Text="14 Días:" OnCheckedChanged="chkb_14_rppc_CheckedChanged" TabIndex="44" />
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant14_rppc" runat="server" TextMode="Number" TabIndex="44"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant14_rppc" runat="server" TextMode="Number" TabIndex="45"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f14_rppc" runat="server" TextMode="Date" TabIndex="45" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f14_rppc" runat="server" TextMode="Date" TabIndex="46" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1542,13 +1542,13 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
 
-                                                                    <asp:CheckBox ID="chkb_28_rppc" runat="server" AutoPostBack="true" Text="28 Días:" OnCheckedChanged="chkb_28_rppc_CheckedChanged" TabIndex="46" />
+                                                                    <asp:CheckBox ID="chkb_28_rppc" runat="server" AutoPostBack="true" Text="28 Días:" OnCheckedChanged="chkb_28_rppc_CheckedChanged" TabIndex="47" />
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant28_rppc" runat="server" TextMode="Number" TabIndex="47"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cant28_rppc" runat="server" TextMode="Number" TabIndex="48"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f28_rppc" runat="server" TextMode="Date" TabIndex="48" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_f28_rppc" runat="server" TextMode="Date" TabIndex="49" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1558,15 +1558,15 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
 
-                                                                    <asp:CheckBox ID="chkb_otro_rppc" runat="server" AutoPostBack="true" Text="Otro     : " OnCheckedChanged="chkb_otro_rppc_CheckedChanged" TabIndex="49" />
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cantotro_rppc" runat="server" TextMode="Number" TabIndex="50"></asp:TextBox>
+                                                                    <asp:CheckBox ID="chkb_otro_rppc" runat="server" AutoPostBack="true" Text="Otro     : " OnCheckedChanged="chkb_otro_rppc_CheckedChanged" TabIndex="50" />
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cantotro_rppc" runat="server" TextMode="Number" TabIndex="51"></asp:TextBox>
                                                                 </span>
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cantesp_rppc" runat="server" TextMode="Number" TabIndex="51"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_cantesp_rppc" runat="server" TextMode="Number" TabIndex="52"></asp:TextBox>
                                                                 </span>
 
                                                                 <span class="input-group-addon">
-                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_fotro_rppc" runat="server" TextMode="Date" TabIndex="52" Enabled="false"></asp:TextBox>
+                                                                    <asp:TextBox CssClass="form-control input-box" ID="txt_fotro_rppc" runat="server" TextMode="Date" TabIndex="53" Enabled="false"></asp:TextBox>
                                                                 </span>
                                                             </div>
                                                             <div class="text-right">
@@ -1579,7 +1579,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="text-right">
-                                                    <asp:Button CssClass="btn btn-warning" ID="btn_guardar_rppc" runat="server" Text="GUARDAR" TabIndex="53" Visible="false" OnClick="btn_guardar_rppc_Click" />
+                                                    <asp:Button CssClass="btn btn-warning" ID="btn_guardar_rppc" runat="server" Text="GUARDAR" TabIndex="54" Visible="false" OnClick="btn_guardar_rppc_Click" />
                                                 </div>
                                             </div>
                                         </div>

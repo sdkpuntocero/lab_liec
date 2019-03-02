@@ -188,7 +188,7 @@
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="callenum" Type="varchar" MaxLength="300" />
           <Property Name="d_codigo" Type="varchar" MaxLength="6" />
-          <Property Name="id_asenta_cpcons" Type="int" />
+          <Property Name="id_asenta_cpcons" Type="varchar" MaxLength="6" />
           <Property Name="comentarios" Type="varchar(max)" />
           <Property Name="registro" Type="datetime" />
           <Property Name="empresa_ID" Type="uniqueidentifier" Nullable="false" />
@@ -266,16 +266,126 @@
           <Property Name="ensaye_esp_est_ID" Type="int" Nullable="false" />
           <Property Name="cde" Type="int" />
           <Property Name="cdem" Type="int" />
-          <Property Name="clave_ensa_a" Type="int" />
-          <Property Name="masa_a" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="altura_a" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="altura_b" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="lados_a" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="lados_b" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="directo_a" Type="varchar" MaxLength="50" />
-          <Property Name="intensidad_a" Type="varchar" MaxLength="50" />
-          <Property Name="presion_a" Type="decimal" Precision="18" Scale="4" />
-          <Property Name="tipofalla_a" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_uno" Type="int" />
+          <Property Name="masa_a_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_uno" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_uno" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_uno" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_uno" Type="int" />
+          <Property Name="masa_b_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_uno" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_uno" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_uno" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_uno" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_tres" Type="int" />
+          <Property Name="masa_a_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_tres" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_tres" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_tres" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_tres" Type="int" />
+          <Property Name="masa_b_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_tres" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_tres" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_tres" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_tres" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_siete" Type="int" />
+          <Property Name="masa_a_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_siete" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_siete" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_siete" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_siete" Type="int" />
+          <Property Name="masa_b_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_siete" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_siete" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_siete" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_siete" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_catorce" Type="int" />
+          <Property Name="masa_a_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_catorce" Type="int" />
+          <Property Name="masa_b_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_catorce" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_veiteocho" Type="int" />
+          <Property Name="masa_a_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_veiteocho" Type="int" />
+          <Property Name="masa_b_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_veiteocho" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_a_n" Type="int" />
+          <Property Name="masa_a_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_n" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_a_n" Type="varchar" MaxLength="50" />
+          <Property Name="presion_a_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_n" Type="varchar" MaxLength="50" />
+          <Property Name="clave_ensa_b_n" Type="int" />
+          <Property Name="masa_b_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_n" Type="varchar" MaxLength="50" />
+          <Property Name="intensidad_b_n" Type="varchar" MaxLength="50" />
+          <Property Name="presion_b_n" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_n" Type="varchar" MaxLength="50" />
           <Property Name="registro" Type="datetime" />
           <Property Name="concreto_rpc_ID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
@@ -364,21 +474,21 @@
             <PropertyRef Name="d_codigo" />
             <PropertyRef Name="id_asenta_cpcons" />
           </Key>
-          <Property Name="d_codigo" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="d_asenta" Type="varchar" MaxLength="150" />
+          <Property Name="d_codigo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="d_asenta" Type="varchar" MaxLength="100" />
           <Property Name="d_tipo_asenta" Type="varchar" MaxLength="50" />
-          <Property Name="d_mnpio" Type="varchar" MaxLength="50" />
+          <Property Name="d_mnpio" Type="varchar" MaxLength="150" />
           <Property Name="d_estado" Type="varchar" MaxLength="50" />
-          <Property Name="d_ciudad" Type="varchar" MaxLength="50" />
-          <Property Name="d_cp" Type="varchar" MaxLength="50" />
-          <Property Name="c_estado" Type="varchar" MaxLength="50" />
-          <Property Name="c_oficina" Type="varchar" MaxLength="50" />
-          <Property Name="c_cp" Type="varchar" MaxLength="50" />
-          <Property Name="c_tipo_asenta" Type="varchar" MaxLength="50" />
-          <Property Name="c_mnpio" Type="varchar" MaxLength="50" />
-          <Property Name="id_asenta_cpcons" Type="int" Nullable="false" />
-          <Property Name="d_zona" Type="varchar" MaxLength="50" />
-          <Property Name="c_cve_ciudad" Type="varchar" MaxLength="50" />
+          <Property Name="d_ciudad" Type="varchar" MaxLength="150" />
+          <Property Name="d_cp" Type="varchar" MaxLength="6" />
+          <Property Name="c_estado" Type="varchar" MaxLength="3" />
+          <Property Name="c_oficina" Type="varchar" MaxLength="6" />
+          <Property Name="c_cp" Type="varchar" MaxLength="5" />
+          <Property Name="c_tipo_asenta" Type="varchar" MaxLength="3" />
+          <Property Name="c_mnpio" Type="varchar" MaxLength="4" />
+          <Property Name="id_asenta_cpcons" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="d_zona" Type="varchar" MaxLength="15" />
+          <Property Name="c_cve_ciudad" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="inf_usr_bancario">
           <Key>
@@ -1551,7 +1661,7 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="callenum" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="d_codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <Property Name="id_asenta_cpcons" Type="Int32" />
+          <Property Name="id_asenta_cpcons" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="registro" Type="DateTime" Precision="3" />
           <Property Name="empresa_ID" Type="Guid" Nullable="false" />
@@ -1645,16 +1755,126 @@
           <Property Name="ensaye_esp_est_ID" Type="Int32" Nullable="false" />
           <Property Name="cde" Type="Int32" />
           <Property Name="cdem" Type="Int32" />
-          <Property Name="clave_ensa_a" Type="Int32" />
-          <Property Name="masa_a" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="altura_a" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="altura_b" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="lados_a" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="lados_b" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="directo_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="intensidad_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="presion_a" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="tipofalla_a" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_uno" Type="Int32" />
+          <Property Name="masa_a_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_uno" Type="Int32" />
+          <Property Name="masa_b_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_uno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_tres" Type="Int32" />
+          <Property Name="masa_a_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_tres" Type="Int32" />
+          <Property Name="masa_b_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_tres" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_siete" Type="Int32" />
+          <Property Name="masa_a_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_siete" Type="Int32" />
+          <Property Name="masa_b_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_siete" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_catorce" Type="Int32" />
+          <Property Name="masa_a_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_catorce" Type="Int32" />
+          <Property Name="masa_b_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_catorce" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_veiteocho" Type="Int32" />
+          <Property Name="masa_a_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_veiteocho" Type="Int32" />
+          <Property Name="masa_b_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_veiteocho" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_a_n" Type="Int32" />
+          <Property Name="masa_a_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_aa_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ab_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_aa_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ab_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_a_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave_ensa_b_n" Type="Int32" />
+          <Property Name="masa_b_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_ba_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="altura_bb_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_ba_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="lados_bb_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="directo_b_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intensidad_b_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="presion_b_n" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tipofalla_b_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="registro" Type="DateTime" Precision="3" />
           <Property Name="concreto_rpc_ID" Type="Guid" Nullable="false" />
           <NavigationProperty Name="fact_ensaye_esp_est" Relationship="bd_labModel.FK_inf_ensaye_esp_fact_ensaye_esp_est" FromRole="inf_ensaye_esp" ToRole="fact_ensaye_esp_est" />
@@ -1761,21 +1981,21 @@
             <PropertyRef Name="d_codigo" />
             <PropertyRef Name="id_asenta_cpcons" />
           </Key>
-          <Property Name="d_codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="d_asenta" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="d_codigo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="d_asenta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="d_tipo_asenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="d_mnpio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_mnpio" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="d_estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="d_ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="d_cp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_oficina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_cp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_tipo_asenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_mnpio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="id_asenta_cpcons" Type="Int32" Nullable="false" />
-          <Property Name="d_zona" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="c_cve_ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="d_ciudad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="d_cp" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="c_estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="c_oficina" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="c_cp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="c_tipo_asenta" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="c_mnpio" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="id_asenta_cpcons" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="d_zona" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="c_cve_ciudad" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="inf_usr_bancario">
           <Key>
@@ -2648,16 +2868,126 @@
               <MappingFragment StoreEntitySet="inf_ensaye_esp">
                 <ScalarProperty Name="concreto_rpc_ID" ColumnName="concreto_rpc_ID" />
                 <ScalarProperty Name="registro" ColumnName="registro" />
-                <ScalarProperty Name="tipofalla_a" ColumnName="tipofalla_a" />
-                <ScalarProperty Name="presion_a" ColumnName="presion_a" />
-                <ScalarProperty Name="intensidad_a" ColumnName="intensidad_a" />
-                <ScalarProperty Name="directo_a" ColumnName="directo_a" />
-                <ScalarProperty Name="lados_b" ColumnName="lados_b" />
-                <ScalarProperty Name="lados_a" ColumnName="lados_a" />
-                <ScalarProperty Name="altura_b" ColumnName="altura_b" />
-                <ScalarProperty Name="altura_a" ColumnName="altura_a" />
-                <ScalarProperty Name="masa_a" ColumnName="masa_a" />
-                <ScalarProperty Name="clave_ensa_a" ColumnName="clave_ensa_a" />
+                <ScalarProperty Name="tipofalla_b_n" ColumnName="tipofalla_b_n" />
+                <ScalarProperty Name="presion_b_n" ColumnName="presion_b_n" />
+                <ScalarProperty Name="intensidad_b_n" ColumnName="intensidad_b_n" />
+                <ScalarProperty Name="directo_b_n" ColumnName="directo_b_n" />
+                <ScalarProperty Name="lados_bb_n" ColumnName="lados_bb_n" />
+                <ScalarProperty Name="lados_ba_n" ColumnName="lados_ba_n" />
+                <ScalarProperty Name="altura_bb_n" ColumnName="altura_bb_n" />
+                <ScalarProperty Name="altura_ba_n" ColumnName="altura_ba_n" />
+                <ScalarProperty Name="masa_b_n" ColumnName="masa_b_n" />
+                <ScalarProperty Name="clave_ensa_b_n" ColumnName="clave_ensa_b_n" />
+                <ScalarProperty Name="tipofalla_a_n" ColumnName="tipofalla_a_n" />
+                <ScalarProperty Name="presion_a_n" ColumnName="presion_a_n" />
+                <ScalarProperty Name="intensidad_a_n" ColumnName="intensidad_a_n" />
+                <ScalarProperty Name="directo_a_n" ColumnName="directo_a_n" />
+                <ScalarProperty Name="lados_ab_n" ColumnName="lados_ab_n" />
+                <ScalarProperty Name="lados_aa_n" ColumnName="lados_aa_n" />
+                <ScalarProperty Name="altura_ab_n" ColumnName="altura_ab_n" />
+                <ScalarProperty Name="altura_aa_n" ColumnName="altura_aa_n" />
+                <ScalarProperty Name="masa_a_n" ColumnName="masa_a_n" />
+                <ScalarProperty Name="clave_ensa_a_n" ColumnName="clave_ensa_a_n" />
+                <ScalarProperty Name="tipofalla_b_veiteocho" ColumnName="tipofalla_b_veiteocho" />
+                <ScalarProperty Name="presion_b_veiteocho" ColumnName="presion_b_veiteocho" />
+                <ScalarProperty Name="intensidad_b_veiteocho" ColumnName="intensidad_b_veiteocho" />
+                <ScalarProperty Name="directo_b_veiteocho" ColumnName="directo_b_veiteocho" />
+                <ScalarProperty Name="lados_bb_veiteocho" ColumnName="lados_bb_veiteocho" />
+                <ScalarProperty Name="lados_ba_veiteocho" ColumnName="lados_ba_veiteocho" />
+                <ScalarProperty Name="altura_bb_veiteocho" ColumnName="altura_bb_veiteocho" />
+                <ScalarProperty Name="altura_ba_veiteocho" ColumnName="altura_ba_veiteocho" />
+                <ScalarProperty Name="masa_b_veiteocho" ColumnName="masa_b_veiteocho" />
+                <ScalarProperty Name="clave_ensa_b_veiteocho" ColumnName="clave_ensa_b_veiteocho" />
+                <ScalarProperty Name="tipofalla_a_veiteocho" ColumnName="tipofalla_a_veiteocho" />
+                <ScalarProperty Name="presion_a_veiteocho" ColumnName="presion_a_veiteocho" />
+                <ScalarProperty Name="intensidad_a_veiteocho" ColumnName="intensidad_a_veiteocho" />
+                <ScalarProperty Name="directo_a_veiteocho" ColumnName="directo_a_veiteocho" />
+                <ScalarProperty Name="lados_ab_veiteocho" ColumnName="lados_ab_veiteocho" />
+                <ScalarProperty Name="lados_aa_veiteocho" ColumnName="lados_aa_veiteocho" />
+                <ScalarProperty Name="altura_ab_veiteocho" ColumnName="altura_ab_veiteocho" />
+                <ScalarProperty Name="altura_aa_veiteocho" ColumnName="altura_aa_veiteocho" />
+                <ScalarProperty Name="masa_a_veiteocho" ColumnName="masa_a_veiteocho" />
+                <ScalarProperty Name="clave_ensa_a_veiteocho" ColumnName="clave_ensa_a_veiteocho" />
+                <ScalarProperty Name="tipofalla_b_catorce" ColumnName="tipofalla_b_catorce" />
+                <ScalarProperty Name="presion_b_catorce" ColumnName="presion_b_catorce" />
+                <ScalarProperty Name="intensidad_b_catorce" ColumnName="intensidad_b_catorce" />
+                <ScalarProperty Name="directo_b_catorce" ColumnName="directo_b_catorce" />
+                <ScalarProperty Name="lados_bb_catorce" ColumnName="lados_bb_catorce" />
+                <ScalarProperty Name="lados_ba_catorce" ColumnName="lados_ba_catorce" />
+                <ScalarProperty Name="altura_bb_catorce" ColumnName="altura_bb_catorce" />
+                <ScalarProperty Name="altura_ba_catorce" ColumnName="altura_ba_catorce" />
+                <ScalarProperty Name="masa_b_catorce" ColumnName="masa_b_catorce" />
+                <ScalarProperty Name="clave_ensa_b_catorce" ColumnName="clave_ensa_b_catorce" />
+                <ScalarProperty Name="tipofalla_a_catorce" ColumnName="tipofalla_a_catorce" />
+                <ScalarProperty Name="presion_a_catorce" ColumnName="presion_a_catorce" />
+                <ScalarProperty Name="intensidad_a_catorce" ColumnName="intensidad_a_catorce" />
+                <ScalarProperty Name="directo_a_catorce" ColumnName="directo_a_catorce" />
+                <ScalarProperty Name="lados_ab_catorce" ColumnName="lados_ab_catorce" />
+                <ScalarProperty Name="lados_aa_catorce" ColumnName="lados_aa_catorce" />
+                <ScalarProperty Name="altura_ab_catorce" ColumnName="altura_ab_catorce" />
+                <ScalarProperty Name="altura_aa_catorce" ColumnName="altura_aa_catorce" />
+                <ScalarProperty Name="masa_a_catorce" ColumnName="masa_a_catorce" />
+                <ScalarProperty Name="clave_ensa_a_catorce" ColumnName="clave_ensa_a_catorce" />
+                <ScalarProperty Name="tipofalla_b_siete" ColumnName="tipofalla_b_siete" />
+                <ScalarProperty Name="presion_b_siete" ColumnName="presion_b_siete" />
+                <ScalarProperty Name="intensidad_b_siete" ColumnName="intensidad_b_siete" />
+                <ScalarProperty Name="directo_b_siete" ColumnName="directo_b_siete" />
+                <ScalarProperty Name="lados_bb_siete" ColumnName="lados_bb_siete" />
+                <ScalarProperty Name="lados_ba_siete" ColumnName="lados_ba_siete" />
+                <ScalarProperty Name="altura_bb_siete" ColumnName="altura_bb_siete" />
+                <ScalarProperty Name="altura_ba_siete" ColumnName="altura_ba_siete" />
+                <ScalarProperty Name="masa_b_siete" ColumnName="masa_b_siete" />
+                <ScalarProperty Name="clave_ensa_b_siete" ColumnName="clave_ensa_b_siete" />
+                <ScalarProperty Name="tipofalla_a_siete" ColumnName="tipofalla_a_siete" />
+                <ScalarProperty Name="presion_a_siete" ColumnName="presion_a_siete" />
+                <ScalarProperty Name="intensidad_a_siete" ColumnName="intensidad_a_siete" />
+                <ScalarProperty Name="directo_a_siete" ColumnName="directo_a_siete" />
+                <ScalarProperty Name="lados_ab_siete" ColumnName="lados_ab_siete" />
+                <ScalarProperty Name="lados_aa_siete" ColumnName="lados_aa_siete" />
+                <ScalarProperty Name="altura_ab_siete" ColumnName="altura_ab_siete" />
+                <ScalarProperty Name="altura_aa_siete" ColumnName="altura_aa_siete" />
+                <ScalarProperty Name="masa_a_siete" ColumnName="masa_a_siete" />
+                <ScalarProperty Name="clave_ensa_a_siete" ColumnName="clave_ensa_a_siete" />
+                <ScalarProperty Name="tipofalla_b_tres" ColumnName="tipofalla_b_tres" />
+                <ScalarProperty Name="presion_b_tres" ColumnName="presion_b_tres" />
+                <ScalarProperty Name="intensidad_b_tres" ColumnName="intensidad_b_tres" />
+                <ScalarProperty Name="directo_b_tres" ColumnName="directo_b_tres" />
+                <ScalarProperty Name="lados_bb_tres" ColumnName="lados_bb_tres" />
+                <ScalarProperty Name="lados_ba_tres" ColumnName="lados_ba_tres" />
+                <ScalarProperty Name="altura_bb_tres" ColumnName="altura_bb_tres" />
+                <ScalarProperty Name="altura_ba_tres" ColumnName="altura_ba_tres" />
+                <ScalarProperty Name="masa_b_tres" ColumnName="masa_b_tres" />
+                <ScalarProperty Name="clave_ensa_b_tres" ColumnName="clave_ensa_b_tres" />
+                <ScalarProperty Name="tipofalla_a_tres" ColumnName="tipofalla_a_tres" />
+                <ScalarProperty Name="presion_a_tres" ColumnName="presion_a_tres" />
+                <ScalarProperty Name="intensidad_a_tres" ColumnName="intensidad_a_tres" />
+                <ScalarProperty Name="directo_a_tres" ColumnName="directo_a_tres" />
+                <ScalarProperty Name="lados_ab_tres" ColumnName="lados_ab_tres" />
+                <ScalarProperty Name="lados_aa_tres" ColumnName="lados_aa_tres" />
+                <ScalarProperty Name="altura_ab_tres" ColumnName="altura_ab_tres" />
+                <ScalarProperty Name="altura_aa_tres" ColumnName="altura_aa_tres" />
+                <ScalarProperty Name="masa_a_tres" ColumnName="masa_a_tres" />
+                <ScalarProperty Name="clave_ensa_a_tres" ColumnName="clave_ensa_a_tres" />
+                <ScalarProperty Name="tipofalla_b_uno" ColumnName="tipofalla_b_uno" />
+                <ScalarProperty Name="presion_b_uno" ColumnName="presion_b_uno" />
+                <ScalarProperty Name="intensidad_b_uno" ColumnName="intensidad_b_uno" />
+                <ScalarProperty Name="directo_b_uno" ColumnName="directo_b_uno" />
+                <ScalarProperty Name="lados_bb_uno" ColumnName="lados_bb_uno" />
+                <ScalarProperty Name="lados_ba_uno" ColumnName="lados_ba_uno" />
+                <ScalarProperty Name="altura_bb_uno" ColumnName="altura_bb_uno" />
+                <ScalarProperty Name="altura_ba_uno" ColumnName="altura_ba_uno" />
+                <ScalarProperty Name="masa_b_uno" ColumnName="masa_b_uno" />
+                <ScalarProperty Name="clave_ensa_b_uno" ColumnName="clave_ensa_b_uno" />
+                <ScalarProperty Name="tipofalla_a_uno" ColumnName="tipofalla_a_uno" />
+                <ScalarProperty Name="presion_a_uno" ColumnName="presion_a_uno" />
+                <ScalarProperty Name="intensidad_a_uno" ColumnName="intensidad_a_uno" />
+                <ScalarProperty Name="directo_a_uno" ColumnName="directo_a_uno" />
+                <ScalarProperty Name="lados_ab_uno" ColumnName="lados_ab_uno" />
+                <ScalarProperty Name="lados_aa_uno" ColumnName="lados_aa_uno" />
+                <ScalarProperty Name="altura_ab_uno" ColumnName="altura_ab_uno" />
+                <ScalarProperty Name="altura_aa_uno" ColumnName="altura_aa_uno" />
+                <ScalarProperty Name="masa_a_uno" ColumnName="masa_a_uno" />
+                <ScalarProperty Name="clave_ensa_a_uno" ColumnName="clave_ensa_a_uno" />
                 <ScalarProperty Name="cdem" ColumnName="cdem" />
                 <ScalarProperty Name="cde" ColumnName="cde" />
                 <ScalarProperty Name="ensaye_esp_est_ID" ColumnName="ensaye_esp_est_ID" />
