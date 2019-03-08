@@ -258,14 +258,10 @@
             <PropertyRef Name="ensaye_esp_ID" />
           </Key>
           <Property Name="ensaye_esp_ID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ensaye_esp_cod" Type="varchar" MaxLength="50" />
-          <Property Name="ensaye_esp_dia" Type="int" />
-          <Property Name="ensaye_esp_numdia" Type="int" />
-          <Property Name="ensaye_esp_num" Type="int" />
-          <Property Name="ensaye_esp_registro" Type="date" />
           <Property Name="ensaye_esp_est_ID" Type="int" Nullable="false" />
-          <Property Name="cde" Type="int" />
-          <Property Name="cdem" Type="int" />
+          <Property Name="ensaye_esp_num_a_uno" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_uno" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_uno" Type="date" />
           <Property Name="clave_ensa_a_uno" Type="int" />
           <Property Name="masa_a_uno" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_uno" Type="decimal" Precision="18" Scale="4" />
@@ -276,6 +272,9 @@
           <Property Name="intensidad_a_uno" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_uno" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_uno" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_uno" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_uno" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_uno" Type="date" />
           <Property Name="clave_ensa_b_uno" Type="int" />
           <Property Name="masa_b_uno" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_uno" Type="decimal" Precision="18" Scale="4" />
@@ -286,6 +285,9 @@
           <Property Name="intensidad_b_uno" Type="varchar" MaxLength="50" />
           <Property Name="presion_b_uno" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_uno" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_a_tres" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_tres" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_tres" Type="date" />
           <Property Name="clave_ensa_a_tres" Type="int" />
           <Property Name="masa_a_tres" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_tres" Type="decimal" Precision="18" Scale="4" />
@@ -296,6 +298,9 @@
           <Property Name="intensidad_a_tres" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_tres" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_tres" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_tres" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_tres" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_tres" Type="date" />
           <Property Name="clave_ensa_b_tres" Type="int" />
           <Property Name="masa_b_tres" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_tres" Type="decimal" Precision="18" Scale="4" />
@@ -306,6 +311,9 @@
           <Property Name="intensidad_b_tres" Type="varchar" MaxLength="50" />
           <Property Name="presion_b_tres" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_tres" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_a_siete" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_siete" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_siete" Type="date" />
           <Property Name="clave_ensa_a_siete" Type="int" />
           <Property Name="masa_a_siete" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_siete" Type="decimal" Precision="18" Scale="4" />
@@ -316,6 +324,9 @@
           <Property Name="intensidad_a_siete" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_siete" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_siete" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_siete" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_siete" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_siete" Type="date" />
           <Property Name="clave_ensa_b_siete" Type="int" />
           <Property Name="masa_b_siete" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_siete" Type="decimal" Precision="18" Scale="4" />
@@ -326,6 +337,9 @@
           <Property Name="intensidad_b_siete" Type="varchar" MaxLength="50" />
           <Property Name="presion_b_siete" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_siete" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_a_catorce" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_catorce" Type="date" />
           <Property Name="clave_ensa_a_catorce" Type="int" />
           <Property Name="masa_a_catorce" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_catorce" Type="decimal" Precision="18" Scale="4" />
@@ -336,6 +350,9 @@
           <Property Name="intensidad_a_catorce" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_catorce" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_catorce" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_catorce" Type="date" />
           <Property Name="clave_ensa_b_catorce" Type="int" />
           <Property Name="masa_b_catorce" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_catorce" Type="decimal" Precision="18" Scale="4" />
@@ -346,6 +363,9 @@
           <Property Name="intensidad_b_catorce" Type="varchar" MaxLength="50" />
           <Property Name="presion_b_catorce" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_catorce" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_a_veiteocho" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_veiteocho" Type="date" />
           <Property Name="clave_ensa_a_veiteocho" Type="int" />
           <Property Name="masa_a_veiteocho" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_veiteocho" Type="decimal" Precision="18" Scale="4" />
@@ -356,6 +376,9 @@
           <Property Name="intensidad_a_veiteocho" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_veiteocho" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_veiteocho" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_veiteocho" Type="date" />
           <Property Name="clave_ensa_b_veiteocho" Type="int" />
           <Property Name="masa_b_veiteocho" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_veiteocho" Type="decimal" Precision="18" Scale="4" />
@@ -366,6 +389,9 @@
           <Property Name="intensidad_b_veiteocho" Type="varchar" MaxLength="50" />
           <Property Name="presion_b_veiteocho" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_veiteocho" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_a_n" Type="bit" />
+          <Property Name="ensaye_esp_cod_a_n" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_a_n" Type="date" />
           <Property Name="clave_ensa_a_n" Type="int" />
           <Property Name="masa_a_n" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_n" Type="decimal" Precision="18" Scale="4" />
@@ -376,6 +402,9 @@
           <Property Name="intensidad_a_n" Type="varchar" MaxLength="50" />
           <Property Name="presion_a_n" Type="decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_n" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_num_b_n" Type="bit" />
+          <Property Name="ensaye_esp_cod_b_n" Type="varchar" MaxLength="50" />
+          <Property Name="ensaye_esp_registro_b_n" Type="date" />
           <Property Name="clave_ensa_b_n" Type="int" />
           <Property Name="masa_b_n" Type="decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_n" Type="decimal" Precision="18" Scale="4" />
@@ -1747,14 +1776,10 @@
             <PropertyRef Name="ensaye_esp_ID" />
           </Key>
           <Property Name="ensaye_esp_ID" Type="Guid" Nullable="false" />
-          <Property Name="ensaye_esp_cod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ensaye_esp_dia" Type="Int32" />
-          <Property Name="ensaye_esp_numdia" Type="Int32" />
-          <Property Name="ensaye_esp_num" Type="Int32" />
-          <Property Name="ensaye_esp_registro" Type="DateTime" Precision="0" />
           <Property Name="ensaye_esp_est_ID" Type="Int32" Nullable="false" />
-          <Property Name="cde" Type="Int32" />
-          <Property Name="cdem" Type="Int32" />
+          <Property Name="ensaye_esp_num_a_uno" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_uno" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_uno" Type="Int32" />
           <Property Name="masa_a_uno" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_uno" Type="Decimal" Precision="18" Scale="4" />
@@ -1765,6 +1790,9 @@
           <Property Name="intensidad_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_uno" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_uno" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_uno" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_uno" Type="Int32" />
           <Property Name="masa_b_uno" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_uno" Type="Decimal" Precision="18" Scale="4" />
@@ -1775,6 +1803,9 @@
           <Property Name="intensidad_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_b_uno" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_uno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_a_tres" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_tres" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_tres" Type="Int32" />
           <Property Name="masa_a_tres" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_tres" Type="Decimal" Precision="18" Scale="4" />
@@ -1785,6 +1816,9 @@
           <Property Name="intensidad_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_tres" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_tres" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_tres" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_tres" Type="Int32" />
           <Property Name="masa_b_tres" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_tres" Type="Decimal" Precision="18" Scale="4" />
@@ -1795,6 +1829,9 @@
           <Property Name="intensidad_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_b_tres" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_tres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_a_siete" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_siete" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_siete" Type="Int32" />
           <Property Name="masa_a_siete" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_siete" Type="Decimal" Precision="18" Scale="4" />
@@ -1805,6 +1842,9 @@
           <Property Name="intensidad_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_siete" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_siete" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_siete" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_siete" Type="Int32" />
           <Property Name="masa_b_siete" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_siete" Type="Decimal" Precision="18" Scale="4" />
@@ -1815,6 +1855,9 @@
           <Property Name="intensidad_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_b_siete" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_siete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_a_catorce" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_catorce" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_catorce" Type="Int32" />
           <Property Name="masa_a_catorce" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_catorce" Type="Decimal" Precision="18" Scale="4" />
@@ -1825,6 +1868,9 @@
           <Property Name="intensidad_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_catorce" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_catorce" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_catorce" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_catorce" Type="Int32" />
           <Property Name="masa_b_catorce" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_catorce" Type="Decimal" Precision="18" Scale="4" />
@@ -1835,6 +1881,9 @@
           <Property Name="intensidad_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_b_catorce" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_catorce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_a_veiteocho" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_veiteocho" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_veiteocho" Type="Int32" />
           <Property Name="masa_a_veiteocho" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_veiteocho" Type="Decimal" Precision="18" Scale="4" />
@@ -1845,6 +1894,9 @@
           <Property Name="intensidad_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_veiteocho" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_veiteocho" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_veiteocho" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_veiteocho" Type="Int32" />
           <Property Name="masa_b_veiteocho" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_veiteocho" Type="Decimal" Precision="18" Scale="4" />
@@ -1855,6 +1907,9 @@
           <Property Name="intensidad_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_b_veiteocho" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_b_veiteocho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_a_n" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_a_n" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_a_n" Type="Int32" />
           <Property Name="masa_a_n" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_aa_n" Type="Decimal" Precision="18" Scale="4" />
@@ -1865,6 +1920,9 @@
           <Property Name="intensidad_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="presion_a_n" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="tipofalla_a_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_num_b_n" Type="Boolean" />
+          <Property Name="ensaye_esp_cod_b_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ensaye_esp_registro_b_n" Type="DateTime" Precision="0" />
           <Property Name="clave_ensa_b_n" Type="Int32" />
           <Property Name="masa_b_n" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="altura_ba_n" Type="Decimal" Precision="18" Scale="4" />
@@ -2878,6 +2936,9 @@
                 <ScalarProperty Name="altura_ba_n" ColumnName="altura_ba_n" />
                 <ScalarProperty Name="masa_b_n" ColumnName="masa_b_n" />
                 <ScalarProperty Name="clave_ensa_b_n" ColumnName="clave_ensa_b_n" />
+                <ScalarProperty Name="ensaye_esp_registro_b_n" ColumnName="ensaye_esp_registro_b_n" />
+                <ScalarProperty Name="ensaye_esp_cod_b_n" ColumnName="ensaye_esp_cod_b_n" />
+                <ScalarProperty Name="ensaye_esp_num_b_n" ColumnName="ensaye_esp_num_b_n" />
                 <ScalarProperty Name="tipofalla_a_n" ColumnName="tipofalla_a_n" />
                 <ScalarProperty Name="presion_a_n" ColumnName="presion_a_n" />
                 <ScalarProperty Name="intensidad_a_n" ColumnName="intensidad_a_n" />
@@ -2888,6 +2949,9 @@
                 <ScalarProperty Name="altura_aa_n" ColumnName="altura_aa_n" />
                 <ScalarProperty Name="masa_a_n" ColumnName="masa_a_n" />
                 <ScalarProperty Name="clave_ensa_a_n" ColumnName="clave_ensa_a_n" />
+                <ScalarProperty Name="ensaye_esp_registro_a_n" ColumnName="ensaye_esp_registro_a_n" />
+                <ScalarProperty Name="ensaye_esp_cod_a_n" ColumnName="ensaye_esp_cod_a_n" />
+                <ScalarProperty Name="ensaye_esp_num_a_n" ColumnName="ensaye_esp_num_a_n" />
                 <ScalarProperty Name="tipofalla_b_veiteocho" ColumnName="tipofalla_b_veiteocho" />
                 <ScalarProperty Name="presion_b_veiteocho" ColumnName="presion_b_veiteocho" />
                 <ScalarProperty Name="intensidad_b_veiteocho" ColumnName="intensidad_b_veiteocho" />
@@ -2898,6 +2962,9 @@
                 <ScalarProperty Name="altura_ba_veiteocho" ColumnName="altura_ba_veiteocho" />
                 <ScalarProperty Name="masa_b_veiteocho" ColumnName="masa_b_veiteocho" />
                 <ScalarProperty Name="clave_ensa_b_veiteocho" ColumnName="clave_ensa_b_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_registro_b_veiteocho" ColumnName="ensaye_esp_registro_b_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_cod_b_veiteocho" ColumnName="ensaye_esp_cod_b_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_num_b_veiteocho" ColumnName="ensaye_esp_num_b_veiteocho" />
                 <ScalarProperty Name="tipofalla_a_veiteocho" ColumnName="tipofalla_a_veiteocho" />
                 <ScalarProperty Name="presion_a_veiteocho" ColumnName="presion_a_veiteocho" />
                 <ScalarProperty Name="intensidad_a_veiteocho" ColumnName="intensidad_a_veiteocho" />
@@ -2908,6 +2975,9 @@
                 <ScalarProperty Name="altura_aa_veiteocho" ColumnName="altura_aa_veiteocho" />
                 <ScalarProperty Name="masa_a_veiteocho" ColumnName="masa_a_veiteocho" />
                 <ScalarProperty Name="clave_ensa_a_veiteocho" ColumnName="clave_ensa_a_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_registro_a_veiteocho" ColumnName="ensaye_esp_registro_a_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_cod_a_veiteocho" ColumnName="ensaye_esp_cod_a_veiteocho" />
+                <ScalarProperty Name="ensaye_esp_num_a_veiteocho" ColumnName="ensaye_esp_num_a_veiteocho" />
                 <ScalarProperty Name="tipofalla_b_catorce" ColumnName="tipofalla_b_catorce" />
                 <ScalarProperty Name="presion_b_catorce" ColumnName="presion_b_catorce" />
                 <ScalarProperty Name="intensidad_b_catorce" ColumnName="intensidad_b_catorce" />
@@ -2918,6 +2988,9 @@
                 <ScalarProperty Name="altura_ba_catorce" ColumnName="altura_ba_catorce" />
                 <ScalarProperty Name="masa_b_catorce" ColumnName="masa_b_catorce" />
                 <ScalarProperty Name="clave_ensa_b_catorce" ColumnName="clave_ensa_b_catorce" />
+                <ScalarProperty Name="ensaye_esp_registro_b_catorce" ColumnName="ensaye_esp_registro_b_catorce" />
+                <ScalarProperty Name="ensaye_esp_cod_b_catorce" ColumnName="ensaye_esp_cod_b_catorce" />
+                <ScalarProperty Name="ensaye_esp_num_b_catorce" ColumnName="ensaye_esp_num_b_catorce" />
                 <ScalarProperty Name="tipofalla_a_catorce" ColumnName="tipofalla_a_catorce" />
                 <ScalarProperty Name="presion_a_catorce" ColumnName="presion_a_catorce" />
                 <ScalarProperty Name="intensidad_a_catorce" ColumnName="intensidad_a_catorce" />
@@ -2928,6 +3001,9 @@
                 <ScalarProperty Name="altura_aa_catorce" ColumnName="altura_aa_catorce" />
                 <ScalarProperty Name="masa_a_catorce" ColumnName="masa_a_catorce" />
                 <ScalarProperty Name="clave_ensa_a_catorce" ColumnName="clave_ensa_a_catorce" />
+                <ScalarProperty Name="ensaye_esp_registro_a_catorce" ColumnName="ensaye_esp_registro_a_catorce" />
+                <ScalarProperty Name="ensaye_esp_cod_a_catorce" ColumnName="ensaye_esp_cod_a_catorce" />
+                <ScalarProperty Name="ensaye_esp_num_a_catorce" ColumnName="ensaye_esp_num_a_catorce" />
                 <ScalarProperty Name="tipofalla_b_siete" ColumnName="tipofalla_b_siete" />
                 <ScalarProperty Name="presion_b_siete" ColumnName="presion_b_siete" />
                 <ScalarProperty Name="intensidad_b_siete" ColumnName="intensidad_b_siete" />
@@ -2938,6 +3014,9 @@
                 <ScalarProperty Name="altura_ba_siete" ColumnName="altura_ba_siete" />
                 <ScalarProperty Name="masa_b_siete" ColumnName="masa_b_siete" />
                 <ScalarProperty Name="clave_ensa_b_siete" ColumnName="clave_ensa_b_siete" />
+                <ScalarProperty Name="ensaye_esp_registro_b_siete" ColumnName="ensaye_esp_registro_b_siete" />
+                <ScalarProperty Name="ensaye_esp_cod_b_siete" ColumnName="ensaye_esp_cod_b_siete" />
+                <ScalarProperty Name="ensaye_esp_num_b_siete" ColumnName="ensaye_esp_num_b_siete" />
                 <ScalarProperty Name="tipofalla_a_siete" ColumnName="tipofalla_a_siete" />
                 <ScalarProperty Name="presion_a_siete" ColumnName="presion_a_siete" />
                 <ScalarProperty Name="intensidad_a_siete" ColumnName="intensidad_a_siete" />
@@ -2948,6 +3027,9 @@
                 <ScalarProperty Name="altura_aa_siete" ColumnName="altura_aa_siete" />
                 <ScalarProperty Name="masa_a_siete" ColumnName="masa_a_siete" />
                 <ScalarProperty Name="clave_ensa_a_siete" ColumnName="clave_ensa_a_siete" />
+                <ScalarProperty Name="ensaye_esp_registro_a_siete" ColumnName="ensaye_esp_registro_a_siete" />
+                <ScalarProperty Name="ensaye_esp_cod_a_siete" ColumnName="ensaye_esp_cod_a_siete" />
+                <ScalarProperty Name="ensaye_esp_num_a_siete" ColumnName="ensaye_esp_num_a_siete" />
                 <ScalarProperty Name="tipofalla_b_tres" ColumnName="tipofalla_b_tres" />
                 <ScalarProperty Name="presion_b_tres" ColumnName="presion_b_tres" />
                 <ScalarProperty Name="intensidad_b_tres" ColumnName="intensidad_b_tres" />
@@ -2958,6 +3040,9 @@
                 <ScalarProperty Name="altura_ba_tres" ColumnName="altura_ba_tres" />
                 <ScalarProperty Name="masa_b_tres" ColumnName="masa_b_tres" />
                 <ScalarProperty Name="clave_ensa_b_tres" ColumnName="clave_ensa_b_tres" />
+                <ScalarProperty Name="ensaye_esp_registro_b_tres" ColumnName="ensaye_esp_registro_b_tres" />
+                <ScalarProperty Name="ensaye_esp_cod_b_tres" ColumnName="ensaye_esp_cod_b_tres" />
+                <ScalarProperty Name="ensaye_esp_num_b_tres" ColumnName="ensaye_esp_num_b_tres" />
                 <ScalarProperty Name="tipofalla_a_tres" ColumnName="tipofalla_a_tres" />
                 <ScalarProperty Name="presion_a_tres" ColumnName="presion_a_tres" />
                 <ScalarProperty Name="intensidad_a_tres" ColumnName="intensidad_a_tres" />
@@ -2968,6 +3053,9 @@
                 <ScalarProperty Name="altura_aa_tres" ColumnName="altura_aa_tres" />
                 <ScalarProperty Name="masa_a_tres" ColumnName="masa_a_tres" />
                 <ScalarProperty Name="clave_ensa_a_tres" ColumnName="clave_ensa_a_tres" />
+                <ScalarProperty Name="ensaye_esp_registro_a_tres" ColumnName="ensaye_esp_registro_a_tres" />
+                <ScalarProperty Name="ensaye_esp_cod_a_tres" ColumnName="ensaye_esp_cod_a_tres" />
+                <ScalarProperty Name="ensaye_esp_num_a_tres" ColumnName="ensaye_esp_num_a_tres" />
                 <ScalarProperty Name="tipofalla_b_uno" ColumnName="tipofalla_b_uno" />
                 <ScalarProperty Name="presion_b_uno" ColumnName="presion_b_uno" />
                 <ScalarProperty Name="intensidad_b_uno" ColumnName="intensidad_b_uno" />
@@ -2978,6 +3066,9 @@
                 <ScalarProperty Name="altura_ba_uno" ColumnName="altura_ba_uno" />
                 <ScalarProperty Name="masa_b_uno" ColumnName="masa_b_uno" />
                 <ScalarProperty Name="clave_ensa_b_uno" ColumnName="clave_ensa_b_uno" />
+                <ScalarProperty Name="ensaye_esp_registro_b_uno" ColumnName="ensaye_esp_registro_b_uno" />
+                <ScalarProperty Name="ensaye_esp_cod_b_uno" ColumnName="ensaye_esp_cod_b_uno" />
+                <ScalarProperty Name="ensaye_esp_num_b_uno" ColumnName="ensaye_esp_num_b_uno" />
                 <ScalarProperty Name="tipofalla_a_uno" ColumnName="tipofalla_a_uno" />
                 <ScalarProperty Name="presion_a_uno" ColumnName="presion_a_uno" />
                 <ScalarProperty Name="intensidad_a_uno" ColumnName="intensidad_a_uno" />
@@ -2988,14 +3079,10 @@
                 <ScalarProperty Name="altura_aa_uno" ColumnName="altura_aa_uno" />
                 <ScalarProperty Name="masa_a_uno" ColumnName="masa_a_uno" />
                 <ScalarProperty Name="clave_ensa_a_uno" ColumnName="clave_ensa_a_uno" />
-                <ScalarProperty Name="cdem" ColumnName="cdem" />
-                <ScalarProperty Name="cde" ColumnName="cde" />
+                <ScalarProperty Name="ensaye_esp_registro_a_uno" ColumnName="ensaye_esp_registro_a_uno" />
+                <ScalarProperty Name="ensaye_esp_cod_a_uno" ColumnName="ensaye_esp_cod_a_uno" />
+                <ScalarProperty Name="ensaye_esp_num_a_uno" ColumnName="ensaye_esp_num_a_uno" />
                 <ScalarProperty Name="ensaye_esp_est_ID" ColumnName="ensaye_esp_est_ID" />
-                <ScalarProperty Name="ensaye_esp_registro" ColumnName="ensaye_esp_registro" />
-                <ScalarProperty Name="ensaye_esp_num" ColumnName="ensaye_esp_num" />
-                <ScalarProperty Name="ensaye_esp_numdia" ColumnName="ensaye_esp_numdia" />
-                <ScalarProperty Name="ensaye_esp_dia" ColumnName="ensaye_esp_dia" />
-                <ScalarProperty Name="ensaye_esp_cod" ColumnName="ensaye_esp_cod" />
                 <ScalarProperty Name="ensaye_esp_ID" ColumnName="ensaye_esp_ID" />
               </MappingFragment>
             </EntityTypeMapping>

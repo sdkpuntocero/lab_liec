@@ -15,14 +15,10 @@ namespace lab_liec
     public partial class inf_ensaye_esp
     {
         public System.Guid ensaye_esp_ID { get; set; }
-        public string ensaye_esp_cod { get; set; }
-        public Nullable<int> ensaye_esp_dia { get; set; }
-        public Nullable<int> ensaye_esp_numdia { get; set; }
-        public Nullable<int> ensaye_esp_num { get; set; }
-        public Nullable<System.DateTime> ensaye_esp_registro { get; set; }
         public int ensaye_esp_est_ID { get; set; }
-        public Nullable<int> cde { get; set; }
-        public Nullable<int> cdem { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_uno { get; set; }
+        public string ensaye_esp_cod_a_uno { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_uno { get; set; }
         public Nullable<int> clave_ensa_a_uno { get; set; }
         public Nullable<decimal> masa_a_uno { get; set; }
         public Nullable<decimal> altura_aa_uno { get; set; }
@@ -33,6 +29,9 @@ namespace lab_liec
         public string intensidad_a_uno { get; set; }
         public Nullable<decimal> presion_a_uno { get; set; }
         public string tipofalla_a_uno { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_uno { get; set; }
+        public string ensaye_esp_cod_b_uno { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_uno { get; set; }
         public Nullable<int> clave_ensa_b_uno { get; set; }
         public Nullable<decimal> masa_b_uno { get; set; }
         public Nullable<decimal> altura_ba_uno { get; set; }
@@ -43,6 +42,9 @@ namespace lab_liec
         public string intensidad_b_uno { get; set; }
         public Nullable<decimal> presion_b_uno { get; set; }
         public string tipofalla_b_uno { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_tres { get; set; }
+        public string ensaye_esp_cod_a_tres { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_tres { get; set; }
         public Nullable<int> clave_ensa_a_tres { get; set; }
         public Nullable<decimal> masa_a_tres { get; set; }
         public Nullable<decimal> altura_aa_tres { get; set; }
@@ -53,6 +55,9 @@ namespace lab_liec
         public string intensidad_a_tres { get; set; }
         public Nullable<decimal> presion_a_tres { get; set; }
         public string tipofalla_a_tres { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_tres { get; set; }
+        public string ensaye_esp_cod_b_tres { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_tres { get; set; }
         public Nullable<int> clave_ensa_b_tres { get; set; }
         public Nullable<decimal> masa_b_tres { get; set; }
         public Nullable<decimal> altura_ba_tres { get; set; }
@@ -63,6 +68,9 @@ namespace lab_liec
         public string intensidad_b_tres { get; set; }
         public Nullable<decimal> presion_b_tres { get; set; }
         public string tipofalla_b_tres { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_siete { get; set; }
+        public string ensaye_esp_cod_a_siete { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_siete { get; set; }
         public Nullable<int> clave_ensa_a_siete { get; set; }
         public Nullable<decimal> masa_a_siete { get; set; }
         public Nullable<decimal> altura_aa_siete { get; set; }
@@ -73,6 +81,9 @@ namespace lab_liec
         public string intensidad_a_siete { get; set; }
         public Nullable<decimal> presion_a_siete { get; set; }
         public string tipofalla_a_siete { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_siete { get; set; }
+        public string ensaye_esp_cod_b_siete { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_siete { get; set; }
         public Nullable<int> clave_ensa_b_siete { get; set; }
         public Nullable<decimal> masa_b_siete { get; set; }
         public Nullable<decimal> altura_ba_siete { get; set; }
@@ -83,6 +94,9 @@ namespace lab_liec
         public string intensidad_b_siete { get; set; }
         public Nullable<decimal> presion_b_siete { get; set; }
         public string tipofalla_b_siete { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_catorce { get; set; }
+        public string ensaye_esp_cod_a_catorce { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_catorce { get; set; }
         public Nullable<int> clave_ensa_a_catorce { get; set; }
         public Nullable<decimal> masa_a_catorce { get; set; }
         public Nullable<decimal> altura_aa_catorce { get; set; }
@@ -93,6 +107,9 @@ namespace lab_liec
         public string intensidad_a_catorce { get; set; }
         public Nullable<decimal> presion_a_catorce { get; set; }
         public string tipofalla_a_catorce { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_catorce { get; set; }
+        public string ensaye_esp_cod_b_catorce { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_catorce { get; set; }
         public Nullable<int> clave_ensa_b_catorce { get; set; }
         public Nullable<decimal> masa_b_catorce { get; set; }
         public Nullable<decimal> altura_ba_catorce { get; set; }
@@ -103,6 +120,9 @@ namespace lab_liec
         public string intensidad_b_catorce { get; set; }
         public Nullable<decimal> presion_b_catorce { get; set; }
         public string tipofalla_b_catorce { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_veiteocho { get; set; }
+        public string ensaye_esp_cod_a_veiteocho { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_veiteocho { get; set; }
         public Nullable<int> clave_ensa_a_veiteocho { get; set; }
         public Nullable<decimal> masa_a_veiteocho { get; set; }
         public Nullable<decimal> altura_aa_veiteocho { get; set; }
@@ -113,6 +133,9 @@ namespace lab_liec
         public string intensidad_a_veiteocho { get; set; }
         public Nullable<decimal> presion_a_veiteocho { get; set; }
         public string tipofalla_a_veiteocho { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_veiteocho { get; set; }
+        public string ensaye_esp_cod_b_veiteocho { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_veiteocho { get; set; }
         public Nullable<int> clave_ensa_b_veiteocho { get; set; }
         public Nullable<decimal> masa_b_veiteocho { get; set; }
         public Nullable<decimal> altura_ba_veiteocho { get; set; }
@@ -123,6 +146,9 @@ namespace lab_liec
         public string intensidad_b_veiteocho { get; set; }
         public Nullable<decimal> presion_b_veiteocho { get; set; }
         public string tipofalla_b_veiteocho { get; set; }
+        public Nullable<bool> ensaye_esp_num_a_n { get; set; }
+        public string ensaye_esp_cod_a_n { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_a_n { get; set; }
         public Nullable<int> clave_ensa_a_n { get; set; }
         public Nullable<decimal> masa_a_n { get; set; }
         public Nullable<decimal> altura_aa_n { get; set; }
@@ -133,6 +159,9 @@ namespace lab_liec
         public string intensidad_a_n { get; set; }
         public Nullable<decimal> presion_a_n { get; set; }
         public string tipofalla_a_n { get; set; }
+        public Nullable<bool> ensaye_esp_num_b_n { get; set; }
+        public string ensaye_esp_cod_b_n { get; set; }
+        public Nullable<System.DateTime> ensaye_esp_registro_b_n { get; set; }
         public Nullable<int> clave_ensa_b_n { get; set; }
         public Nullable<decimal> masa_b_n { get; set; }
         public Nullable<decimal> altura_ba_n { get; set; }

@@ -637,7 +637,6 @@ namespace lab_liec
                     txt_cp_clte.Text = i_clte.d_codigo;
                     txt_clte_coment.Text = i_clte.comentarios;
 
-
                     string str_dcodigo = i_clte.d_codigo;
                     try
                     {
@@ -1366,7 +1365,6 @@ namespace lab_liec
             }
             else if (int_clte_cont == 2)
             {
-
                 using (var m_clte = new bd_labEntities())
                 {
                     var i_clte = (from c in m_clte.inf_clte_contacto
@@ -1418,7 +1416,6 @@ namespace lab_liec
                                        t_clte.email1,
                                        t_clte.email2,
                                        t_clte.registro
-
                                    }).ToList();
 
                     gv_cltef_cont.DataSource = i_cltec;
@@ -1435,18 +1432,17 @@ namespace lab_liec
                         txt_clte_contacto_tel2.Text = i_cltec[0].tel2;
                         txt_clte_contacto_email1.Text = i_cltec[0].email1;
                         txt_clte_contacto_email2.Text = i_cltec[0].email2;
-
                     }
                     else
                     {
                         div_clte_contactof.Visible = false;
-
                     }
                 }
             }
             catch
             { }
         }
+
         #endregion clte_contacto
 
         #region clte_obras
@@ -1660,7 +1656,6 @@ namespace lab_liec
                 up_pdf.Update();
             }
         }
-
 
         protected void gv_clte_obras_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -2113,13 +2108,11 @@ namespace lab_liec
 
             if (chkb_1_rppc.Checked)
             {
-               
-                    rfv_f1_rppc.Enabled = true;
-                    rvf1_rppc.Enabled = true;
-                    dt_fcol = dt_fechacolado;
-                    txt_f1_rppc.Text = dt_fcol.AddDays(1).ToString("yyyy-MM-dd");
-                    up_rppc.Update();
-                
+                rfv_f1_rppc.Enabled = true;
+                rvf1_rppc.Enabled = true;
+                dt_fcol = dt_fechacolado;
+                txt_f1_rppc.Text = dt_fcol.AddDays(1).ToString("yyyy-MM-dd");
+                up_rppc.Update();
             }
             else
             {
@@ -2137,12 +2130,10 @@ namespace lab_liec
 
             if (chkb_3_rppc.Checked)
             {
-               
-                    rfv_f3_rppc.Enabled = true;
-                    rvf3_rppc.Enabled = true;
-                    dt_fcol = dt_fechacolado;
-                    txt_f3_rppc.Text = dt_fcol.AddDays(3).ToString("yyyy-MM-dd");
-                
+                rfv_f3_rppc.Enabled = true;
+                rvf3_rppc.Enabled = true;
+                dt_fcol = dt_fechacolado;
+                txt_f3_rppc.Text = dt_fcol.AddDays(3).ToString("yyyy-MM-dd");
             }
             else
             {
@@ -2160,12 +2151,10 @@ namespace lab_liec
 
             if (chkb_7_rppc.Checked)
             {
-               
-                    rfv_f7_rppc.Enabled = true;
-                    rvf7_rppc.Enabled = true;
-                    dt_fcol = dt_fechacolado;
-                    txt_f7_rppc.Text = dt_fcol.AddDays(7).ToString("yyyy-MM-dd");
-                
+                rfv_f7_rppc.Enabled = true;
+                rvf7_rppc.Enabled = true;
+                dt_fcol = dt_fechacolado;
+                txt_f7_rppc.Text = dt_fcol.AddDays(7).ToString("yyyy-MM-dd");
             }
             else
             {
@@ -2183,12 +2172,10 @@ namespace lab_liec
 
             if (chkb_14_rppc.Checked)
             {
-               
-                    rfv_f14_rppc.Enabled = true;
-                    rvf14_rppc.Enabled = true;
-                    dt_fcol = dt_fechacolado;
-                    txt_f14_rppc.Text = dt_fcol.AddDays(14).ToString("yyyy-MM-dd");
-                
+                rfv_f14_rppc.Enabled = true;
+                rvf14_rppc.Enabled = true;
+                dt_fcol = dt_fechacolado;
+                txt_f14_rppc.Text = dt_fcol.AddDays(14).ToString("yyyy-MM-dd");
             }
             else
             {
@@ -2207,7 +2194,6 @@ namespace lab_liec
 
             if (e.CommandName == "btn_recepcion")
             {
-
                 if (int_rppc == 0)
                 {
                     div_docf.Visible = false;
@@ -2217,21 +2203,18 @@ namespace lab_liec
                 {
                     div_docf.Visible = true;
                     btn_guardar_rppc.Visible = true;
-
                 }
                 else if (int_rppc == 2)
                 {
                     div_rpc.Visible = true;
                     btn_guardar_rppc.Visible = true;
                     div_docf.Visible = true;
-
                 }
             }
-          
 
             //try
             //{
-            //   
+            //
 
             //    using (bd_labEntities edm_clte = new bd_labEntities())
             //    {
@@ -2307,20 +2290,16 @@ namespace lab_liec
             //{ }
         }
 
- 
-
         protected void chkb_28_rppc_CheckedChanged(object sender, EventArgs e)
         {
             DateTime dt_fcol;
 
             if (chkb_28_rppc.Checked)
             {
-               
-                    rfv_f28_rppc.Enabled = true;
-                    rvf28_rppc.Enabled = true;
-                    dt_fcol = dt_fechacolado;
-                    txt_f28_rppc.Text = dt_fcol.AddDays(28).ToString("yyyy-MM-dd");
-                
+                rfv_f28_rppc.Enabled = true;
+                rvf28_rppc.Enabled = true;
+                dt_fcol = dt_fechacolado;
+                txt_f28_rppc.Text = dt_fcol.AddDays(28).ToString("yyyy-MM-dd");
             }
             else
             {
@@ -2338,26 +2317,24 @@ namespace lab_liec
 
             if (chkb_otro_rppc.Checked)
             {
-              
-                    if (string.IsNullOrEmpty(txt_cantotro_rppc.Text))
-                    {
-                        Mensaje("Favor de escribir cantidas de dias");
-                        chkb_otro_rppc.Checked = false;
-                        rfv_cantesp_rppc.Enabled = true;
-                        rfv_cantotro_rppc.Enabled = true;
-                        rvfotro_rppc.Enabled = true;
-                        txt_cantotro_rppc.Focus();
-                    }
-                    else
-                    {
-                        rfv_cantesp_rppc.Enabled = true;
-                        rfv_cantotro_rppc.Enabled = true;
-                        rvfotro_rppc.Enabled = true;
-                        dt_fcol = dt_fechacolado;
-                        int int_fotro_rppc = int.Parse(txt_cantotro_rppc.Text);
-                        txt_fotro_rppc.Text = dt_fcol.AddDays(int_fotro_rppc).ToString("yyyy-MM-dd");
-                    }
-                
+                if (string.IsNullOrEmpty(txt_cantotro_rppc.Text))
+                {
+                    Mensaje("Favor de escribir cantidas de dias");
+                    chkb_otro_rppc.Checked = false;
+                    rfv_cantesp_rppc.Enabled = true;
+                    rfv_cantotro_rppc.Enabled = true;
+                    rvfotro_rppc.Enabled = true;
+                    txt_cantotro_rppc.Focus();
+                }
+                else
+                {
+                    rfv_cantesp_rppc.Enabled = true;
+                    rfv_cantotro_rppc.Enabled = true;
+                    rvfotro_rppc.Enabled = true;
+                    dt_fcol = dt_fechacolado;
+                    int int_fotro_rppc = int.Parse(txt_cantotro_rppc.Text);
+                    txt_fotro_rppc.Text = dt_fcol.AddDays(int_fotro_rppc).ToString("yyyy-MM-dd");
+                }
             }
             else
             {
@@ -2802,6 +2779,7 @@ namespace lab_liec
             txt_inic_rrpc.Text = null;
             txt_term_rrpc.Text = null;
         }
+
         protected void gv_rppc_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             GridViewRow gvr = (GridViewRow)(((Button)e.CommandSource).NamingContainer);
@@ -2811,7 +2789,6 @@ namespace lab_liec
 
             if (e.CommandName == "btn_recepcion")
             {
-
                 if (int_rppc == 0)
                 {
                     div_docf.Visible = false;
@@ -2822,18 +2799,16 @@ namespace lab_liec
                     div_docf.Visible = false;
                     div_pfe.Visible = true;
                     btn_guardar_rppc.Visible = true;
-
                 }
                 else if (int_rppc == 2)
                 {
                     div_docf.Visible = false;
                     div_pfe.Visible = true;
                     btn_guardar_rppc.Visible = true;
-                    
-
                 }
             }
         }
+
         protected void btn_guardar_rppc_Click(object sender, EventArgs e)
         {
             if (int_rppc == 0)
@@ -2922,7 +2897,194 @@ namespace lab_liec
                     }
                     string n_rub;
                     int int_pfe = 0;
+
+                    Guid str_ensaye_esp_ID;
+                    int str_ensaye_esp_est_ID, str_clave_ensa_a_uno, str_clave_ensa_a_tres, str_clave_ensa_a_siete, str_clave_ensa_a_catorce, str_clave_ensa_a_veinteocho, str_clave_ensa_a_n;
+                    bool str_ensaye_esp_num_a_uno = false, str_ensaye_esp_num_b_uno = false, str_ensaye_esp_num_a_tres, str_ensaye_esp_num_b_tres, str_ensaye_esp_num_a_siete, str_ensaye_esp_num_b_siete, str_ensaye_esp_num_a_catorce, str_ensaye_esp_num_b_catorce, str_ensaye_esp_num_a_veiteocho, str_ensaye_esp_num_b_veiteocho, str_ensaye_esp_num_a_n, str_ensaye_esp_num_b_n;
+                    string str_ensaye_esp_cod_a_uno, str_directo_a_uno, str_intensidad_a_uno, str_tipofalla_a_uno, str_ensaye_esp_cod_a_tres, str_directo_a_tres, str_intensidad_a_tres, str_tipofalla_a_tres, str_ensaye_esp_cod_a_siete, str_directo_a_siete, str_intensidad_a_siete, str_tipofalla_a_siete, str_ensaye_esp_cod_a_catorce, str_directo_a_catorce, str_intensidad_a_catorce, str_tipofalla_a_catorce, str_ensaye_esp_cod_a_veiteocho, str_directo_a_veiteocho, str_intensidad_a_veiteocho, str_tipofalla_a_veiteocho, str_ensaye_esp_cod_a_n, str_directo_a_n, str_intensidad_a_n, str_tipofalla_a_n;
+                    DateTime str_ensaye_esp_registro_a_uno = DateTime.Now, str_ensaye_esp_registro_a_tres = DateTime.Now, str_ensaye_esp_registro_a_siete, str_ensaye_esp_registro_a_catorce, str_ensaye_esp_registro_a_veiteocho, str_ensaye_esp_registro_a_n, str_ensaye_esp_registro_b_uno = DateTime.Now, str_ensaye_esp_registro_b_tres, str_ensaye_esp_registro_b_siete, str_ensaye_esp_registro_b_catorce, str_ensaye_esp_registro_b_veiteocho, str_ensaye_esp_registro_b_n; 
+                    decimal str_masa_a_uno, str_altura_aa_uno, str_altura_ab_uno, str_lados_aa_uno, str_lados_ab_uno, str_presion_a_uno, str_masa_a_tres, str_altura_aa_tres, str_altura_ab_tres, str_lados_aa_tres, str_lados_ab_tres, str_presion_a_tres, str_masa_a_siete, str_altura_aa_siete, str_altura_ab_siete, str_lados_aa_siete, str_lados_ab_siete, str_presion_a_siete, str_masa_a_catorce, str_altura_aa_catorce, str_altura_ab_catorce, str_lados_aa_catorce, str_lados_ab_catorce, str_presion_a_catorce, str_masa_a_veinteocho, str_altura_aa_veinteocho, str_altura_ab_veinteocho, str_lados_aa_veinteocho, str_lados_ab_veinteocho, str_presion_a_veinteocho, str_masa_a_n, str_altura_aa_n, str_altura_ab_n, str_lados_aa_n, str_lados_ab_n, str_presion_a_n;
+
+
+
+
                     int_pfe = int_1d + int_3d + int_7d + int_14d + int_28d + int_otrod;
+
+                    if (int_1d == 0)
+                    {
+                    }
+                    else if (int_1d == 1)
+                    {
+                        str_ensaye_esp_num_a_uno = true;
+                        str_ensaye_esp_registro_a_uno = dt_fechacolado.AddDays(1);
+                    }
+                    else if (int_1d == 2)
+                    {
+                        str_ensaye_esp_num_a_uno = true;
+                        str_ensaye_esp_registro_a_uno = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_num_b_uno = true;
+                        str_ensaye_esp_registro_b_uno = dt_fechacolado.AddDays(1);
+                    }
+
+                    else if (int_7d == 0)
+                    {
+                    }
+                    else if (int_7d == 1)
+                    {
+                        str_ensaye_esp_num_a_siete = true;
+                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(1);
+                    }
+                    else if (int_7d == 2)
+                    {
+                        str_ensaye_esp_num_a_siete = true;
+                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_num_b_siete = true;
+                        str_ensaye_esp_registro_b_siete = dt_fechacolado.AddDays(1);
+                    }
+
+
+                    using (var m_clte = new bd_labEntities())
+                    {
+                        var i_clte = new inf_ensaye_esp
+
+                        {
+                            ensaye_esp_ID = Guid.NewGuid(),
+                            ensaye_esp_num_a_uno = str_ensaye_esp_num_a_uno,
+                            ensaye_esp_registro_a_uno = str_ensaye_esp_registro_a_uno,
+                            ensaye_esp_est_ID = 3,
+                            clave_ensa_a_uno = 1,
+                            masa_a_uno = 1,
+                            altura_aa_uno = 1,
+                            altura_ab_uno = 1,
+                            lados_aa_uno = 1,
+                            lados_ab_uno = 1,
+                            directo_a_uno = "a",
+                            intensidad_a_uno = "a",
+                            presion_a_uno = 1,
+                            tipofalla_a_uno = "a",
+                            ensaye_esp_num_b_uno = str_ensaye_esp_num_b_uno,
+                            ensaye_esp_registro_b_uno = str_ensaye_esp_registro_b_uno,
+                            clave_ensa_b_uno = 1,
+                            masa_b_uno = 1,
+                            altura_ba_uno = 1,
+                            altura_bb_uno = 1,
+                            lados_ba_uno = 1,
+                            lados_bb_uno = 1,
+                            directo_b_uno = "a",
+                            intensidad_b_uno = "a",
+                            presion_b_uno = 1,
+                            tipofalla_b_uno = "a",
+                            clave_ensa_a_tres = 1,
+                            masa_a_tres = 1,
+                            altura_aa_tres = 1,
+                            altura_ab_tres = 1,
+                            lados_aa_tres = 1,
+                            lados_ab_tres = 1,
+                            directo_a_tres = "a",
+                            intensidad_a_tres = "a",
+                            presion_a_tres = 1,
+                            tipofalla_a_tres = "a",
+                            clave_ensa_b_tres = 1,
+                            masa_b_tres = 1,
+                            altura_ba_tres = 1,
+                            altura_bb_tres = 1,
+                            lados_ba_tres = 1,
+                            lados_bb_tres = 1,
+                            directo_b_tres = "a",
+                            intensidad_b_tres = "a",
+                            presion_b_tres = 1,
+                            tipofalla_b_tres = "a",
+                            ensaye_esp_num_a_siete = str_ensaye_esp_num_a_uno,
+                            ensaye_esp_registro_a_siete = str_ensaye_esp_registro_a_uno,
+                            clave_ensa_a_siete = 1,
+                            masa_a_siete = 1,
+                            altura_aa_siete = 1,
+                            altura_ab_siete = 1,
+                            lados_aa_siete = 1,
+                            lados_ab_siete = 1,
+                            directo_a_siete = "a",
+                            intensidad_a_siete = "a",
+                            presion_a_siete = 1,
+                            tipofalla_a_siete = "a",
+                            ensaye_esp_num_b_siete = str_ensaye_esp_num_b_uno,
+                            ensaye_esp_registro_b_siete = str_ensaye_esp_registro_b_uno,
+                            clave_ensa_b_siete = 1,
+                            masa_b_siete = 1,
+                            altura_ba_siete = 1,
+                            altura_bb_siete = 1,
+                            lados_ba_siete = 1,
+                            lados_bb_siete = 1,
+                            directo_b_siete = "a",
+                            intensidad_b_siete = "a",
+                            presion_b_siete = 1,
+                            tipofalla_b_siete = "a",
+                            clave_ensa_a_catorce = 1,
+                            masa_a_catorce = 1,
+                            altura_aa_catorce = 1,
+                            altura_ab_catorce = 1,
+                            lados_aa_catorce = 1,
+                            lados_ab_catorce = 1,
+                            directo_a_catorce = "a",
+                            intensidad_a_catorce = "a",
+                            presion_a_catorce = 1,
+                            tipofalla_a_catorce = "a",
+                            clave_ensa_b_catorce = 1,
+                            masa_b_catorce = 1,
+                            altura_ba_catorce = 1,
+                            altura_bb_catorce = 1,
+                            lados_ba_catorce = 1,
+                            lados_bb_catorce = 1,
+                            directo_b_catorce = "a",
+                            intensidad_b_catorce = "a",
+                            presion_b_catorce = 1,
+                            tipofalla_b_catorce = "a",
+                            clave_ensa_a_veiteocho = 1,
+                            masa_a_veiteocho = 1,
+                            altura_aa_veiteocho = 1,
+                            altura_ab_veiteocho = 1,
+                            lados_aa_veiteocho = 1,
+                            lados_ab_veiteocho = 1,
+                            directo_a_veiteocho = "a",
+                            intensidad_a_veiteocho = "a",
+                            presion_a_veiteocho = 1,
+                            tipofalla_a_veiteocho = "a",
+                            clave_ensa_b_veiteocho = 1,
+                            masa_b_veiteocho = 1,
+                            altura_ba_veiteocho = 1,
+                            altura_bb_veiteocho = 1,
+                            lados_ba_veiteocho = 1,
+                            lados_bb_veiteocho = 1,
+                            directo_b_veiteocho = "a",
+                            intensidad_b_veiteocho = "a",
+                            presion_b_veiteocho = 1,
+                            tipofalla_b_veiteocho = "a",
+                            clave_ensa_a_n = 1,
+                            masa_a_n = 1,
+                            altura_aa_n = 1,
+                            altura_ab_n = 1,
+                            lados_aa_n = 1,
+                            lados_ab_n = 1,
+                            directo_a_n = "a",
+                            intensidad_a_n = "a",
+                            presion_a_n = 1,
+                            tipofalla_a_n = "a",
+                            clave_ensa_b_n = 1,
+                            masa_b_n = 1,
+                            altura_ba_n = 1,
+                            altura_bb_n = 1,
+                            lados_ba_n = 1,
+                            lados_bb_n = 1,
+                            directo_b_n = "a",
+                            intensidad_b_n = "a",
+                            presion_b_n = 1,
+                            tipofalla_b_n = "a",
+                            registro = DateTime.Now,
+                            concreto_rpc_ID = guclte_ID,
+                        };
+
+                        m_clte.inf_ensaye_esp.Add(i_clte);
+                        m_clte.SaveChanges();
+                    }
                 }
                 else
                 {
@@ -3032,7 +3194,6 @@ namespace lab_liec
                                               t_clte.concreto_est_muestra,
                                               t_clte.fecha_colado,
                                               t_clte.registro
-
                                           }).ToList();
 
                             gv_rppc.DataSource = i_clte;
@@ -3045,7 +3206,6 @@ namespace lab_liec
                     }
                     else if (int_rppc == 2)
                     {
-
                         //using (var m_clte = new bd_labEntities())
                         //{
                         //    var i_clte = (from c in m_clte.inf_rpc
@@ -3085,16 +3245,9 @@ namespace lab_liec
                         //}
                     }
                 }
-
-                
-                
-
-
-
-
             }
-            
         }
+
         protected void btn_buscar_rppc_Click(object sender, EventArgs e)
         {
             Guid guid_cltef;
@@ -3126,7 +3279,6 @@ namespace lab_liec
                                       i_c.razon_social,
                                       i_c.cod_clte,
                                       i_c.registro
-
                                   }).ToList();
 
                     gv_obra_clte.DataSource = i_clte;
@@ -3139,6 +3291,7 @@ namespace lab_liec
                 gv_clte_obras.Visible = false;
             }
         }
+
         protected void ddl_sit_rppc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int int_sit = int.Parse(ddl_sit_rppc.SelectedValue);
@@ -3185,8 +3338,8 @@ namespace lab_liec
                 rfv_revb_rppc.Enabled = false;
                 rfv_loca_rppc.Enabled = false;
             }
-
         }
+
         protected void gv_rppc_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             Guid guid_cltef;
