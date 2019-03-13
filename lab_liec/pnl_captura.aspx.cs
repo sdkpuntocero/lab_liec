@@ -2900,46 +2900,151 @@ namespace lab_liec
 
                     Guid str_ensaye_esp_ID;
                     int str_ensaye_esp_est_ID, str_clave_ensa_a_uno, str_clave_ensa_a_tres, str_clave_ensa_a_siete, str_clave_ensa_a_catorce, str_clave_ensa_a_veinteocho, str_clave_ensa_a_n;
-                    bool str_ensaye_esp_num_a_uno = false, str_ensaye_esp_num_b_uno = false, str_ensaye_esp_num_a_tres, str_ensaye_esp_num_b_tres, str_ensaye_esp_num_a_siete, str_ensaye_esp_num_b_siete, str_ensaye_esp_num_a_catorce, str_ensaye_esp_num_b_catorce, str_ensaye_esp_num_a_veiteocho, str_ensaye_esp_num_b_veiteocho, str_ensaye_esp_num_a_n, str_ensaye_esp_num_b_n;
-                    string str_ensaye_esp_cod_a_uno, str_directo_a_uno, str_intensidad_a_uno, str_tipofalla_a_uno, str_ensaye_esp_cod_a_tres, str_directo_a_tres, str_intensidad_a_tres, str_tipofalla_a_tres, str_ensaye_esp_cod_a_siete, str_directo_a_siete, str_intensidad_a_siete, str_tipofalla_a_siete, str_ensaye_esp_cod_a_catorce, str_directo_a_catorce, str_intensidad_a_catorce, str_tipofalla_a_catorce, str_ensaye_esp_cod_a_veiteocho, str_directo_a_veiteocho, str_intensidad_a_veiteocho, str_tipofalla_a_veiteocho, str_ensaye_esp_cod_a_n, str_directo_a_n, str_intensidad_a_n, str_tipofalla_a_n;
-                    DateTime str_ensaye_esp_registro_a_uno = DateTime.Now, str_ensaye_esp_registro_a_tres = DateTime.Now, str_ensaye_esp_registro_a_siete, str_ensaye_esp_registro_a_catorce, str_ensaye_esp_registro_a_veiteocho, str_ensaye_esp_registro_a_n, str_ensaye_esp_registro_b_uno = DateTime.Now, str_ensaye_esp_registro_b_tres, str_ensaye_esp_registro_b_siete, str_ensaye_esp_registro_b_catorce, str_ensaye_esp_registro_b_veiteocho, str_ensaye_esp_registro_b_n; 
+                    bool str_ensaye_esp_num_a_uno = false, str_ensaye_esp_num_b_uno = false, str_ensaye_esp_num_a_tres = false, str_ensaye_esp_num_b_tres = false, str_ensaye_esp_num_a_siete = false, str_ensaye_esp_num_b_siete = false, str_ensaye_esp_num_a_catorce = false, str_ensaye_esp_num_b_catorce = false, str_ensaye_esp_num_a_veiteocho = false, str_ensaye_esp_num_b_veiteocho = false, str_ensaye_esp_num_a_n = false, str_ensaye_esp_num_b_n = false;
+                    string str_ensaye_esp_cod_a_uno = null, str_ensaye_esp_cod_a_tres = null,  str_ensaye_esp_cod_a_siete = null, str_ensaye_esp_cod_a_catorce = null, str_ensaye_esp_cod_a_veiteocho = null,  str_ensaye_esp_cod_a_n = null, str_ensaye_esp_cod_b_uno = null, str_ensaye_esp_cod_b_tres = null, str_ensaye_esp_cod_b_siete = null, str_ensaye_esp_cod_b_catorce = null, str_ensaye_esp_cod_b_veiteocho = null, str_ensaye_esp_cod_b_n = null;
+                    DateTime str_ensaye_esp_registro_a_uno = DateTime.Now, str_ensaye_esp_registro_a_tres = DateTime.Now, str_ensaye_esp_registro_a_siete = DateTime.Now, str_ensaye_esp_registro_a_catorce = DateTime.Now, str_ensaye_esp_registro_a_veiteocho = DateTime.Now, str_ensaye_esp_registro_a_n = DateTime.Now, str_ensaye_esp_registro_b_uno = DateTime.Now, str_ensaye_esp_registro_b_tres = DateTime.Now, str_ensaye_esp_registro_b_siete = DateTime.Now, str_ensaye_esp_registro_b_catorce = DateTime.Now, str_ensaye_esp_registro_b_veiteocho = DateTime.Now, str_ensaye_esp_registro_b_n = DateTime.Now;
                     decimal str_masa_a_uno, str_altura_aa_uno, str_altura_ab_uno, str_lados_aa_uno, str_lados_ab_uno, str_presion_a_uno, str_masa_a_tres, str_altura_aa_tres, str_altura_ab_tres, str_lados_aa_tres, str_lados_ab_tres, str_presion_a_tres, str_masa_a_siete, str_altura_aa_siete, str_altura_ab_siete, str_lados_aa_siete, str_lados_ab_siete, str_presion_a_siete, str_masa_a_catorce, str_altura_aa_catorce, str_altura_ab_catorce, str_lados_aa_catorce, str_lados_ab_catorce, str_presion_a_catorce, str_masa_a_veinteocho, str_altura_aa_veinteocho, str_altura_ab_veinteocho, str_lados_aa_veinteocho, str_lados_ab_veinteocho, str_presion_a_veinteocho, str_masa_a_n, str_altura_aa_n, str_altura_ab_n, str_lados_aa_n, str_lados_ab_n, str_presion_a_n;
 
 
 
 
-                    int_pfe = int_1d + int_3d + int_7d + int_14d + int_28d + int_otrod;
+                    int_pfe = int_1d + int_3d + int_7d + int_14d + int_28d + int_otroe;
 
-                    if (int_1d == 0)
+
+                   if (int_1d == 0)
                     {
+                        // Condition1 is true.
                     }
+          
+
+
+
+
+
+
                     else if (int_1d == 1)
                     {
                         str_ensaye_esp_num_a_uno = true;
+                        str_ensaye_esp_cod_a_uno = "capturar";
                         str_ensaye_esp_registro_a_uno = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_num_b_uno = true;
+                        str_ensaye_esp_cod_b_uno = "repetir";
+                        str_ensaye_esp_registro_b_uno = dt_fechacolado.AddDays(1);
                     }
                     else if (int_1d == 2)
                     {
                         str_ensaye_esp_num_a_uno = true;
+                        str_ensaye_esp_cod_a_uno = "capturar";
                         str_ensaye_esp_registro_a_uno = dt_fechacolado.AddDays(1);
                         str_ensaye_esp_num_b_uno = true;
+                        str_ensaye_esp_cod_b_uno = "capturar";
                         str_ensaye_esp_registro_b_uno = dt_fechacolado.AddDays(1);
                     }
 
-                    else if (int_7d == 0)
+                    if (int_3d == 0)
+                    {
+                    }
+                    else if (int_3d == 1)
+                    {
+                        str_ensaye_esp_num_a_tres = true;
+                        str_ensaye_esp_cod_a_tres = "capturar";
+                        str_ensaye_esp_registro_a_tres = dt_fechacolado.AddDays(3);
+                        str_ensaye_esp_num_b_tres = true;
+                        str_ensaye_esp_cod_b_tres = "repetir";
+                        str_ensaye_esp_registro_b_tres = dt_fechacolado.AddDays(3);
+                    }
+                    else if (int_3d == 2)
+                    {
+                        str_ensaye_esp_num_a_tres = true;
+                        str_ensaye_esp_cod_a_tres = "capturar";
+                        str_ensaye_esp_registro_a_tres = dt_fechacolado.AddDays(3);
+                        str_ensaye_esp_num_b_tres = true;
+                        str_ensaye_esp_cod_b_tres = "capturar";
+                        str_ensaye_esp_registro_b_tres = dt_fechacolado.AddDays(3);
+                    }
+                     if (int_7d == 0)
                     {
                     }
                     else if (int_7d == 1)
                     {
                         str_ensaye_esp_num_a_siete = true;
-                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_cod_a_siete = "capturar";
+                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(7);
+                        str_ensaye_esp_num_b_siete = true;
+                        str_ensaye_esp_cod_b_siete = "repetir";
+                        str_ensaye_esp_registro_b_siete = dt_fechacolado.AddDays(7);
                     }
                     else if (int_7d == 2)
                     {
                         str_ensaye_esp_num_a_siete = true;
-                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_cod_a_siete = "capturar";
+                        str_ensaye_esp_registro_a_siete = dt_fechacolado.AddDays(7);
                         str_ensaye_esp_num_b_siete = true;
-                        str_ensaye_esp_registro_b_siete = dt_fechacolado.AddDays(1);
+                        str_ensaye_esp_cod_b_siete = "capturar";
+                        str_ensaye_esp_registro_b_siete = dt_fechacolado.AddDays(7);
+                    }
+                     if (int_14d == 0)
+                    {
+                    }
+                    else if (int_14d == 1)
+                    {
+                        str_ensaye_esp_num_a_catorce = true;
+                        str_ensaye_esp_cod_a_catorce = "capturar";
+                        str_ensaye_esp_registro_a_catorce = dt_fechacolado.AddDays(14);
+                        str_ensaye_esp_num_b_catorce = true;
+                        str_ensaye_esp_cod_b_catorce = "repetir";
+                        str_ensaye_esp_registro_b_catorce = dt_fechacolado.AddDays(14);
+                    }
+                    else if (int_14d == 2)
+                    {
+                        str_ensaye_esp_num_a_catorce = true;
+                        str_ensaye_esp_cod_a_catorce = "capturar";
+                        str_ensaye_esp_registro_a_catorce = dt_fechacolado.AddDays(14);
+                        str_ensaye_esp_num_b_catorce = true;
+                        str_ensaye_esp_cod_b_catorce = "capturar";
+                        str_ensaye_esp_registro_b_catorce = dt_fechacolado.AddDays(14);
+                    }
+                  if (int_28d == 0)
+                    {
+                    }
+                    else if (int_28d == 1)
+                    {
+                        str_ensaye_esp_num_a_veiteocho = true;
+                        str_ensaye_esp_cod_a_veiteocho = "capturar";
+                        str_ensaye_esp_registro_a_veiteocho = dt_fechacolado.AddDays(28);
+                        str_ensaye_esp_num_b_veiteocho = true;
+                        str_ensaye_esp_cod_b_veiteocho = "repetir";
+                        str_ensaye_esp_registro_b_veiteocho = dt_fechacolado.AddDays(28);
+                    }
+                    else if (int_28d == 2)
+                    {
+                        str_ensaye_esp_num_a_veiteocho = true;
+                        str_ensaye_esp_cod_a_veiteocho = "capturar";
+                        str_ensaye_esp_registro_a_veiteocho = dt_fechacolado.AddDays(28);
+                        str_ensaye_esp_num_b_veiteocho = true;
+                        str_ensaye_esp_cod_b_veiteocho = "capturar";
+                        str_ensaye_esp_registro_b_veiteocho = dt_fechacolado.AddDays(28);
+                    }
+                    if (int_otrod == 0)
+                    {
+                    }
+                    else if (int_otrod == 1)
+                    {
+                        str_ensaye_esp_num_a_n = true;
+                        str_ensaye_esp_cod_a_n = "capturar";
+                        str_ensaye_esp_registro_a_n = dt_fechacolado.AddDays(int_otrod);
+                        str_ensaye_esp_num_b_n = true;
+                        str_ensaye_esp_cod_b_n = "repetir";
+                        str_ensaye_esp_registro_b_n = dt_fechacolado.AddDays(int_otrod);
+                    }
+                    else if (int_otrod == 2)
+                    {
+                        str_ensaye_esp_num_a_n = true;
+                        str_ensaye_esp_cod_a_n = "capturar";
+                        str_ensaye_esp_registro_a_n = dt_fechacolado.AddDays(int_otrod);
+                        str_ensaye_esp_num_b_n = true;
+                        str_ensaye_esp_cod_b_n = "capturar";
+                        str_ensaye_esp_registro_b_n = dt_fechacolado.AddDays(int_otrod);
                     }
 
 
@@ -2949,135 +3054,56 @@ namespace lab_liec
 
                         {
                             ensaye_esp_ID = Guid.NewGuid(),
-                            ensaye_esp_num_a_uno = str_ensaye_esp_num_a_uno,
-                            ensaye_esp_registro_a_uno = str_ensaye_esp_registro_a_uno,
                             ensaye_esp_est_ID = 3,
-                            clave_ensa_a_uno = 1,
-                            masa_a_uno = 1,
-                            altura_aa_uno = 1,
-                            altura_ab_uno = 1,
-                            lados_aa_uno = 1,
-                            lados_ab_uno = 1,
-                            directo_a_uno = "a",
-                            intensidad_a_uno = "a",
-                            presion_a_uno = 1,
-                            tipofalla_a_uno = "a",
+
+                            ensaye_esp_num_a_uno = str_ensaye_esp_num_a_uno,
+                            ensaye_esp_cod_a_uno = str_ensaye_esp_cod_a_uno,
+                            ensaye_esp_registro_a_uno = str_ensaye_esp_registro_a_uno,
+
                             ensaye_esp_num_b_uno = str_ensaye_esp_num_b_uno,
+                            ensaye_esp_cod_b_uno = str_ensaye_esp_cod_b_uno,
                             ensaye_esp_registro_b_uno = str_ensaye_esp_registro_b_uno,
-                            clave_ensa_b_uno = 1,
-                            masa_b_uno = 1,
-                            altura_ba_uno = 1,
-                            altura_bb_uno = 1,
-                            lados_ba_uno = 1,
-                            lados_bb_uno = 1,
-                            directo_b_uno = "a",
-                            intensidad_b_uno = "a",
-                            presion_b_uno = 1,
-                            tipofalla_b_uno = "a",
-                            clave_ensa_a_tres = 1,
-                            masa_a_tres = 1,
-                            altura_aa_tres = 1,
-                            altura_ab_tres = 1,
-                            lados_aa_tres = 1,
-                            lados_ab_tres = 1,
-                            directo_a_tres = "a",
-                            intensidad_a_tres = "a",
-                            presion_a_tres = 1,
-                            tipofalla_a_tres = "a",
-                            clave_ensa_b_tres = 1,
-                            masa_b_tres = 1,
-                            altura_ba_tres = 1,
-                            altura_bb_tres = 1,
-                            lados_ba_tres = 1,
-                            lados_bb_tres = 1,
-                            directo_b_tres = "a",
-                            intensidad_b_tres = "a",
-                            presion_b_tres = 1,
-                            tipofalla_b_tres = "a",
-                            ensaye_esp_num_a_siete = str_ensaye_esp_num_a_uno,
-                            ensaye_esp_registro_a_siete = str_ensaye_esp_registro_a_uno,
-                            clave_ensa_a_siete = 1,
-                            masa_a_siete = 1,
-                            altura_aa_siete = 1,
-                            altura_ab_siete = 1,
-                            lados_aa_siete = 1,
-                            lados_ab_siete = 1,
-                            directo_a_siete = "a",
-                            intensidad_a_siete = "a",
-                            presion_a_siete = 1,
-                            tipofalla_a_siete = "a",
-                            ensaye_esp_num_b_siete = str_ensaye_esp_num_b_uno,
-                            ensaye_esp_registro_b_siete = str_ensaye_esp_registro_b_uno,
-                            clave_ensa_b_siete = 1,
-                            masa_b_siete = 1,
-                            altura_ba_siete = 1,
-                            altura_bb_siete = 1,
-                            lados_ba_siete = 1,
-                            lados_bb_siete = 1,
-                            directo_b_siete = "a",
-                            intensidad_b_siete = "a",
-                            presion_b_siete = 1,
-                            tipofalla_b_siete = "a",
-                            clave_ensa_a_catorce = 1,
-                            masa_a_catorce = 1,
-                            altura_aa_catorce = 1,
-                            altura_ab_catorce = 1,
-                            lados_aa_catorce = 1,
-                            lados_ab_catorce = 1,
-                            directo_a_catorce = "a",
-                            intensidad_a_catorce = "a",
-                            presion_a_catorce = 1,
-                            tipofalla_a_catorce = "a",
-                            clave_ensa_b_catorce = 1,
-                            masa_b_catorce = 1,
-                            altura_ba_catorce = 1,
-                            altura_bb_catorce = 1,
-                            lados_ba_catorce = 1,
-                            lados_bb_catorce = 1,
-                            directo_b_catorce = "a",
-                            intensidad_b_catorce = "a",
-                            presion_b_catorce = 1,
-                            tipofalla_b_catorce = "a",
-                            clave_ensa_a_veiteocho = 1,
-                            masa_a_veiteocho = 1,
-                            altura_aa_veiteocho = 1,
-                            altura_ab_veiteocho = 1,
-                            lados_aa_veiteocho = 1,
-                            lados_ab_veiteocho = 1,
-                            directo_a_veiteocho = "a",
-                            intensidad_a_veiteocho = "a",
-                            presion_a_veiteocho = 1,
-                            tipofalla_a_veiteocho = "a",
-                            clave_ensa_b_veiteocho = 1,
-                            masa_b_veiteocho = 1,
-                            altura_ba_veiteocho = 1,
-                            altura_bb_veiteocho = 1,
-                            lados_ba_veiteocho = 1,
-                            lados_bb_veiteocho = 1,
-                            directo_b_veiteocho = "a",
-                            intensidad_b_veiteocho = "a",
-                            presion_b_veiteocho = 1,
-                            tipofalla_b_veiteocho = "a",
-                            clave_ensa_a_n = 1,
-                            masa_a_n = 1,
-                            altura_aa_n = 1,
-                            altura_ab_n = 1,
-                            lados_aa_n = 1,
-                            lados_ab_n = 1,
-                            directo_a_n = "a",
-                            intensidad_a_n = "a",
-                            presion_a_n = 1,
-                            tipofalla_a_n = "a",
-                            clave_ensa_b_n = 1,
-                            masa_b_n = 1,
-                            altura_ba_n = 1,
-                            altura_bb_n = 1,
-                            lados_ba_n = 1,
-                            lados_bb_n = 1,
-                            directo_b_n = "a",
-                            intensidad_b_n = "a",
-                            presion_b_n = 1,
-                            tipofalla_b_n = "a",
+
+                            ensaye_esp_num_a_tres = str_ensaye_esp_num_a_tres,
+                            ensaye_esp_cod_a_tres = str_ensaye_esp_cod_a_tres,
+                            ensaye_esp_registro_a_tres = str_ensaye_esp_registro_a_tres,
+
+                            ensaye_esp_num_b_tres = str_ensaye_esp_num_b_tres,
+                            ensaye_esp_cod_b_tres = str_ensaye_esp_cod_b_tres,
+                            ensaye_esp_registro_b_tres = str_ensaye_esp_registro_b_tres,
+
+                            ensaye_esp_num_a_siete = str_ensaye_esp_num_a_siete,
+                            ensaye_esp_cod_a_siete = str_ensaye_esp_cod_a_siete,
+                            ensaye_esp_registro_a_siete = str_ensaye_esp_registro_a_siete,
+
+                            ensaye_esp_num_b_siete = str_ensaye_esp_num_b_siete,
+                            ensaye_esp_cod_b_siete = str_ensaye_esp_cod_b_siete,
+                            ensaye_esp_registro_b_siete = str_ensaye_esp_registro_b_siete,
+
+                            ensaye_esp_num_a_catorce = str_ensaye_esp_num_a_catorce,
+                            ensaye_esp_cod_a_catorce = str_ensaye_esp_cod_a_catorce,
+                            ensaye_esp_registro_a_catorce = str_ensaye_esp_registro_a_catorce,
+
+                            ensaye_esp_num_b_catorce = str_ensaye_esp_num_b_catorce,
+                            ensaye_esp_cod_b_catorce = str_ensaye_esp_cod_b_catorce,
+                            ensaye_esp_registro_b_catorce = str_ensaye_esp_registro_b_catorce,
+
+                            ensaye_esp_num_a_veiteocho = str_ensaye_esp_num_a_veiteocho,
+                            ensaye_esp_cod_a_veiteocho = str_ensaye_esp_cod_a_veiteocho,
+                            ensaye_esp_registro_a_veiteocho = str_ensaye_esp_registro_a_veiteocho,
+
+                            ensaye_esp_num_b_veiteocho = str_ensaye_esp_num_b_veiteocho,
+                            ensaye_esp_cod_b_veiteocho = str_ensaye_esp_cod_b_veiteocho,
+                            ensaye_esp_registro_b_veiteocho = str_ensaye_esp_registro_b_veiteocho,
+
+                            ensaye_esp_num_a_n = str_ensaye_esp_num_a_n,
+                            ensaye_esp_cod_a_n = str_ensaye_esp_cod_a_n,
+                            ensaye_esp_registro_a_n = str_ensaye_esp_registro_a_n,
+
+                            ensaye_esp_num_b_n = str_ensaye_esp_num_b_n,
+                            ensaye_esp_cod_b_n = str_ensaye_esp_cod_b_n,
+                            ensaye_esp_registro_b_n = str_ensaye_esp_registro_b_n,
+
                             registro = DateTime.Now,
                             concreto_rpc_ID = guclte_ID,
                         };
@@ -3085,6 +3111,7 @@ namespace lab_liec
                         m_clte.inf_ensaye_esp.Add(i_clte);
                         m_clte.SaveChanges();
                     }
+                    Mensaje("Datos de cliente-obra-muestra agregados con éxito.");
                 }
                 else
                 {
