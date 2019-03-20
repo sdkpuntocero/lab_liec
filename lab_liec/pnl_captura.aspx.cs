@@ -194,10 +194,13 @@ namespace lab_liec
             div_nav_clte.Visible = false;
             div_nav_clte_cont.Visible = false;
             div_nav_clte_obras.Visible = false;
+            div_nav_obras_rpc.Visible = false;
 
             up_prospectos.Update();
             up_clte.Update();
+            up_clte_contacto.Update();
             up_clte_obras.Update();
+            up_rppc.Update();
         }
 
         private void limp_prosp_ctrl()
@@ -240,9 +243,13 @@ namespace lab_liec
             div_nav_clte.Visible = true;
             div_nav_clte_cont.Visible = false;
             div_nav_clte_obras.Visible = false;
+            div_nav_obras_rpc.Visible = false;
+
             up_prospectos.Update();
             up_clte.Update();
+            up_clte_contacto.Update();
             up_clte_obras.Update();
+            up_rppc.Update();
         }
 
         protected void lkb_clte_obras_Click(object sender, EventArgs e)
@@ -273,10 +280,13 @@ namespace lab_liec
             div_nav_clte.Visible = false;
             div_nav_clte_cont.Visible = false;
             div_nav_clte_obras.Visible = true;
+            div_nav_obras_rpc.Visible = false;
+
             up_prospectos.Update();
             up_clte.Update();
             up_clte_contacto.Update();
             up_clte_obras.Update();
+            up_rppc.Update();
         }
 
         protected void lkb_concreto_Click(object sender, EventArgs e)
@@ -342,9 +352,16 @@ namespace lab_liec
             limp_clte_ctrl();
 
             div_nav_prospectos.Visible = false;
-            div_nav_clte.Visible = true;
-            up_clte.Update();
+            div_nav_clte.Visible = false;
+            div_nav_clte_cont.Visible = false;
+            div_nav_clte_obras.Visible = false;
+            div_nav_obras_rpc.Visible = false;
+
             up_prospectos.Update();
+            up_clte.Update();
+            up_clte_contacto.Update();
+            up_clte_obras.Update();
+            up_rppc.Update();
         }
 
         protected void lkb_salir_Click(object sender, EventArgs e)
